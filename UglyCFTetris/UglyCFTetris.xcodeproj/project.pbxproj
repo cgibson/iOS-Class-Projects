@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C69F925136822F3008D82C9 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C69F922136822F3008D82C9 /* Icon@2x.png */; };
+		1C69F926136822F3008D82C9 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C69F923136822F3008D82C9 /* Icon.png */; };
+		1C69F927136822F3008D82C9 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C69F924136822F3008D82C9 /* Icon-Small@2x.png */; };
+		1C69F92C136822FB008D82C9 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C69F929136822FB008D82C9 /* Icon-72.png */; };
+		1C69F92D136822FB008D82C9 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C69F92A136822FB008D82C9 /* Icon-Small-50.png */; };
+		1C69F92E136822FB008D82C9 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C69F92B136822FB008D82C9 /* Icon-Small.png */; };
+		1C69F932136827F5008D82C9 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C69F931136827F5008D82C9 /* Default.png */; };
+		1C69F93413682801008D82C9 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C69F93313682801008D82C9 /* Default@2x.png */; };
+		1C75952813681C3F00ED681F /* MemoryHound.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C75952713681C3F00ED681F /* MemoryHound.m */; };
+		1C9746C1135D0151000F4211 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9746C0135D0151000F4211 /* UIKit.framework */; };
+		1C9746C3135D0151000F4211 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9746C2135D0151000F4211 /* Foundation.framework */; };
+		1C9746C5135D0151000F4211 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9746C4135D0151000F4211 /* CoreGraphics.framework */; };
+		1C9746CB135D0151000F4211 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C9746C9135D0151000F4211 /* InfoPlist.strings */; };
+		1C9746CE135D0151000F4211 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9746CD135D0151000F4211 /* main.m */; };
+		1C9746D1135D0151000F4211 /* UglyCFTetrisAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9746D0135D0151000F4211 /* UglyCFTetrisAppDelegate.m */; };
+		1C9746D4135D0151000F4211 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C9746D2135D0151000F4211 /* MainWindow.xib */; };
+		1C9746E1135D0151000F4211 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9746C0135D0151000F4211 /* UIKit.framework */; };
+		1C9746E2135D0151000F4211 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9746C2135D0151000F4211 /* Foundation.framework */; };
+		1C9746E3135D0151000F4211 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C9746C4135D0151000F4211 /* CoreGraphics.framework */; };
+		1C9746EB135D0152000F4211 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C9746E9135D0152000F4211 /* InfoPlist.strings */; };
+		1C9746EE135D0152000F4211 /* UglyCFTetrisTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 1C9746ED135D0152000F4211 /* UglyCFTetrisTests.h */; };
+		1C9746F0135D0152000F4211 /* UglyCFTetrisTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9746EF135D0152000F4211 /* UglyCFTetrisTests.m */; };
+		1C9746FA135D01EC000F4211 /* UglyTetrisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C9746F9135D01EC000F4211 /* UglyTetrisViewController.xib */; };
+		1C9746FF135D021B000F4211 /* TetrisEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9746FC135D021B000F4211 /* TetrisEngine.m */; };
+		1C974700135D021B000F4211 /* UglyTetrisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9746FE135D021B000F4211 /* UglyTetrisViewController.m */; };
+		1CC9BF6E136816760029014E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1CC9BF6D136816760029014E /* Settings.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1C9746E4135D0151000F4211 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C9746B3135D0151000F4211 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1C9746BB135D0151000F4211;
+			remoteInfo = UglyCFTetris;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1C69F922136822F3008D82C9 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		1C69F923136822F3008D82C9 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		1C69F924136822F3008D82C9 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		1C69F929136822FB008D82C9 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		1C69F92A136822FB008D82C9 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		1C69F92B136822FB008D82C9 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		1C69F931136827F5008D82C9 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1C69F93313682801008D82C9 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1C75952713681C3F00ED681F /* MemoryHound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryHound.m; sourceTree = "<group>"; };
+		1C75952913681C5100ED681F /* MemoryHound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryHound.h; sourceTree = "<group>"; };
+		1C9746BC135D0151000F4211 /* UglyCFTetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UglyCFTetris.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C9746C0135D0151000F4211 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1C9746C2135D0151000F4211 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1C9746C4135D0151000F4211 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1C9746C8135D0151000F4211 /* UglyCFTetris-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UglyCFTetris-Info.plist"; sourceTree = "<group>"; };
+		1C9746CA135D0151000F4211 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1C9746CC135D0151000F4211 /* UglyCFTetris-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UglyCFTetris-Prefix.pch"; sourceTree = "<group>"; };
+		1C9746CD135D0151000F4211 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1C9746CF135D0151000F4211 /* UglyCFTetrisAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UglyCFTetrisAppDelegate.h; sourceTree = "<group>"; };
+		1C9746D0135D0151000F4211 /* UglyCFTetrisAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UglyCFTetrisAppDelegate.m; sourceTree = "<group>"; };
+		1C9746D3135D0151000F4211 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		1C9746E0135D0151000F4211 /* UglyCFTetrisTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UglyCFTetrisTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C9746E8135D0152000F4211 /* UglyCFTetrisTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UglyCFTetrisTests-Info.plist"; sourceTree = "<group>"; };
+		1C9746EA135D0152000F4211 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1C9746EC135D0152000F4211 /* UglyCFTetrisTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UglyCFTetrisTests-Prefix.pch"; sourceTree = "<group>"; };
+		1C9746ED135D0152000F4211 /* UglyCFTetrisTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UglyCFTetrisTests.h; sourceTree = "<group>"; };
+		1C9746EF135D0152000F4211 /* UglyCFTetrisTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UglyCFTetrisTests.m; sourceTree = "<group>"; };
+		1C9746F9135D01EC000F4211 /* UglyTetrisViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UglyTetrisViewController.xib; sourceTree = "<group>"; };
+		1C9746FB135D021B000F4211 /* TetrisEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TetrisEngine.h; sourceTree = "<group>"; };
+		1C9746FC135D021B000F4211 /* TetrisEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TetrisEngine.m; sourceTree = "<group>"; };
+		1C9746FD135D021B000F4211 /* UglyTetrisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UglyTetrisViewController.h; sourceTree = "<group>"; };
+		1C9746FE135D021B000F4211 /* UglyTetrisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UglyTetrisViewController.m; sourceTree = "<group>"; };
+		1CC9BF6D136816760029014E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C9746B9135D0151000F4211 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9746C1135D0151000F4211 /* UIKit.framework in Frameworks */,
+				1C9746C3135D0151000F4211 /* Foundation.framework in Frameworks */,
+				1C9746C5135D0151000F4211 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C9746DC135D0151000F4211 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9746E1135D0151000F4211 /* UIKit.framework in Frameworks */,
+				1C9746E2135D0151000F4211 /* Foundation.framework in Frameworks */,
+				1C9746E3135D0151000F4211 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C69F93013682682008D82C9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1C69F929136822FB008D82C9 /* Icon-72.png */,
+				1C69F92A136822FB008D82C9 /* Icon-Small-50.png */,
+				1C69F92B136822FB008D82C9 /* Icon-Small.png */,
+				1C69F922136822F3008D82C9 /* Icon@2x.png */,
+				1C69F923136822F3008D82C9 /* Icon.png */,
+				1C69F924136822F3008D82C9 /* Icon-Small@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		1C9746B1135D0151000F4211 = {
+			isa = PBXGroup;
+			children = (
+				1C69F93313682801008D82C9 /* Default@2x.png */,
+				1C69F931136827F5008D82C9 /* Default.png */,
+				1C69F93013682682008D82C9 /* Resources */,
+				1C9746C6135D0151000F4211 /* UglyCFTetris */,
+				1C9746E6135D0151000F4211 /* UglyCFTetrisTests */,
+				1C9746BF135D0151000F4211 /* Frameworks */,
+				1C9746BD135D0151000F4211 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1C9746BD135D0151000F4211 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C9746BC135D0151000F4211 /* UglyCFTetris.app */,
+				1C9746E0135D0151000F4211 /* UglyCFTetrisTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C9746BF135D0151000F4211 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C9746C0135D0151000F4211 /* UIKit.framework */,
+				1C9746C2135D0151000F4211 /* Foundation.framework */,
+				1C9746C4135D0151000F4211 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C9746C6135D0151000F4211 /* UglyCFTetris */ = {
+			isa = PBXGroup;
+			children = (
+				1C75952913681C5100ED681F /* MemoryHound.h */,
+				1C75952713681C3F00ED681F /* MemoryHound.m */,
+				1C9746FB135D021B000F4211 /* TetrisEngine.h */,
+				1C9746FC135D021B000F4211 /* TetrisEngine.m */,
+				1C9746FD135D021B000F4211 /* UglyTetrisViewController.h */,
+				1C9746FE135D021B000F4211 /* UglyTetrisViewController.m */,
+				1C9746F9135D01EC000F4211 /* UglyTetrisViewController.xib */,
+				1C9746CF135D0151000F4211 /* UglyCFTetrisAppDelegate.h */,
+				1C9746D0135D0151000F4211 /* UglyCFTetrisAppDelegate.m */,
+				1C9746D2135D0151000F4211 /* MainWindow.xib */,
+				1C9746C7135D0151000F4211 /* Supporting Files */,
+			);
+			path = UglyCFTetris;
+			sourceTree = "<group>";
+		};
+		1C9746C7135D0151000F4211 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CC9BF6D136816760029014E /* Settings.bundle */,
+				1C9746C8135D0151000F4211 /* UglyCFTetris-Info.plist */,
+				1C9746C9135D0151000F4211 /* InfoPlist.strings */,
+				1C9746CC135D0151000F4211 /* UglyCFTetris-Prefix.pch */,
+				1C9746CD135D0151000F4211 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1C9746E6135D0151000F4211 /* UglyCFTetrisTests */ = {
+			isa = PBXGroup;
+			children = (
+				1C9746ED135D0152000F4211 /* UglyCFTetrisTests.h */,
+				1C9746EF135D0152000F4211 /* UglyCFTetrisTests.m */,
+				1C9746E7135D0152000F4211 /* Supporting Files */,
+			);
+			path = UglyCFTetrisTests;
+			sourceTree = "<group>";
+		};
+		1C9746E7135D0152000F4211 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C9746E8135D0152000F4211 /* UglyCFTetrisTests-Info.plist */,
+				1C9746E9135D0152000F4211 /* InfoPlist.strings */,
+				1C9746EC135D0152000F4211 /* UglyCFTetrisTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C9746BB135D0151000F4211 /* UglyCFTetris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C9746F3135D0152000F4211 /* Build configuration list for PBXNativeTarget "UglyCFTetris" */;
+			buildPhases = (
+				1C9746B8135D0151000F4211 /* Sources */,
+				1C9746B9135D0151000F4211 /* Frameworks */,
+				1C9746BA135D0151000F4211 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UglyCFTetris;
+			productName = UglyCFTetris;
+			productReference = 1C9746BC135D0151000F4211 /* UglyCFTetris.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1C9746DF135D0151000F4211 /* UglyCFTetrisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C9746F6135D0152000F4211 /* Build configuration list for PBXNativeTarget "UglyCFTetrisTests" */;
+			buildPhases = (
+				1C9746DB135D0151000F4211 /* Sources */,
+				1C9746DC135D0151000F4211 /* Frameworks */,
+				1C9746DD135D0151000F4211 /* Resources */,
+				1C9746DE135D0151000F4211 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C9746E5135D0151000F4211 /* PBXTargetDependency */,
+			);
+			name = UglyCFTetrisTests;
+			productName = UglyCFTetrisTests;
+			productReference = 1C9746E0135D0151000F4211 /* UglyCFTetrisTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1C9746B3135D0151000F4211 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1C9746B6135D0151000F4211 /* Build configuration list for PBXProject "UglyCFTetris" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1C9746B1135D0151000F4211;
+			productRefGroup = 1C9746BD135D0151000F4211 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C9746BB135D0151000F4211 /* UglyCFTetris */,
+				1C9746DF135D0151000F4211 /* UglyCFTetrisTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C9746BA135D0151000F4211 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9746CB135D0151000F4211 /* InfoPlist.strings in Resources */,
+				1C9746D4135D0151000F4211 /* MainWindow.xib in Resources */,
+				1C9746FA135D01EC000F4211 /* UglyTetrisViewController.xib in Resources */,
+				1CC9BF6E136816760029014E /* Settings.bundle in Resources */,
+				1C69F925136822F3008D82C9 /* Icon@2x.png in Resources */,
+				1C69F926136822F3008D82C9 /* Icon.png in Resources */,
+				1C69F927136822F3008D82C9 /* Icon-Small@2x.png in Resources */,
+				1C69F92C136822FB008D82C9 /* Icon-72.png in Resources */,
+				1C69F92D136822FB008D82C9 /* Icon-Small-50.png in Resources */,
+				1C69F92E136822FB008D82C9 /* Icon-Small.png in Resources */,
+				1C69F932136827F5008D82C9 /* Default.png in Resources */,
+				1C69F93413682801008D82C9 /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C9746DD135D0151000F4211 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9746EB135D0152000F4211 /* InfoPlist.strings in Resources */,
+				1C9746EE135D0152000F4211 /* UglyCFTetrisTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1C9746DE135D0151000F4211 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C9746B8135D0151000F4211 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9746CE135D0151000F4211 /* main.m in Sources */,
+				1C9746D1135D0151000F4211 /* UglyCFTetrisAppDelegate.m in Sources */,
+				1C9746FF135D021B000F4211 /* TetrisEngine.m in Sources */,
+				1C974700135D021B000F4211 /* UglyTetrisViewController.m in Sources */,
+				1C75952813681C3F00ED681F /* MemoryHound.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1C9746DB135D0151000F4211 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C9746F0135D0152000F4211 /* UglyCFTetrisTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1C9746E5135D0151000F4211 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1C9746BB135D0151000F4211 /* UglyCFTetris */;
+			targetProxy = 1C9746E4135D0151000F4211 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1C9746C9135D0151000F4211 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C9746CA135D0151000F4211 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1C9746D2135D0151000F4211 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C9746D3135D0151000F4211 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		1C9746E9135D0152000F4211 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C9746EA135D0152000F4211 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1C9746F1135D0152000F4211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1C9746F2135D0152000F4211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		1C9746F4135D0152000F4211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UglyCFTetris/UglyCFTetris-Prefix.pch";
+				INFOPLIST_FILE = "UglyCFTetris/UglyCFTetris-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1C9746F5135D0152000F4211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UglyCFTetris/UglyCFTetris-Prefix.pch";
+				INFOPLIST_FILE = "UglyCFTetris/UglyCFTetris-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1C9746F7135D0152000F4211 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UglyCFTetris.app/UglyCFTetris";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UglyCFTetrisTests/UglyCFTetrisTests-Prefix.pch";
+				INFOPLIST_FILE = "UglyCFTetrisTests/UglyCFTetrisTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		1C9746F8135D0152000F4211 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/UglyCFTetris.app/UglyCFTetris";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UglyCFTetrisTests/UglyCFTetrisTests-Prefix.pch";
+				INFOPLIST_FILE = "UglyCFTetrisTests/UglyCFTetrisTests-Info.plist";
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C9746B6135D0151000F4211 /* Build configuration list for PBXProject "UglyCFTetris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C9746F1135D0152000F4211 /* Debug */,
+				1C9746F2135D0152000F4211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C9746F3135D0152000F4211 /* Build configuration list for PBXNativeTarget "UglyCFTetris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C9746F4135D0152000F4211 /* Debug */,
+				1C9746F5135D0152000F4211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C9746F6135D0152000F4211 /* Build configuration list for PBXNativeTarget "UglyCFTetrisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C9746F7135D0152000F4211 /* Debug */,
+				1C9746F8135D0152000F4211 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1C9746B3135D0151000F4211 /* Project object */;
+}
