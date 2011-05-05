@@ -24,6 +24,7 @@
 
 @property (nonatomic, retain) IBOutlet UglyTetrisViewController *viewController;
 
+@property (nonatomic) bool backgrounded;
 
 
 @end

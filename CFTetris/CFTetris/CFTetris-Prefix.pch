@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'UglyCFTetris' target in the 'UglyCFTetris' project
+// Prefix header for all source files of the 'CFTetris' target in the 'CFTetris' project
 //
 
 #import <Availability.h>

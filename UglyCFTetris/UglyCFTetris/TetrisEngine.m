@@ -134,6 +134,9 @@ static struct TetrisPiece pieces[TetrisNumPieces] = {
 
 - (void) dealloc
 {
+    NSLog(@"Stopping");
+    [self stop];
+    [stepTimer release];
     [self.newGrid release];
     [super dealloc];
 }
@@ -309,7 +312,7 @@ static struct TetrisPiece pieces[TetrisNumPieces] = {
 
 - (void) advance
 {
-	if (gameOver)
+	if (gameOver || !self)
 		return;
 	
 	self.timeStep++;
@@ -372,6 +375,15 @@ static struct TetrisPiece pieces[TetrisNumPieces] = {
     }
 }
 
+- (void) stopTentative
+{
+    // keep the fact that we are running alive
+    if (stepTimer) {
+        [stepTimer invalidate];
+        stepTimer = nil;
+    }
+}
+
 - (bool) running
 {
     return timerRunning;
@@ -379,7 +391,7 @@ static struct TetrisPiece pieces[TetrisNumPieces] = {
 
 - (void) pieceDown
 {
-    if([self running])
+    if(currPiece && [self running])
     {
        //[self advance];
        while(![self currPieceWillCollideAtRow: pieceRow - 1 col: pieceCol  rotation: pieceRotation])

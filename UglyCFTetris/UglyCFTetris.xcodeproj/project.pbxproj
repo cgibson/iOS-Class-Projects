@@ -33,6 +33,10 @@
 		1C9746FF135D021B000F4211 /* TetrisEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9746FC135D021B000F4211 /* TetrisEngine.m */; };
 		1C974700135D021B000F4211 /* UglyTetrisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9746FE135D021B000F4211 /* UglyTetrisViewController.m */; };
 		1CC9BF6E136816760029014E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1CC9BF6D136816760029014E /* Settings.bundle */; };
+		1CD0CEEC1370E145005A3DF7 /* MemoryHound.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD0CEE61370E145005A3DF7 /* MemoryHound.m */; };
+		1CD0CEED1370E145005A3DF7 /* TetrisEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD0CEE81370E145005A3DF7 /* TetrisEngine.m */; };
+		1CD0CEEE1370E145005A3DF7 /* UglyTetrisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CD0CEEA1370E145005A3DF7 /* UglyTetrisViewController.m */; };
+		1CD0CEEF1370E145005A3DF7 /* UglyTetrisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CD0CEEB1370E145005A3DF7 /* UglyTetrisViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +83,13 @@
 		1C9746FD135D021B000F4211 /* UglyTetrisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UglyTetrisViewController.h; sourceTree = "<group>"; };
 		1C9746FE135D021B000F4211 /* UglyTetrisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UglyTetrisViewController.m; sourceTree = "<group>"; };
 		1CC9BF6D136816760029014E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		1CD0CEE51370E145005A3DF7 /* MemoryHound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryHound.h; sourceTree = "<group>"; };
+		1CD0CEE61370E145005A3DF7 /* MemoryHound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryHound.m; sourceTree = "<group>"; };
+		1CD0CEE71370E145005A3DF7 /* TetrisEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TetrisEngine.h; sourceTree = "<group>"; };
+		1CD0CEE81370E145005A3DF7 /* TetrisEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TetrisEngine.m; sourceTree = "<group>"; };
+		1CD0CEE91370E145005A3DF7 /* UglyTetrisViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UglyTetrisViewController.h; sourceTree = "<group>"; };
+		1CD0CEEA1370E145005A3DF7 /* UglyTetrisViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UglyTetrisViewController.m; sourceTree = "<group>"; };
+		1CD0CEEB1370E145005A3DF7 /* UglyTetrisViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UglyTetrisViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +164,13 @@
 		1C9746C6135D0151000F4211 /* UglyCFTetris */ = {
 			isa = PBXGroup;
 			children = (
+				1CD0CEE51370E145005A3DF7 /* MemoryHound.h */,
+				1CD0CEE61370E145005A3DF7 /* MemoryHound.m */,
+				1CD0CEE71370E145005A3DF7 /* TetrisEngine.h */,
+				1CD0CEE81370E145005A3DF7 /* TetrisEngine.m */,
+				1CD0CEE91370E145005A3DF7 /* UglyTetrisViewController.h */,
+				1CD0CEEA1370E145005A3DF7 /* UglyTetrisViewController.m */,
+				1CD0CEEB1370E145005A3DF7 /* UglyTetrisViewController.xib */,
 				1C75952913681C5100ED681F /* MemoryHound.h */,
 				1C75952713681C3F00ED681F /* MemoryHound.m */,
 				1C9746FB135D021B000F4211 /* TetrisEngine.h */,
@@ -279,6 +297,7 @@
 				1C69F92E136822FB008D82C9 /* Icon-Small.png in Resources */,
 				1C69F932136827F5008D82C9 /* Default.png in Resources */,
 				1C69F93413682801008D82C9 /* Default@2x.png in Resources */,
+				1CD0CEEF1370E145005A3DF7 /* UglyTetrisViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +338,9 @@
 				1C9746FF135D021B000F4211 /* TetrisEngine.m in Sources */,
 				1C974700135D021B000F4211 /* UglyTetrisViewController.m in Sources */,
 				1C75952813681C3F00ED681F /* MemoryHound.m in Sources */,
+				1CD0CEEC1370E145005A3DF7 /* MemoryHound.m in Sources */,
+				1CD0CEED1370E145005A3DF7 /* TetrisEngine.m in Sources */,
+				1CD0CEEE1370E145005A3DF7 /* UglyTetrisViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,8 @@
 //
 //  main.m
-//  UglyCFTetris
+//  CFTetris
 //
-//  Created by Gibson, Christopher on 4/18/11.
+//  Created by Gibson, Christopher on 5/3/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 

@@ -19,6 +19,7 @@
 @synthesize engine=_engine;
 
 @synthesize viewController=_viewController;
+@synthesize backgrounded=_backgrounded;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -42,7 +43,7 @@
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     NSLog(@"WillResignActive");
-    [self.engine stop];
+    [self.engine stopTentative];
     /*
      Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
      Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -53,6 +54,7 @@
 {
     NSLog(@"DidEnterBackground");
     [self.engine stop];
+    self.backgrounded = true;
     [self saveState];
     /*
      Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
@@ -63,6 +65,7 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     NSLog(@"WillEnterForeground");
+    [self.viewController refreshGrid];
     /*
      Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
      */
@@ -71,19 +74,22 @@
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     NSLog(@"DidBecomeActive");
-    bool runningVal = [self.engine running];
+    //bool runningVal = [self.engine running];
     
-    if(!runningVal)
-    [self restoreState];
-    
-    if(runningVal){
-        NSLog(@"Something?");
+    if (self.backgrounded || ![self.engine running])
+        [self restoreState];
+    else if ([self.engine running]){
         [self.engine start];
+    }else{
+
     }
+    self.backgrounded = false;
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults synchronize];
-    self.engine.antigravity = [defaults boolForKey:@"Antigravity"];
+    self.engine.antigravity = [defaults boolForKey:@"antigravity"];
+    NSLog(@"Resulting Antigravity: %d", self.engine.antigravity);
+    [self.viewController refreshGrid];
     
     
     /*

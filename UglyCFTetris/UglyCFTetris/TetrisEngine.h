@@ -51,6 +51,7 @@
 
 - (void) start;
 - (void) stop;
+- (void) stopTentative;
 - (bool) running;
 
 - (void) pieceDown;

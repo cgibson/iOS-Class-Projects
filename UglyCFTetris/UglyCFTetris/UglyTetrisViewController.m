@@ -20,7 +20,7 @@
     [engine_ removeObserver:self forKeyPath:@"score"];
     [engine_ removeObserver:self forKeyPath:@"timeStep"];
     [engine_ removeObserver:self forKeyPath:@"gridVersion"];
-    [self.engine release];
+    [engine_ release];
     [super dealloc];
 }
 
@@ -28,8 +28,6 @@
 {
     if (![self isViewLoaded] || !self.engine || self.newGridLabels )
         return;
-    
-    NSLog(@"setupLabels is being called!  Height is %d\n", self.engine.height);
     
     self.newGridLabels = [NSMutableArray arrayWithCapacity:TetrisArrSize(self.engine.height)];
     for(int i = 0; i < TetrisArrSize(self.engine.height); i++) {
@@ -102,7 +100,7 @@
     [engine_ removeObserver:self forKeyPath:@"score"];
     [engine_ removeObserver:self forKeyPath:@"timeStep"];
     [engine_ removeObserver:self forKeyPath:@"gridVersion"];
-    [self.engine release];
+    [engine_ release];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
 }
@@ -161,7 +159,6 @@
     [engine_ removeObserver:self forKeyPath:@"timeStep"];
     [engine_ removeObserver:self forKeyPath:@"gridVersion"];
     [engine_ release];
-    NSLog(@"setEngine is being called!\n");
     [self loadView];
     engine_ = eng;
     [self setupLabels];
@@ -178,7 +175,6 @@
 
 - (void) refreshGrid
 {
-    
     for (int column = 0; column < [self.engine width]; column++) {
         for (int row = 0; row < self.engine.height; row++) {
             int piece = [self.engine pieceAtRow:row column:column];
@@ -193,7 +189,6 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath
                       ofObject:(id)object change:(NSDictionary *)change
                        context:(void *)context {
-    NSLog(@"OBSERVE[%@]", keyPath);
     if ([keyPath isEqualToString:@"score"]) {
         scoreLabel.text = [NSString stringWithFormat:@"%d", self.engine.score];
     }else if ([keyPath isEqualToString:@"timeStep"]) {
