@@ -11,7 +11,7 @@
 #import <Cocoa/Cocoa.h>
 
 
-@interface OpenGLView : NSView {
+@interface OpenGLView : UIView {
 	NSOpenGLContext * m_context;
 }
 

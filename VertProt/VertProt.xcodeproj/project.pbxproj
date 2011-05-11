@@ -18,9 +18,10 @@
 		1C05FD66137A098A0035104F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05FD65137A098A0035104F /* SecondViewController.m */; };
 		1C05FD69137A098A0035104F /* FirstView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C05FD67137A098A0035104F /* FirstView.xib */; };
 		1C05FD6C137A098A0035104F /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C05FD6A137A098A0035104F /* SecondView.xib */; };
-		1C05FD85137A1C800035104F /* OpenGLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05FD83137A1C800035104F /* OpenGLViewController.m */; };
-		1C05FD86137A1C800035104F /* OpenGLView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C05FD84137A1C800035104F /* OpenGLView.xib */; };
-		1C05FD89137A1CD10035104F /* OpenGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C05FD88137A1CD10035104F /* OpenGLView.m */; };
+		1C70E44E137A240D008FE193 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C70E44D137A240D008FE193 /* Entity.m */; };
+		1C70E459137A26C9008FE193 /* Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C70E458137A26C9008FE193 /* Shape.m */; };
+		1C70E45C137A274B008FE193 /* CellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C70E45B137A274B008FE193 /* CellView.m */; };
+		1C70E45F137A2A41008FE193 /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C70E45E137A2A41008FE193 /* World.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,11 +42,14 @@
 		1C05FD65137A098A0035104F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		1C05FD68137A098A0035104F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FirstView.xib; sourceTree = "<group>"; };
 		1C05FD6B137A098A0035104F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondView.xib; sourceTree = "<group>"; };
-		1C05FD82137A1C800035104F /* OpenGLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLViewController.h; sourceTree = "<group>"; };
-		1C05FD83137A1C800035104F /* OpenGLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLViewController.m; sourceTree = "<group>"; };
-		1C05FD84137A1C800035104F /* OpenGLView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OpenGLView.xib; sourceTree = "<group>"; };
-		1C05FD87137A1CD10035104F /* OpenGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenGLView.h; sourceTree = "<group>"; };
-		1C05FD88137A1CD10035104F /* OpenGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenGLView.m; sourceTree = "<group>"; };
+		1C70E44C137A240D008FE193 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entity.h; sourceTree = "<group>"; };
+		1C70E44D137A240D008FE193 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entity.m; sourceTree = "<group>"; };
+		1C70E457137A26C9008FE193 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Shape.h; sourceTree = "<group>"; };
+		1C70E458137A26C9008FE193 /* Shape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Shape.m; sourceTree = "<group>"; };
+		1C70E45A137A274B008FE193 /* CellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellView.h; path = ../CellView.h; sourceTree = "<group>"; };
+		1C70E45B137A274B008FE193 /* CellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellView.m; path = ../CellView.m; sourceTree = "<group>"; };
+		1C70E45D137A2A40008FE193 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
+		1C70E45E137A2A41008FE193 /* World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = World.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +99,6 @@
 				1C05FD5B137A098A0035104F /* VertProtAppDelegate.h */,
 				1C05FD5C137A098A0035104F /* VertProtAppDelegate.m */,
 				1C05FD5E137A098A0035104F /* MainWindow.xib */,
-				1C05FD82137A1C800035104F /* OpenGLViewController.h */,
-				1C05FD83137A1C800035104F /* OpenGLViewController.m */,
-				1C05FD84137A1C800035104F /* OpenGLView.xib */,
 				1C05FD61137A098A0035104F /* FirstViewController.h */,
 				1C05FD62137A098A0035104F /* FirstViewController.m */,
 				1C05FD64137A098A0035104F /* SecondViewController.h */,
@@ -105,8 +106,14 @@
 				1C05FD67137A098A0035104F /* FirstView.xib */,
 				1C05FD6A137A098A0035104F /* SecondView.xib */,
 				1C05FD53137A098A0035104F /* Supporting Files */,
-				1C05FD87137A1CD10035104F /* OpenGLView.h */,
-				1C05FD88137A1CD10035104F /* OpenGLView.m */,
+				1C70E44C137A240D008FE193 /* Entity.h */,
+				1C70E44D137A240D008FE193 /* Entity.m */,
+				1C70E457137A26C9008FE193 /* Shape.h */,
+				1C70E458137A26C9008FE193 /* Shape.m */,
+				1C70E45A137A274B008FE193 /* CellView.h */,
+				1C70E45B137A274B008FE193 /* CellView.m */,
+				1C70E45D137A2A40008FE193 /* World.h */,
+				1C70E45E137A2A41008FE193 /* World.m */,
 			);
 			path = VertProt;
 			sourceTree = "<group>";
@@ -173,7 +180,6 @@
 				1C05FD60137A098A0035104F /* MainWindow.xib in Resources */,
 				1C05FD69137A098A0035104F /* FirstView.xib in Resources */,
 				1C05FD6C137A098A0035104F /* SecondView.xib in Resources */,
-				1C05FD86137A1C800035104F /* OpenGLView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,8 +194,10 @@
 				1C05FD5D137A098A0035104F /* VertProtAppDelegate.m in Sources */,
 				1C05FD63137A098A0035104F /* FirstViewController.m in Sources */,
 				1C05FD66137A098A0035104F /* SecondViewController.m in Sources */,
-				1C05FD85137A1C800035104F /* OpenGLViewController.m in Sources */,
-				1C05FD89137A1CD10035104F /* OpenGLView.m in Sources */,
+				1C70E44E137A240D008FE193 /* Entity.m in Sources */,
+				1C70E459137A26C9008FE193 /* Shape.m in Sources */,
+				1C70E45C137A274B008FE193 /* CellView.m in Sources */,
+				1C70E45F137A2A41008FE193 /* World.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +318,7 @@
 				1C05FD71137A098A0035104F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -7,17 +7,40 @@
 //
 
 #import "FirstViewController.h"
-
+#import "Entity.h"
+#import "Shape.h"
+#import "CellView.h"
 
 @implementation FirstViewController
 
-/*
+@synthesize world = world_;
+
+
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    if(!self.world)
+        self.world = [[[World alloc] initWithRect:self.view.bounds] autorelease];
+    
+    Shape *subView;
+    Entity *obj;
+    
+    // Main Cell
+    CGRect frame1 = { 150, 150, 50, 50};
+    obj = [[Entity alloc] initWithType:1 location:frame1];
+    [self.world addObject:obj];
+    subView = [[CellView alloc] initWithFrame:frame1];
+    subView.opaque = NO;
+    subView.tag = obj.objId;
+    subView.target = self;
+    [self.view addSubview:subView];
+    [subView release];
+    
+    
 }
-*/
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
@@ -46,6 +69,7 @@
 
 - (void)dealloc
 {
+    [world_ release];
     [super dealloc];
 }
 

@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  Shape.h
 //  VertProt
 //
 //  Created by Gibson, Christopher on 5/10/11.
@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "World.h"
 
-@interface FirstViewController : UIViewController {
 
+@interface Shape : UIView {
+    
 }
 
-@property (nonatomic, retain) World *world;
+@property (nonatomic, assign) id target;
 
+- (id) initWithFrame:(CGRect)frame;
 @end

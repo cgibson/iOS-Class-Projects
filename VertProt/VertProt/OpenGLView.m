@@ -13,7 +13,7 @@
 #import <OpenGL/glu.h>
 #import <GLUT/glut.h>
 
-@implementation DSOpenGLView
+@implementation OpenGLView
 
 - (id)initWithFrame:(NSRect)frame {
 	NSOpenGLPixelFormatAttribute attrs[] = {
