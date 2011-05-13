@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameViewController.h"
 
-
-@interface SecondViewController : UIViewController {
+@interface SecondViewController : GameViewController {
     
 }
 

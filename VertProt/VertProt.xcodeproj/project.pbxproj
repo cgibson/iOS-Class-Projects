@@ -22,6 +22,10 @@
 		1C70E459137A26C9008FE193 /* Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C70E458137A26C9008FE193 /* Shape.m */; };
 		1C70E45C137A274B008FE193 /* CellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C70E45B137A274B008FE193 /* CellView.m */; };
 		1C70E45F137A2A41008FE193 /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C70E45E137A2A41008FE193 /* World.m */; };
+		1C8D75F0137B58A900D83DF2 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D75EF137B58A900D83DF2 /* Camera.m */; };
+		1C8D75F4137B5F2700D83DF2 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C8D75F3137B5F2700D83DF2 /* GameViewController.m */; };
+		1C968126137B912800BA8C81 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C968125137B912800BA8C81 /* CoreMotion.framework */; };
+		1CB18F7A137CA0CC0090CE04 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CB18F79137CA0CC0090CE04 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,12 @@
 		1C70E45B137A274B008FE193 /* CellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellView.m; path = ../CellView.m; sourceTree = "<group>"; };
 		1C70E45D137A2A40008FE193 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = World.h; sourceTree = "<group>"; };
 		1C70E45E137A2A41008FE193 /* World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = World.m; sourceTree = "<group>"; };
+		1C8D75EE137B58A900D83DF2 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		1C8D75EF137B58A900D83DF2 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Camera.m; sourceTree = "<group>"; };
+		1C8D75F2137B5F2700D83DF2 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		1C8D75F3137B5F2700D83DF2 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		1C968125137B912800BA8C81 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		1CB18F79137CA0CC0090CE04 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CB18F7A137CA0CC0090CE04 /* QuartzCore.framework in Frameworks */,
+				1C968126137B912800BA8C81 /* CoreMotion.framework in Frameworks */,
 				1C05FD4D137A098A0035104F /* UIKit.framework in Frameworks */,
 				1C05FD4F137A098A0035104F /* Foundation.framework in Frameworks */,
 				1C05FD51137A098A0035104F /* CoreGraphics.framework in Frameworks */,
@@ -86,6 +98,8 @@
 		1C05FD4B137A098A0035104F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1C968125137B912800BA8C81 /* CoreMotion.framework */,
+				1CB18F79137CA0CC0090CE04 /* QuartzCore.framework */,
 				1C05FD4C137A098A0035104F /* UIKit.framework */,
 				1C05FD4E137A098A0035104F /* Foundation.framework */,
 				1C05FD50137A098A0035104F /* CoreGraphics.framework */,
@@ -114,6 +128,10 @@
 				1C70E45B137A274B008FE193 /* CellView.m */,
 				1C70E45D137A2A40008FE193 /* World.h */,
 				1C70E45E137A2A41008FE193 /* World.m */,
+				1C8D75EE137B58A900D83DF2 /* Camera.h */,
+				1C8D75EF137B58A900D83DF2 /* Camera.m */,
+				1C8D75F2137B5F2700D83DF2 /* GameViewController.h */,
+				1C8D75F3137B5F2700D83DF2 /* GameViewController.m */,
 			);
 			path = VertProt;
 			sourceTree = "<group>";
@@ -198,6 +216,8 @@
 				1C70E459137A26C9008FE193 /* Shape.m in Sources */,
 				1C70E45C137A274B008FE193 /* CellView.m in Sources */,
 				1C70E45F137A2A41008FE193 /* World.m in Sources */,
+				1C8D75F0137B58A900D83DF2 /* Camera.m in Sources */,
+				1C8D75F4137B5F2700D83DF2 /* GameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +300,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VertProt/VertProt-Prefix.pch";
 				INFOPLIST_FILE = "VertProt/VertProt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -293,7 +315,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VertProt/VertProt-Prefix.pch";
 				INFOPLIST_FILE = "VertProt/VertProt-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

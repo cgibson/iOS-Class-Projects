@@ -11,19 +11,23 @@
 
 @interface World()
 @property (nonatomic, retain) NSMutableArray *objects;
+@property (nonatomic, retain) Camera *camera;
 @end
 
 @implementation World
 
 @synthesize objects = objects_;
+@synthesize camera = camera_;
 
 - (void) dealloc
 {
+    NSLog(@"World dealloc'd");
     [objects_ release];
+    [camera_ release];
     [super dealloc];
 }
 
-- (Entity*) objectwithID: (int) objId
+- (Entity*) objectWithID: (int) objId
 {
     return [self.objects objectAtIndex:objId];
 }
@@ -36,12 +40,41 @@
         self->bounds = rect;
     }
     
+    [self buildCamera:CGPointMake(0, 0)];
+    
     return self;
+}
+
+- (void) buildCamera:(CGPoint)point
+{
+    [self.camera release];
+    self.camera = [[[Camera alloc] initWithLook:point] autorelease];
 }
 
 - (void) addObject:(Entity *)obj
 {
     [self.objects addObject:obj];
+    [obj refresh];
+}
+
+- (void) setCamera:(Camera *)cam
+{
+    [camera_ release];
+    camera_ = cam;
+    [self.camera retain];
+    [self refreshAll];
+}
+
+- (void) refreshAll
+{
+    for(Entity* ent in self.objects) {
+        [ent refresh];
+    }
+}
+
+- (void) frame:(CFTimeInterval)elapsed
+{
+    
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Entity.h"
+#import "Camera.h"
 
 @interface World : NSObject {
     @private
@@ -15,10 +16,14 @@
 }
     
 @property (nonatomic, retain, readonly) NSMutableArray *objects;
+@property (nonatomic, retain, readonly) Camera *camera;
 
-- (Entity*) objectwithID: (int) objId;
+- (Entity*) objectWithID: (int) objId;
 - (id) initWithRect: (CGRect) rect;
+- (void) setCamera: (Camera*) cam;
 - (void) addObject: (Entity*) obj;
-
+- (void) refreshAll;
+- (void) frame: (CFTimeInterval)elapsed;
+- (void) buildCamera:(CGPoint)point;
 
 @end

@@ -16,8 +16,12 @@
 
 @property (nonatomic, readonly) int objId;
 @property (nonatomic, readonly) int type;
-@property (nonatomic) CGRect location;
+@property (nonatomic, readonly) int version;
+@property (nonatomic) CGPoint location;
+@property (nonatomic) CGPoint size;
 
-- (id) initWithType: (int) type location:(CGRect) rect;
+- (id) initWithType: (int) type location:(CGPoint)loc size:(CGPoint)size;
+- (void) refresh;
+- (CGRect) getFrame;
 
 @end

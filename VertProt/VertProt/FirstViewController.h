@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "World.h"
+#import "GameViewController.h"
+#import "Shape.h"
 
-@interface FirstViewController : UIViewController {
+@interface FirstViewController : GameViewController {
 
 }
 
-@property (nonatomic, retain) World *world;
+
+- (void) panShape: (Shape*) shape amount: (ShapePanData*)data;
 
 @end

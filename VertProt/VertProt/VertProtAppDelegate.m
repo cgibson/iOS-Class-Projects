@@ -7,11 +7,17 @@
 //
 
 #import "VertProtAppDelegate.h"
+#include "World.h"
+
+@interface VertProtAppDelegate()
+@property (nonatomic, retain) World *world;
+@end
+
 
 @implementation VertProtAppDelegate
 
-
 @synthesize window=_window;
+@synthesize world =world_;
 
 @synthesize tabBarController=_tabBarController;
 
@@ -21,6 +27,19 @@
     // Add the tab bar controller's current view as a subview of the window
     self.window.rootViewController = self.tabBarController;
     [self.window makeKeyAndVisible];
+    
+    CGRect worldRect = CGRectMake(0, 0, 500, 500);
+    
+    if(!self.world) {
+        self.world = [[[World alloc] initWithRect:worldRect] autorelease];
+    }
+    
+    [self.world.camera useScreenSize:self.tabBarController.view.bounds];
+    
+    [[self.tabBarController.viewControllers objectAtIndex:0] setWorld:self.world];
+    [[self.tabBarController.viewControllers objectAtIndex:1] setWorld:self.world];
+    
+    
     return YES;
 }
 
