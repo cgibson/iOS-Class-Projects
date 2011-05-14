@@ -12,6 +12,10 @@
 #import "CellView.h"
 #import "Camera.h"
 
+@interface GameViewController()
+@property (nonatomic) BOOL gyroEnabled;
+@end
+
 @implementation SecondViewController
 
 
@@ -20,24 +24,7 @@
 {
     [super viewDidLoad];
     
-    Shape *subView;
-    Entity *obj;
-    
-    // Main Cell
-    obj = [[Entity alloc] initWithType:1 location:CGPointMake(0,0) size:CGPointMake(60, 60)];
-    [self.world addObject:obj];
-    subView = [[CellView alloc] initWithFrame: [obj getFrame]];
-    subView.opaque = NO;
-    subView.tag = obj.objId;
-    subView.target = self;
-    subView.panAction = @selector(panShape:amount:);
-    [self.view addSubview:subView];
-    [subView release];
-    
-    // Monitor with KVO
-    [obj addObserver:self forKeyPath:@"version" 
-             options:NSKeyValueObservingOptionInitial 
-             context:subView];
+    self.gyroEnabled = false;
 }
 
 
@@ -67,6 +54,7 @@
 
 - (void)dealloc
 {
+    NSLog(@"Second view dealloc'd");
     [super dealloc];
 }
 

@@ -13,64 +13,14 @@
 #import "Camera.h"
 
 
-
-@interface GameViewController()
-@property (nonatomic, retain) CMMotionManager *motionManager;
-@end
-
 @implementation FirstViewController
-
-@synthesize motionManager = motionManager_;
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    Shape *subView;
-    Entity *obj;
-    
-    // Main Cell
-    obj = [[Entity alloc] initWithType:1 location:CGPointMake(0,0) size:CGPointMake(60, 60)];
-    [self.world addObject:obj];
-    subView = [[CellView alloc] initWithFrame: [obj getFrame]];
-    subView.opaque = NO;
-    subView.tag = obj.objId;
-    subView.target = self;
-    subView.panAction = @selector(panShape:amount:);
-    [self.view addSubview:subView];
-    [subView release];
-    
-    // Monitor with KVO
-    [obj addObserver:self forKeyPath:@"version" 
-             options:NSKeyValueObservingOptionInitial 
-             context:subView];
-    
-
-    
-    // Motion Manager Code
-    self.motionManager = [[CMMotionManager alloc] init];
-    
-    if(self.motionManager.gyroAvailable) {
-        self.motionManager.gyroUpdateInterval = 1.0 / 60.0;
-        [self.motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue]
-                                        withHandler: ^(CMGyroData *gyroData, NSError *error)
-         {
-             
-             CMRotationRate rotate = gyroData.rotationRate;
-             
-             [self.world.camera moveLookAt:CGPointMake(rotate.y * 2, rotate.x * 2)];
-             [self.world refreshAll];
-         }];
-        
-        
-    } else {
-        NSLog(@"No gyroscope on device.");
-        [self.motionManager release];
-    }
-
-    
-    
+    [self enableGyro];
 }
 
 
@@ -107,7 +57,7 @@
 
 - (void)dealloc
 {
-    [motionManager_ release];
+    NSLog(@"First view dealloc'd");
     [super dealloc];
 }
 

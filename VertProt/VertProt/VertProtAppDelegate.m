@@ -7,7 +7,8 @@
 //
 
 #import "VertProtAppDelegate.h"
-#include "World.h"
+#import "World.h"
+#import "MemoryHound.h"
 
 @interface VertProtAppDelegate()
 @property (nonatomic, retain) World *world;
@@ -23,6 +24,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    //[MemoryHound startHound];
+    
     // Override point for customization after application launch.
     // Add the tab bar controller's current view as a subview of the window
     self.window.rootViewController = self.tabBarController;
@@ -34,9 +38,16 @@
         self.world = [[[World alloc] initWithRect:worldRect] autorelease];
     }
     
+    NSLog(@"References for World: %d", [self.world retainCount]);
+    
+    // Main Cell
+    Entity *obj = [[[Entity alloc] initWithType:1 location:CGPointMake(0,0) size:CGPointMake(60, 60)] autorelease];
+    [self.world addObject:obj];
+    
     [self.world.camera useScreenSize:self.tabBarController.view.bounds];
     
     [[self.tabBarController.viewControllers objectAtIndex:0] setWorld:self.world];
+    
     [[self.tabBarController.viewControllers objectAtIndex:1] setWorld:self.world];
     
     
@@ -84,6 +95,8 @@
 
 - (void)dealloc
 {
+    NSLog(@"Releasing delegate!");
+    [world_ release];
     [_window release];
     [_tabBarController release];
     [super dealloc];

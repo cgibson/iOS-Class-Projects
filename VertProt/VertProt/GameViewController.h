@@ -26,18 +26,22 @@
 
 
 @interface GameViewController : UIViewController {
-    
+    CMMotionManager *motionManager;
 }
 
 @property (nonatomic, retain, readonly) World *world;
 @property (nonatomic, retain, readonly) CADisplayLink *dispLink;
-@property (nonatomic, retain, readonly) CMMotionManager *motionManager;
+//@property (nonatomic, retain, readonly) CMMotionManager *motionManager;
 @property (nonatomic, retain, readonly) Vec3 *gyroVec; 
+@property (nonatomic, readonly) BOOL active;
+
+@property (nonatomic, readonly) BOOL gyroEnabled;
 
 - (void) frame: (CADisplayLink*)link;
 - (void) start;
 - (void) stop;
-- (void) initializeGyro;
+- (void) loadViewObjects;
+- (void) enableGyro;
 
 @end
 

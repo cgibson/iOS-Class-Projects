@@ -41,4 +41,10 @@
     self.screenOffset = CGPointMake(screen.size.width / 2, screen.size.height / 2);
 }
 
+- (void) dealloc
+{
+    NSLog(@"Camera dealloc'd");
+    [super dealloc];
+}
+
 @end

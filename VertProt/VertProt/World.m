@@ -21,6 +21,12 @@
 
 - (void) dealloc
 {
+
+    // Release our ownership of the WorldObjects
+    /*for (Entity *obj in self.objects) {
+        [obj release];
+    }*/
+    
     NSLog(@"World dealloc'd");
     [objects_ release];
     [camera_ release];
