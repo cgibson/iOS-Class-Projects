@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C176BE8138AFEF500061A04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C176BE7138AFEF500061A04 /* UIKit.framework */; };
+		1C176BEA138AFEF500061A04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C176BE9138AFEF500061A04 /* Foundation.framework */; };
+		1C176BEC138AFEF500061A04 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C176BEB138AFEF500061A04 /* CoreGraphics.framework */; };
+		1C176BF2138AFEF500061A04 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1C176BF0138AFEF500061A04 /* InfoPlist.strings */; };
+		1C176BF5138AFEF500061A04 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C176BF4138AFEF500061A04 /* main.m */; };
+		1C176BF8138AFEF500061A04 /* GradeBookVIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C176BF7138AFEF500061A04 /* GradeBookVIAppDelegate.m */; };
+		1C176BFB138AFEF500061A04 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C176BF9138AFEF500061A04 /* MainWindow.xib */; };
+		1C176C01138AFEF500061A04 /* GradeDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C176BFF138AFEF500061A04 /* GradeDataViewController.xib */; };
+		1C176C13138B02AC00061A04 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C176C10138B02AC00061A04 /* JSONKit.m */; };
+		1C176C14138B02AC00061A04 /* NSString+Base64Encoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C176C12138B02AC00061A04 /* NSString+Base64Encoding.m */; };
+		1C176C18138B02CD00061A04 /* GradeData.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C176C17138B02CD00061A04 /* GradeData.m */; };
+		1C5B63DF138B309100E10FBA /* GradeDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5B63DE138B309100E10FBA /* GradeDataViewController.m */; };
+		1CCE5ED1138B21FC008FF07C /* MemoryHound.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CCE5ED0138B21FC008FF07C /* MemoryHound.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C176BE3138AFEF500061A04 /* GradeBookVI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradeBookVI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1C176BE7138AFEF500061A04 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1C176BE9138AFEF500061A04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1C176BEB138AFEF500061A04 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1C176BEF138AFEF500061A04 /* GradeBookVI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GradeBookVI-Info.plist"; sourceTree = "<group>"; };
+		1C176BF1138AFEF500061A04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1C176BF3138AFEF500061A04 /* GradeBookVI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GradeBookVI-Prefix.pch"; sourceTree = "<group>"; };
+		1C176BF4138AFEF500061A04 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1C176BF6138AFEF500061A04 /* GradeBookVIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradeBookVIAppDelegate.h; sourceTree = "<group>"; };
+		1C176BF7138AFEF500061A04 /* GradeBookVIAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradeBookVIAppDelegate.m; sourceTree = "<group>"; };
+		1C176BFA138AFEF500061A04 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		1C176BFC138AFEF500061A04 /* GradeDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradeDataViewController.h; sourceTree = "<group>"; };
+		1C176C00138AFEF500061A04 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/GradeDataViewController.xib; sourceTree = "<group>"; };
+		1C176C0F138B02AC00061A04 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JSONKit.h; path = data/JSONKit.h; sourceTree = SOURCE_ROOT; };
+		1C176C10138B02AC00061A04 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JSONKit.m; path = data/JSONKit.m; sourceTree = SOURCE_ROOT; };
+		1C176C11138B02AC00061A04 /* NSString+Base64Encoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Base64Encoding.h"; path = "data/NSString+Base64Encoding.h"; sourceTree = SOURCE_ROOT; };
+		1C176C12138B02AC00061A04 /* NSString+Base64Encoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Base64Encoding.m"; path = "data/NSString+Base64Encoding.m"; sourceTree = SOURCE_ROOT; };
+		1C176C16138B02CD00061A04 /* GradeData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradeData.h; sourceTree = "<group>"; };
+		1C176C17138B02CD00061A04 /* GradeData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradeData.m; sourceTree = "<group>"; };
+		1C5B63DE138B309100E10FBA /* GradeDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradeDataViewController.m; sourceTree = "<group>"; };
+		1CCE5ECF138B21FC008FF07C /* MemoryHound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemoryHound.h; path = ../../UglyCFTetris/UglyCFTetris/MemoryHound.h; sourceTree = "<group>"; };
+		1CCE5ED0138B21FC008FF07C /* MemoryHound.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemoryHound.m; path = ../../UglyCFTetris/UglyCFTetris/MemoryHound.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1C176BE0138AFEF500061A04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C176BE8138AFEF500061A04 /* UIKit.framework in Frameworks */,
+				1C176BEA138AFEF500061A04 /* Foundation.framework in Frameworks */,
+				1C176BEC138AFEF500061A04 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1C176BD8138AFEF400061A04 = {
+			isa = PBXGroup;
+			children = (
+				1C176BED138AFEF500061A04 /* GradeBookVI */,
+				1C176BE6138AFEF500061A04 /* Frameworks */,
+				1C176BE4138AFEF500061A04 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1C176BE4138AFEF500061A04 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1C176BE3138AFEF500061A04 /* GradeBookVI.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1C176BE6138AFEF500061A04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1C176BE7138AFEF500061A04 /* UIKit.framework */,
+				1C176BE9138AFEF500061A04 /* Foundation.framework */,
+				1C176BEB138AFEF500061A04 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1C176BED138AFEF500061A04 /* GradeBookVI */ = {
+			isa = PBXGroup;
+			children = (
+				1CCE5ECF138B21FC008FF07C /* MemoryHound.h */,
+				1CCE5ED0138B21FC008FF07C /* MemoryHound.m */,
+				1C176C0F138B02AC00061A04 /* JSONKit.h */,
+				1C176C10138B02AC00061A04 /* JSONKit.m */,
+				1C176C11138B02AC00061A04 /* NSString+Base64Encoding.h */,
+				1C176C12138B02AC00061A04 /* NSString+Base64Encoding.m */,
+				1C176BF6138AFEF500061A04 /* GradeBookVIAppDelegate.h */,
+				1C176BF7138AFEF500061A04 /* GradeBookVIAppDelegate.m */,
+				1C176BF9138AFEF500061A04 /* MainWindow.xib */,
+				1C176BFC138AFEF500061A04 /* GradeDataViewController.h */,
+				1C5B63DE138B309100E10FBA /* GradeDataViewController.m */,
+				1C176BFF138AFEF500061A04 /* GradeDataViewController.xib */,
+				1C176BEE138AFEF500061A04 /* Supporting Files */,
+				1C176C16138B02CD00061A04 /* GradeData.h */,
+				1C176C17138B02CD00061A04 /* GradeData.m */,
+			);
+			path = GradeBookVI;
+			sourceTree = "<group>";
+		};
+		1C176BEE138AFEF500061A04 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1C176BEF138AFEF500061A04 /* GradeBookVI-Info.plist */,
+				1C176BF0138AFEF500061A04 /* InfoPlist.strings */,
+				1C176BF3138AFEF500061A04 /* GradeBookVI-Prefix.pch */,
+				1C176BF4138AFEF500061A04 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1C176BE2138AFEF500061A04 /* GradeBookVI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C176C04138AFEF500061A04 /* Build configuration list for PBXNativeTarget "GradeBookVI" */;
+			buildPhases = (
+				1C176BDF138AFEF500061A04 /* Sources */,
+				1C176BE0138AFEF500061A04 /* Frameworks */,
+				1C176BE1138AFEF500061A04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GradeBookVI;
+			productName = GradeBookVI;
+			productReference = 1C176BE3138AFEF500061A04 /* GradeBookVI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1C176BDA138AFEF400061A04 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1C176BDD138AFEF400061A04 /* Build configuration list for PBXProject "GradeBookVI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1C176BD8138AFEF400061A04;
+			productRefGroup = 1C176BE4138AFEF500061A04 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1C176BE2138AFEF500061A04 /* GradeBookVI */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1C176BE1138AFEF500061A04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C176BF2138AFEF500061A04 /* InfoPlist.strings in Resources */,
+				1C176BFB138AFEF500061A04 /* MainWindow.xib in Resources */,
+				1C176C01138AFEF500061A04 /* GradeDataViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C176BDF138AFEF500061A04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C176BF5138AFEF500061A04 /* main.m in Sources */,
+				1C176BF8138AFEF500061A04 /* GradeBookVIAppDelegate.m in Sources */,
+				1C176C13138B02AC00061A04 /* JSONKit.m in Sources */,
+				1C176C14138B02AC00061A04 /* NSString+Base64Encoding.m in Sources */,
+				1C176C18138B02CD00061A04 /* GradeData.m in Sources */,
+				1CCE5ED1138B21FC008FF07C /* MemoryHound.m in Sources */,
+				1C5B63DF138B309100E10FBA /* GradeDataViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1C176BF0138AFEF500061A04 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C176BF1138AFEF500061A04 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1C176BF9138AFEF500061A04 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C176BFA138AFEF500061A04 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		1C176BFF138AFEF500061A04 /* GradeDataViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1C176C00138AFEF500061A04 /* en */,
+			);
+			name = GradeDataViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1C176C02138AFEF500061A04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1C176C03138AFEF500061A04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		1C176C05138AFEF500061A04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GradeBookVI/GradeBookVI-Prefix.pch";
+				INFOPLIST_FILE = "GradeBookVI/GradeBookVI-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1C176C06138AFEF500061A04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "GradeBookVI/GradeBookVI-Prefix.pch";
+				INFOPLIST_FILE = "GradeBookVI/GradeBookVI-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1C176BDD138AFEF400061A04 /* Build configuration list for PBXProject "GradeBookVI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C176C02138AFEF500061A04 /* Debug */,
+				1C176C03138AFEF500061A04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1C176C04138AFEF500061A04 /* Build configuration list for PBXNativeTarget "GradeBookVI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1C176C05138AFEF500061A04 /* Debug */,
+				1C176C06138AFEF500061A04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1C176BDA138AFEF400061A04 /* Project object */;
+}
