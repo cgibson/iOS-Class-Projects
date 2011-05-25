@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C0C6A7D138C8F1F00841A07 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1C0C6A7C138C8F1F00841A07 /* Settings.bundle */; };
 		1C176BE8138AFEF500061A04 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C176BE7138AFEF500061A04 /* UIKit.framework */; };
 		1C176BEA138AFEF500061A04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C176BE9138AFEF500061A04 /* Foundation.framework */; };
 		1C176BEC138AFEF500061A04 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C176BEB138AFEF500061A04 /* CoreGraphics.framework */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C0C6A7C138C8F1F00841A07 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../../UglyCFTetris/UglyCFTetris/Settings.bundle; sourceTree = "<group>"; };
 		1C176BE3138AFEF500061A04 /* GradeBookVI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GradeBookVI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C176BE7138AFEF500061A04 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1C176BE9138AFEF500061A04 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -91,6 +93,7 @@
 		1C176BED138AFEF500061A04 /* GradeBookVI */ = {
 			isa = PBXGroup;
 			children = (
+				1C0C6A7C138C8F1F00841A07 /* Settings.bundle */,
 				1CCE5ECF138B21FC008FF07C /* MemoryHound.h */,
 				1CCE5ED0138B21FC008FF07C /* MemoryHound.m */,
 				1C176C0F138B02AC00061A04 /* JSONKit.h */,
@@ -171,6 +174,7 @@
 				1C176BF2138AFEF500061A04 /* InfoPlist.strings in Resources */,
 				1C176BFB138AFEF500061A04 /* MainWindow.xib in Resources */,
 				1C176C01138AFEF500061A04 /* GradeDataViewController.xib in Resources */,
+				1C0C6A7D138C8F1F00841A07 /* Settings.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

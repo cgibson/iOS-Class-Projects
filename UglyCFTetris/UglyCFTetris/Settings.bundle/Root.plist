@@ -5,14 +5,38 @@
 	<key>PreferenceSpecifiers</key>
 	<array>
 		<dict>
+			<key>IsSecure</key>
+			<false/>
 			<key>DefaultValue</key>
 			<true/>
 			<key>Key</key>
-			<string>antigravity</string>
+			<string>url</string>
 			<key>Title</key>
-			<string>Antigravity</string>
+			<string>Root Url</string>
 			<key>Type</key>
-			<string>PSToggleSwitchSpecifier</string>
+			<string>PSTextFieldSpecifier</string>
+		</dict>
+		<dict>
+			<key>DefaultValue</key>
+			<true/>
+			<key>Key</key>
+			<string>username</string>
+			<key>Title</key>
+			<string>Username</string>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+		</dict>
+		<dict>
+			<key>IsSecure</key>
+			<true/>
+			<key>DefaultValue</key>
+			<true/>
+			<key>Key</key>
+			<string>password</string>
+			<key>Title</key>
+			<string>Password</string>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
 		</dict>
 	</array>
 	<key>StringsTable</key>

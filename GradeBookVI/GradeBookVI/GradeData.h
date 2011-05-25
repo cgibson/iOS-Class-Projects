@@ -14,17 +14,21 @@
 }
 
 @property (nonatomic, copy) NSString *url;
-@property (nonatomic, retain) NSArray *options;
-@property (nonatomic, retain) NSArray *optionUrls;
+@property (nonatomic, retain) NSMutableArray *options;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic) NSInteger depth;
+@property (nonatomic, copy) NSString *auth;
 
-@property (nonatomic) NSInteger term;
-@property (nonatomic) NSInteger course;
-@property (nonatomic) NSInteger user;
+@property (nonatomic, copy) NSString *term;
+@property (nonatomic, copy) NSString *course;
+@property (nonatomic, copy) NSString *user;
 
 - (void) load; 
 - (BOOL) canGoDeeper;
-- (NSString*) urlFromIndex:(NSInteger)index;
+//- (NSString*) urlFromIndex:(NSInteger)index;
+- (NSString*) authenticationHeader: (NSString*)username password:(NSString*)password;
+- (NSString*) valAtIndex:(NSInteger)index;
+- (NSString*) detailAtIndex:(NSInteger)index;
+- (NSString*) colorAtIndex:(NSInteger)index;
 
 @end

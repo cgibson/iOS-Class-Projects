@@ -12,21 +12,6 @@
 
 @synthesize gradeData=_gradeData;
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    
-    return self;
-}
-
-- (id)init
-{
-    self = [super init];
-    
-    
-    return self;
-}
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil
@@ -62,9 +47,6 @@
 
 - (void) loadURL
 {
-    //NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    //self.url = [defaults objectForKey:@"currURL"];
-    
     if(!self.gradeData.url || self.gradeData.url == nil)
         self.gradeData.url = @"root";
     
@@ -82,6 +64,7 @@
 {
     NSLog(@"ui table view controller loaded");
     [self.gradeData load];
+    self.title = self.gradeData.title;
     [super viewDidLoad];
 }
 - (void)viewWillAppear:(BOOL)animated
@@ -92,7 +75,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [self loadURL];
-    //[self saveURL:self.url];
     [super viewDidAppear:animated];
 }
 
@@ -131,14 +113,31 @@
 {
     static NSString *CellIdentifier = @"Cell";
     
+    int style;
+    
+    if(self.gradeData.depth == 0)
+    {
+        style = UITableViewCellStyleSubtitle;
+    }else{
+        style = UITableViewCellStyleValue1;
+    }
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[[UITableViewCell alloc] initWithStyle:style reuseIdentifier:CellIdentifier] autorelease];
     }
     
     // Select the 'option' text for the current grade data
-    cell.textLabel.text = [self.gradeData.options objectAtIndex:indexPath.row];
-
+    cell.textLabel.text = [self.gradeData valAtIndex:indexPath.row];
+    if(self.gradeData.depth == 2)
+    {
+        NSString *color = [self.gradeData colorAtIndex:indexPath.row];
+        if([color isEqualToString:@"RED"])
+            cell.detailTextLabel.textColor = [UIColor redColor];
+        if([color isEqualToString:@"GRAY"])
+            cell.detailTextLabel.textColor = [UIColor grayColor];
+    }
+    cell.detailTextLabel.text = [self.gradeData detailAtIndex:indexPath.row];
     // Configure the cell.
     return cell;
 }
@@ -193,12 +192,29 @@
     {
         GradeDataViewController *gradeViewController = [[GradeDataViewController alloc] initWithNibName:@"GradeDataViewController" bundle:nil];
     
-        NSString *newUrl = [self.gradeData urlFromIndex:indexPath.row];
+        //NSString *newUrl = [self.gradeData urlFromIndex:indexPath.row];
     
         //[self saveURL:newUrl];
         NSLog(@"setting depth to %d", self.gradeData.depth + 1);
         gradeViewController.gradeData.depth = self.gradeData.depth + 1;
-        gradeViewController.gradeData.url = newUrl;
+        gradeViewController.gradeData.url = self.gradeData.url;
+        gradeViewController.gradeData.auth = self.gradeData.auth;
+        
+        NSMutableDictionary* dict = [self.gradeData.options objectAtIndex:indexPath.row];
+        
+        switch (self.gradeData.depth) {
+            case 0: // Will be enrollments
+                gradeViewController.gradeData.term = [dict objectForKey:@"term"];
+                gradeViewController.gradeData.course = [dict objectForKey:@"course"];
+                break;
+            case 1: // Will be scores
+                gradeViewController.gradeData.term = self.gradeData.term;
+                gradeViewController.gradeData.course = self.gradeData.course;
+                gradeViewController.gradeData.user = [dict objectForKey:@"user"];
+                
+            default:
+                break;
+        }
     
         [self.navigationController pushViewController:gradeViewController animated:YES];
         [gradeViewController release];
