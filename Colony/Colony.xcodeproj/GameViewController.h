@@ -18,4 +18,6 @@
 
 - (IBAction) buttonPressed:(UIButton*)sender;
 
+- (void) start;
+- (void) stop;
 @end

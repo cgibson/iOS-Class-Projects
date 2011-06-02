@@ -38,8 +38,6 @@
     self.version = 0;
     self.level = level;
     
-    NSLog(@"Entity created");
-    
     return self;
 }
 
@@ -55,6 +53,40 @@
 - (CGRect) getFrame
 {
     return CGRectMake(self.location.x - self.size.x / 2., self.location.y - self.size.y / 2., self.size.x, self.size.y);
+}
+
+
+- (void) think:(NSTimeInterval)elapsed
+{
+    //NSLog(@"Entity %d is thinking...", self.objId);
+}
+
+- (void) moveDelta:(CGPoint)delta
+{
+    CGPoint loc = self.location;
+    loc.x += delta.x;
+    loc.y += delta.y;
+    self.location = loc;
+    [self refresh];
+}
+
+- (void) moveDelta:(CGPoint)delta refresh:(bool)refresh
+{
+    CGPoint loc = self.location;
+    loc.x += delta.x;
+    loc.y += delta.y;
+    self.location = loc;
+    if(refresh)
+        [self refresh];
+}
+
+- (void) moveDirection:(CGPoint)dir Elapsed:(NSTimeInterval)elapsed
+{
+    CGPoint loc = self.location;
+    loc.x += dir.x * elapsed;
+    loc.y += dir.y * elapsed;
+    self.location = loc;
+    [self refresh];
 }
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-
 typedef enum CellType_t{CELL_PLAYER, CELL_ENEMY} CellType_t;
 
 #define TYPE_CELL 1
@@ -25,5 +24,9 @@ typedef enum CellType_t{CELL_PLAYER, CELL_ENEMY} CellType_t;
 - (id) initWithType: (CellType_t) type location:(CGPoint)loc size:(CGPoint)size level:(int)level;
 - (void) refresh;
 - (CGRect) getFrame;
+- (void) moveDelta:(CGPoint)delta;
+- (void) moveDelta:(CGPoint)delta refresh:(bool)refresh;
+- (void) moveDirection:(CGPoint)dir Elapsed:(NSTimeInterval)elapsed;
+- (void) think:(NSTimeInterval)elapsed;
 
 @end

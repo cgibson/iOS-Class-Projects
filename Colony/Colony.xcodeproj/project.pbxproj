@@ -19,6 +19,8 @@
 		1C5654F31396D26600A169F5 /* WorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654F21396D26600A169F5 /* WorldViewController.m */; };
 		1C5654F61396F71B00A169F5 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654F51396F71700A169F5 /* Player.m */; };
 		1C5654FA13970F3700A169F5 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654F913970F3000A169F5 /* Enemy.m */; };
+		1C93145013973FF600121710 /* MovingEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C93144F13973FF600121710 /* MovingEnemy.m */; };
+		1C9314571397534600121710 /* Vec3.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9314561397534400121710 /* Vec3.m */; };
 		1CBAE8CB1395A88D004B151E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBAE8CA1395A88D004B151E /* UIKit.framework */; };
 		1CBAE8CD1395A88D004B151E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBAE8CC1395A88D004B151E /* Foundation.framework */; };
 		1CBAE8CF1395A88D004B151E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBAE8CE1395A88D004B151E /* CoreGraphics.framework */; };
@@ -63,6 +65,11 @@
 		1C5654F71396FA0B00A169F5 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
 		1C5654F813970F2B00A169F5 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
 		1C5654F913970F3000A169F5 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		1C93144E13973FF600121710 /* MovingEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingEnemy.h; sourceTree = "<group>"; };
+		1C93144F13973FF600121710 /* MovingEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingEnemy.m; sourceTree = "<group>"; };
+		1C9314551397534300121710 /* Vec3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec3.h; sourceTree = "<group>"; };
+		1C9314561397534400121710 /* Vec3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vec3.m; sourceTree = "<group>"; };
+		1C93146613976CA400121710 /* Running.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Running.h; sourceTree = "<group>"; };
 		1CBAE8C61395A88D004B151E /* Colony.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colony.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBAE8CA1395A88D004B151E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1CBAE8CC1395A88D004B151E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -162,6 +169,8 @@
 				1C5654D91396CFFC00A169F5 /* Camera.m */,
 				1C5654F41396F71400A169F5 /* Player.h */,
 				1C5654F51396F71700A169F5 /* Player.m */,
+				1C93144E13973FF600121710 /* MovingEnemy.h */,
+				1C93144F13973FF600121710 /* MovingEnemy.m */,
 				1C5654F813970F2B00A169F5 /* Enemy.h */,
 				1C5654F913970F3000A169F5 /* Enemy.m */,
 				1C5654DA1396CFFC00A169F5 /* Entity.h */,
@@ -171,6 +180,8 @@
 				1C5654F71396FA0B00A169F5 /* types.h */,
 				1C5654DE1396CFFC00A169F5 /* World.h */,
 				1C5654DF1396CFFC00A169F5 /* World.m */,
+				1C9314551397534300121710 /* Vec3.h */,
+				1C9314561397534400121710 /* Vec3.m */,
 				1C5654E41396D0AA00A169F5 /* DefaultGameViewController.h */,
 				1C5654E51396D0AA00A169F5 /* DefaultGameViewController.m */,
 				1C5654E71396D11600A169F5 /* CellView.h */,
@@ -179,6 +190,7 @@
 				1C5654EF1396D21F00A169F5 /* WorldView.m */,
 				1C5654F11396D26600A169F5 /* WorldViewController.h */,
 				1C5654F21396D26600A169F5 /* WorldViewController.m */,
+				1C93146613976CA400121710 /* Running.h */,
 			);
 			path = Colony;
 			sourceTree = "<group>";
@@ -276,6 +288,8 @@
 				1C5654F31396D26600A169F5 /* WorldViewController.m in Sources */,
 				1C5654F61396F71B00A169F5 /* Player.m in Sources */,
 				1C5654FA13970F3700A169F5 /* Enemy.m in Sources */,
+				1C93145013973FF600121710 /* MovingEnemy.m in Sources */,
+				1C9314571397534600121710 /* Vec3.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

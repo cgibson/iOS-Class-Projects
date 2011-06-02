@@ -11,6 +11,7 @@
 
 @interface World()
 @property (nonatomic, retain) NSMutableArray *objects;
+@property (nonatomic, retain) Player *player;
 @property (nonatomic, retain) Camera *camera;
 @end
 
@@ -19,6 +20,7 @@
 @synthesize objects = objects_;
 @synthesize player=_player;
 @synthesize camera = camera_;
+@synthesize objectsWrap=_objectsWrap;
 
 - (void) dealloc
 {
@@ -51,6 +53,8 @@
         self.objects = [NSMutableArray arrayWithCapacity:10];
         self->bounds = rect;
     }
+    
+    self.objectsWrap = true;
     
     [self buildCamera:CGPointMake(0, 0)];
     
@@ -86,7 +90,56 @@
 
 - (void) frame:(CFTimeInterval)elapsed
 {
-    
+    for (Entity* ent in self.objects) {
+        [ent think:elapsed];
+        
+        CGPoint entLoc = ent.location;
+        
+        for (Entity* ent2 in self.objects) {
+            if(ent.objId != ent2.objId && ent.level == ent2.level) {
+
+                CGPoint distVec = CGPointMake(entLoc.x - ent2.location.x, entLoc.y - ent2.location.y);
+            
+                float dist = sqrt(pow(distVec.x, 2) + pow(distVec.y, 2));
+                float totEntSize = (ent.size.x + ent2.size.x) / 2.0;
+            
+                if(dist < totEntSize) {
+                    distVec.x /= dist;
+                    distVec.y /= dist;
+                
+                    distVec.x *= totEntSize;
+                    distVec.y *= totEntSize;
+                
+                    entLoc.x = ent2.location.x + distVec.x;
+                    entLoc.y = ent2.location.y + distVec.y;
+                }
+                
+            }
+             
+        }
+
+        ent.location = entLoc;
+        
+        if(self.objectsWrap) {
+            CGPoint loc = ent.location;
+            if (loc.x < bounds.origin.x) {
+                loc.x = bounds.origin.x + bounds.size.width;
+                ent.location = loc;
+            }else if (loc.x > bounds.origin.x + bounds.size.width) {
+                loc.x = bounds.origin.x;
+                ent.location = loc;
+            }
+            if (loc.y < bounds.origin.y) {
+                loc.y = bounds.origin.y + bounds.size.height;
+                ent.location = loc;
+            }else if (loc.y > bounds.origin.y + bounds.size.height) {
+                loc.y = bounds.origin.y;
+                ent.location = loc;
+            }
+        }
+         
+    }
+    //[self.player think:elapsed];
 }
 
 @end

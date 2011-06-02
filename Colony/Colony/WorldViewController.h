@@ -8,16 +8,24 @@
 
 #import <Foundation/Foundation.h>
 #import "World.h"
+#import "Running.h"
+#import "Enemy.h"
 
-
-@interface WorldViewController : UIViewController {
+@interface WorldViewController : UIViewController <Running>{
     
 }
 
+@property (nonatomic, retain, readonly) CADisplayLink *dispLink;
 @property (nonatomic, retain, readonly) World *world;
 
 - (void) loadViewObjects;
 - (void) removeListeners;
 - (void) setWorld: (World*) world;
 - (void) addFakeWorld;
+- (void) start;
+- (void) stop;
+- (void) frame:(CADisplayLink*)link;
+
+- (void) setPlayer:(Player*)player;
+- (void) addEnemy:(Enemy*)enemy;
 @end

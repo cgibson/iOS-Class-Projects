@@ -11,35 +11,21 @@
 #import <CoreMotion/CoreMotion.h>
 #import "WorldViewController.h"
 #import "World.h"
-
-@interface Vec3 : NSObject {
-    
-}
-
-@property (nonatomic) float x;
-@property (nonatomic) float y;
-@property (nonatomic) float z;
-
-- (id) initWithVals:(float)x y:(float)y z:(float) z;
-
-@end
-
-
+#import "Vec3.h"
 
 @interface DefaultGameViewController : WorldViewController {
     CMMotionManager *motionManager;
 }
 
-@property (nonatomic, retain, readonly) CADisplayLink *dispLink;
 @property (nonatomic, retain, readonly) Vec3 *gyroVec; 
 @property (nonatomic, readonly) BOOL active;
 
 @property (nonatomic, readonly) BOOL gyroEnabled;
 
-- (void) frame: (CADisplayLink*)link;
+- (void) initializeGyro;
+
 - (void) start;
 - (void) stop;
-- (void) enableGyro;
 
 @end
 

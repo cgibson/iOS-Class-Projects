@@ -54,7 +54,8 @@
     CGRect sizedRect = CGRectMake(box.origin.x + 2.0, box.origin.y + 2.0, box.size.width - 4.0, box.size.height - 4.0);
     CGContextAddEllipseInRect(context, sizedRect);
     CGContextClosePath(context);
-    CGContextSetAlpha(context, self.level == 0 ? 1.0 : (1.0f / abs(self.level)));
+    CGContextSetAlpha(context, (self.level == 0) ? 1.0 : 0.3);
+    //CGContextSetAlpha(context, self.level == 0 ? 1.0 : (1.0f / abs(self.level)));
     [self.primaryColor setStroke];
     [self.secondaryColor setFill];
     

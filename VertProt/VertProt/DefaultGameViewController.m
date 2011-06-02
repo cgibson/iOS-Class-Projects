@@ -11,35 +11,14 @@
 #import "Shape.h"
 #import "CellView.h"
 
-@implementation Vec3
-
-@synthesize x=x_;
-@synthesize y=y_;
-@synthesize z=z_;
-
-- (id) initWithVals:(float)x y:(float)y z:(float) z
-{
-    self = [super init];
-    if (self) {
-        self.x = x;
-        self.y = y;
-        self.z = z;
-    }
-    return self;
-}
-
-@end
-
 
 @interface DefaultGameViewController()
-    @property (nonatomic, retain) CADisplayLink *dispLink;
     @property (nonatomic) BOOL active;
     @property (nonatomic) BOOL gyroEnabled;
 @end
 
 @implementation DefaultGameViewController
 
-@synthesize dispLink = dispLink_;
 @synthesize gyroVec = gyroVec_;
 @synthesize active = active_;
 @synthesize gyroEnabled = gyroEnabled_;
@@ -47,6 +26,7 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
+    [self initializeGyro];
     
     [self start];
     
@@ -54,7 +34,7 @@
     
 }
 
-- (void) enableGyro
+- (void) initializeGyro
 {
     // Motion Manager Code
     motionManager = [[CMMotionManager alloc] init];
@@ -67,12 +47,12 @@
             if(self.active && self.gyroEnabled)
             {
                 CMAcceleration accel = accelerometerData.acceleration;
-                [self.world.camera moveLookAt:CGPointMake(accel.x * 10, -accel.y * 10)];
-                [self.world refreshAll];
+                [self.world.camera moveLookAt:CGPointMake(accel.x * -10, accel.y * 10)];
+                //[self.world refreshAll];
             }
         }];
     }
-    
+    /*
     if(motionManager.gyroAvailable) {
         motionManager.gyroUpdateInterval = 1.0 / 60.0;
         [motionManager startGyroUpdatesToQueue:[NSOperationQueue currentQueue]
@@ -93,6 +73,7 @@
         NSLog(@"No gyroscope on device.");
         [motionManager release];
     }
+     */
 }
 
 - (void) viewDidAppear:(BOOL)animated
@@ -107,41 +88,37 @@
     self.active = false;
 }
 
-- (void) start
-{
-    
-}
-
-- (void) stop
-{
-    if (self.dispLink) {
-        // Stop the animation timer
-        [self.dispLink invalidate];
-        self.dispLink = nil;
-    }
-    [self removeListeners];
-}
-
 - (void) dealloc
 {
     NSLog(@"DefaultGameView dealloc'd");
     active_ = false;
-    [self stop];
     
     if(self.gyroEnabled)
         [motionManager release];
     
-    [dispLink_ release];
     [super dealloc];
 }
 
-- (void) frame: (CADisplayLink*) link
+- (void) start
 {
-    if(!self.world) {
-        NSLog(@"Error: world not initialized");
-    }
-    
-    [self.world frame:link.duration];
+    [super start];
+    self.active = true;
+}
+
+- (void) stop
+{
+    [super stop];
+    //self.active = false;
+}
+
+- (void) pause
+{
+    [super pause];
+}
+
+- (void) unpause
+{
+    [super unpause];
 }
 
 @end

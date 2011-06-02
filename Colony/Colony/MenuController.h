@@ -10,14 +10,18 @@
 #import "GameState.h"
 #import "WorldViewController.h"
 #import "GameViewController.h"
+#import "Running.h"
 
-@interface MenuController : UIViewController {
+@interface MenuController : UIViewController <Running>{
     
 }
 
 @property (nonatomic, retain) GameState* state;
-@property (nonatomic, retain) GameViewController* GVController;
+@property (nonatomic, retain) WorldViewController* GVController;
 
 - (IBAction) buttonPressed:(UIButton*)sender;
+
+- (void) stop;
+- (void) start;
 
 @end

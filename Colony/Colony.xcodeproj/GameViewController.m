@@ -8,6 +8,12 @@
 
 #import "GameViewController.h"
 #import "WorldView.h"
+#import "Running.h"
+
+@interface DefaultGameViewController()
+@property (nonatomic) BOOL active;
+@property (nonatomic) BOOL gyroEnabled;
+@end
 
 @interface WorldViewController()
 
@@ -22,21 +28,17 @@
 
 - (void) buildWorld
 {
-    CGRect worldRect = CGRectMake(0, 0, 500, 500);
-    World *newWorld = [[[World alloc] initWithRect:worldRect] autorelease];
+    //CGRect worldRect = CGRectMake(-500, -500, 1000, 1000);
+    //World *newWorld = [[[World alloc] initWithRect:worldRect] autorelease];
     
-    Player *obj = [[Player alloc] initWithType:CELL_ENEMY location:CGPointMake(30,30) size:CGPointMake(30, 30) level:0];
-    //obj.cellType = CELL_ENEMY;
-    [newWorld addObject:obj];
-    [obj release];
+    //[newWorld.camera useScreenSize:self.view.bounds];
     
-    obj = [[[Entity alloc] initWithType:CELL_PLAYER location:CGPointMake(0,0) size:CGPointMake(60, 60) level:0] autorelease];
-    //obj.cellType = CELL_PLAYER;
-    [newWorld setPlayer:obj];
+    //self.world = newWorld;
     
-    [newWorld.camera useScreenSize:self.view.bounds];
+    [self addFakeWorld];
     
-    self.world = newWorld;
+    Player *player = [[Player alloc] initWithType:CELL_PLAYER location:CGPointMake(0, 0) size:CGPointMake(60, 60) level:0];
+    [self setPlayer:player];
     
 }
 
@@ -85,6 +87,11 @@
 
 - (void)viewDidLoad
 {
+    [super viewDidLoad];
+    [self initMenuButton];
+    
+    [self start];
+    self.world.objectsWrap = true;
     /*if(self.state && self.state.running) {
         CGRect myImageRect = CGRectMake(0.0f, 0.0f, 320.0f, 109.0f);
         UIImageView *myImage = [[UIImageView alloc] initWithFrame:myImageRect];
@@ -94,9 +101,10 @@
         [myImage release]; 
     }*/
     
-    [super viewDidLoad];
+    self.gyroEnabled = true;
     
-    [self initMenuButton];
+    self.active = true;
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -109,6 +117,13 @@
 
 - (IBAction) buttonPressed:(UIButton*)sender
 {
+    // TERRIBLE TERRIBLE CODE
+    int topControllerIndex = [self.navigationController.viewControllers count] - 1;
+    UIViewController *controller = [self.navigationController.viewControllers objectAtIndex: topControllerIndex-1];
+    if([controller conformsToProtocol:@protocol(Running)]) {
+        [(UIViewController<Running>*) controller start];
+    }
+    
     [self.navigationController popViewControllerAnimated:true];
 }
 
@@ -116,6 +131,28 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void) start
+{
+    NSLog(@"Started");
+    [super start];
+}
+
+- (void) stop
+{
+    [super stop];
+}
+
+
+- (void) pause
+{
+    [super pause];
+}
+
+- (void) unpause
+{
+    [super unpause];
 }
 
 @end

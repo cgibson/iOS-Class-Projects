@@ -17,8 +17,9 @@
 }
 
 @property (nonatomic, retain, readonly) NSMutableArray *objects;
-@property (nonatomic, retain) Player *player;
+@property (nonatomic, retain, readonly) Player *player;
 @property (nonatomic, retain, readonly) Camera *camera;
+@property (nonatomic) bool objectsWrap;
 
 - (Entity*) objectWithID: (int) objId;
 - (id) initWithRect: (CGRect) rect;

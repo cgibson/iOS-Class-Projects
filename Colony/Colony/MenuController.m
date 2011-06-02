@@ -31,6 +31,9 @@
         [self.view addSubview:self.GVController.view];
         [self.view sendSubviewToBack:self.GVController.view];
         
+        self.GVController.world.objectsWrap = true;
+        [self.GVController start];
+        
         
         //[worldView release];
         
@@ -63,6 +66,7 @@
     GameViewController *gameView = [[GameViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
     gameView.state = self.state;
     
+    [self stop];
     [self.navigationController pushViewController:gameView animated:YES];
     [gameView release];
 }
@@ -111,6 +115,26 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void) start
+{
+    [self.GVController start];
+}
+
+- (void) stop
+{
+    [self.GVController stop];
+}
+
+- (void) pause
+{
+    [self.GVController stop];
+}
+
+- (void) unpause
+{
+    [self.GVController start];    
 }
 
 @end
