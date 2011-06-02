@@ -1,0 +1,396 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C5654E01396CFFC00A169F5 /* Camera.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654D91396CFFC00A169F5 /* Camera.m */; };
+		1C5654E11396CFFC00A169F5 /* Entity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654DB1396CFFC00A169F5 /* Entity.m */; };
+		1C5654E21396CFFC00A169F5 /* Shape.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654DD1396CFFC00A169F5 /* Shape.m */; };
+		1C5654E31396CFFC00A169F5 /* World.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654DF1396CFFC00A169F5 /* World.m */; };
+		1C5654E61396D0AA00A169F5 /* DefaultGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654E51396D0AA00A169F5 /* DefaultGameViewController.m */; };
+		1C5654E91396D11600A169F5 /* CellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654E81396D11600A169F5 /* CellView.m */; };
+		1C5654EB1396D13D00A169F5 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5654EA1396D13D00A169F5 /* CoreMotion.framework */; };
+		1C5654ED1396D14200A169F5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C5654EC1396D14200A169F5 /* QuartzCore.framework */; };
+		1C5654F01396D21F00A169F5 /* WorldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654EF1396D21F00A169F5 /* WorldView.m */; };
+		1C5654F31396D26600A169F5 /* WorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654F21396D26600A169F5 /* WorldViewController.m */; };
+		1C5654F61396F71B00A169F5 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654F51396F71700A169F5 /* Player.m */; };
+		1C5654FA13970F3700A169F5 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654F913970F3000A169F5 /* Enemy.m */; };
+		1CBAE8CB1395A88D004B151E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBAE8CA1395A88D004B151E /* UIKit.framework */; };
+		1CBAE8CD1395A88D004B151E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBAE8CC1395A88D004B151E /* Foundation.framework */; };
+		1CBAE8CF1395A88D004B151E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBAE8CE1395A88D004B151E /* CoreGraphics.framework */; };
+		1CBAE8D51395A88D004B151E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CBAE8D31395A88D004B151E /* InfoPlist.strings */; };
+		1CBAE8D81395A88D004B151E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAE8D71395A88D004B151E /* main.m */; };
+		1CBAE8DB1395A88D004B151E /* ColonyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAE8DA1395A88D004B151E /* ColonyAppDelegate.m */; };
+		1CBAE8DE1395A88D004B151E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CBAE8DC1395A88D004B151E /* MainWindow.xib */; };
+		1CBAE8E11395A88D004B151E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBAE8E01395A88D004B151E /* RootViewController.m */; };
+		1CBAE8E41395A88D004B151E /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CBAE8E21395A88D004B151E /* RootViewController.xib */; };
+		1CBAE8ED1395A987004B151E /* LoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CBAE8EC1395A987004B151E /* LoadView.xib */; };
+		1CBAE8EF1395A997004B151E /* SaveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CBAE8EE1395A997004B151E /* SaveView.xib */; };
+		1CBAE8F31395AA07004B151E /* MainMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CBAE8F21395AA07004B151E /* MainMenuView.xib */; };
+		1CDB5A6F1395C5F90052A3D0 /* MenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDB5A6D1395C5F90052A3D0 /* MenuController.m */; };
+		1CDB5A701395C5F90052A3D0 /* MenuController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDB5A6E1395C5F90052A3D0 /* MenuController.xib */; };
+		1CDB5A8C1395CF240052A3D0 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDB5A8A1395CF230052A3D0 /* GameViewController.m */; };
+		1CDB5A8D1395CF240052A3D0 /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CDB5A8B1395CF240052A3D0 /* GameViewController.xib */; };
+		1CDB5A901395E0B50052A3D0 /* GameState.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CDB5A8F1395E0B40052A3D0 /* GameState.m */; };
+		1CDB5A921395E54A0052A3D0 /* Green_sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CDB5A911395E54A0052A3D0 /* Green_sphere.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1C5654D81396CFFC00A169F5 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = ../../VertProt/VertProt/Camera.h; sourceTree = "<group>"; };
+		1C5654D91396CFFC00A169F5 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Camera.m; path = ../../VertProt/VertProt/Camera.m; sourceTree = "<group>"; };
+		1C5654DA1396CFFC00A169F5 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = ../../VertProt/VertProt/Entity.h; sourceTree = "<group>"; };
+		1C5654DB1396CFFC00A169F5 /* Entity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Entity.m; path = ../../VertProt/VertProt/Entity.m; sourceTree = "<group>"; };
+		1C5654DC1396CFFC00A169F5 /* Shape.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Shape.h; path = ../../VertProt/VertProt/Shape.h; sourceTree = "<group>"; };
+		1C5654DD1396CFFC00A169F5 /* Shape.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Shape.m; path = ../../VertProt/VertProt/Shape.m; sourceTree = "<group>"; };
+		1C5654DE1396CFFC00A169F5 /* World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = World.h; path = ../../VertProt/VertProt/World.h; sourceTree = "<group>"; };
+		1C5654DF1396CFFC00A169F5 /* World.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = World.m; path = ../../VertProt/VertProt/World.m; sourceTree = "<group>"; };
+		1C5654E41396D0AA00A169F5 /* DefaultGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DefaultGameViewController.h; path = ../../VertProt/VertProt/DefaultGameViewController.h; sourceTree = "<group>"; };
+		1C5654E51396D0AA00A169F5 /* DefaultGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DefaultGameViewController.m; path = ../../VertProt/VertProt/DefaultGameViewController.m; sourceTree = "<group>"; };
+		1C5654E71396D11600A169F5 /* CellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CellView.h; path = ../../VertProt/CellView.h; sourceTree = "<group>"; };
+		1C5654E81396D11600A169F5 /* CellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CellView.m; path = ../../VertProt/CellView.m; sourceTree = "<group>"; };
+		1C5654EA1396D13D00A169F5 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		1C5654EC1396D14200A169F5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1C5654EE1396D21F00A169F5 /* WorldView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldView.h; sourceTree = "<group>"; };
+		1C5654EF1396D21F00A169F5 /* WorldView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldView.m; sourceTree = "<group>"; };
+		1C5654F11396D26600A169F5 /* WorldViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorldViewController.h; sourceTree = "<group>"; };
+		1C5654F21396D26600A169F5 /* WorldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorldViewController.m; sourceTree = "<group>"; };
+		1C5654F41396F71400A169F5 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		1C5654F51396F71700A169F5 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		1C5654F71396FA0B00A169F5 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
+		1C5654F813970F2B00A169F5 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		1C5654F913970F3000A169F5 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		1CBAE8C61395A88D004B151E /* Colony.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Colony.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CBAE8CA1395A88D004B151E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1CBAE8CC1395A88D004B151E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1CBAE8CE1395A88D004B151E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1CBAE8D21395A88D004B151E /* Colony-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Colony-Info.plist"; sourceTree = "<group>"; };
+		1CBAE8D41395A88D004B151E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1CBAE8D61395A88D004B151E /* Colony-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Colony-Prefix.pch"; sourceTree = "<group>"; };
+		1CBAE8D71395A88D004B151E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1CBAE8D91395A88D004B151E /* ColonyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColonyAppDelegate.h; sourceTree = "<group>"; };
+		1CBAE8DA1395A88D004B151E /* ColonyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColonyAppDelegate.m; sourceTree = "<group>"; };
+		1CBAE8DD1395A88D004B151E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		1CBAE8DF1395A88D004B151E /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		1CBAE8E01395A88D004B151E /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		1CBAE8E31395A88D004B151E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		1CBAE8EC1395A987004B151E /* LoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadView.xib; sourceTree = "<group>"; };
+		1CBAE8EE1395A997004B151E /* SaveView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveView.xib; sourceTree = "<group>"; };
+		1CBAE8F21395AA07004B151E /* MainMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenuView.xib; path = Colony.xcodeproj/MainMenuView.xib; sourceTree = SOURCE_ROOT; };
+		1CDB5A6C1395C5F90052A3D0 /* MenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuController.h; sourceTree = "<group>"; };
+		1CDB5A6D1395C5F90052A3D0 /* MenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuController.m; sourceTree = "<group>"; };
+		1CDB5A6E1395C5F90052A3D0 /* MenuController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MenuController.xib; sourceTree = "<group>"; };
+		1CDB5A891395CF230052A3D0 /* GameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameViewController.h; path = Colony.xcodeproj/GameViewController.h; sourceTree = SOURCE_ROOT; };
+		1CDB5A8A1395CF230052A3D0 /* GameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameViewController.m; path = Colony.xcodeproj/GameViewController.m; sourceTree = SOURCE_ROOT; };
+		1CDB5A8B1395CF240052A3D0 /* GameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GameViewController.xib; path = Colony.xcodeproj/GameViewController.xib; sourceTree = SOURCE_ROOT; };
+		1CDB5A8E1395E0B30052A3D0 /* GameState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameState.h; sourceTree = "<group>"; };
+		1CDB5A8F1395E0B40052A3D0 /* GameState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameState.m; sourceTree = "<group>"; };
+		1CDB5A911395E54A0052A3D0 /* Green_sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Green_sphere.png; path = ../../../Downloads/Green_sphere.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1CBAE8C31395A88D004B151E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C5654ED1396D14200A169F5 /* QuartzCore.framework in Frameworks */,
+				1C5654EB1396D13D00A169F5 /* CoreMotion.framework in Frameworks */,
+				1CBAE8CB1395A88D004B151E /* UIKit.framework in Frameworks */,
+				1CBAE8CD1395A88D004B151E /* Foundation.framework in Frameworks */,
+				1CBAE8CF1395A88D004B151E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1CBAE8BB1395A88D004B151E = {
+			isa = PBXGroup;
+			children = (
+				1C5654EC1396D14200A169F5 /* QuartzCore.framework */,
+				1C5654EA1396D13D00A169F5 /* CoreMotion.framework */,
+				1CBAE8D01395A88D004B151E /* Colony */,
+				1CBAE8C91395A88D004B151E /* Frameworks */,
+				1CBAE8C71395A88D004B151E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1CBAE8C71395A88D004B151E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1CBAE8C61395A88D004B151E /* Colony.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1CBAE8C91395A88D004B151E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1CBAE8CA1395A88D004B151E /* UIKit.framework */,
+				1CBAE8CC1395A88D004B151E /* Foundation.framework */,
+				1CBAE8CE1395A88D004B151E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CBAE8D01395A88D004B151E /* Colony */ = {
+			isa = PBXGroup;
+			children = (
+				1CDB5A911395E54A0052A3D0 /* Green_sphere.png */,
+				1CBAE8D91395A88D004B151E /* ColonyAppDelegate.h */,
+				1CBAE8DA1395A88D004B151E /* ColonyAppDelegate.m */,
+				1CBAE8DC1395A88D004B151E /* MainWindow.xib */,
+				1CBAE8DF1395A88D004B151E /* RootViewController.h */,
+				1CBAE8E01395A88D004B151E /* RootViewController.m */,
+				1CBAE8E21395A88D004B151E /* RootViewController.xib */,
+				1CBAE8F21395AA07004B151E /* MainMenuView.xib */,
+				1CDB5A6C1395C5F90052A3D0 /* MenuController.h */,
+				1CDB5A6D1395C5F90052A3D0 /* MenuController.m */,
+				1CDB5A6E1395C5F90052A3D0 /* MenuController.xib */,
+				1CBAE8EC1395A987004B151E /* LoadView.xib */,
+				1CBAE8EE1395A997004B151E /* SaveView.xib */,
+				1CDB5A891395CF230052A3D0 /* GameViewController.h */,
+				1CDB5A8A1395CF230052A3D0 /* GameViewController.m */,
+				1CDB5A8B1395CF240052A3D0 /* GameViewController.xib */,
+				1CBAE8D11395A88D004B151E /* Supporting Files */,
+				1CDB5A8E1395E0B30052A3D0 /* GameState.h */,
+				1CDB5A8F1395E0B40052A3D0 /* GameState.m */,
+				1C5654D81396CFFC00A169F5 /* Camera.h */,
+				1C5654D91396CFFC00A169F5 /* Camera.m */,
+				1C5654F41396F71400A169F5 /* Player.h */,
+				1C5654F51396F71700A169F5 /* Player.m */,
+				1C5654F813970F2B00A169F5 /* Enemy.h */,
+				1C5654F913970F3000A169F5 /* Enemy.m */,
+				1C5654DA1396CFFC00A169F5 /* Entity.h */,
+				1C5654DB1396CFFC00A169F5 /* Entity.m */,
+				1C5654DC1396CFFC00A169F5 /* Shape.h */,
+				1C5654DD1396CFFC00A169F5 /* Shape.m */,
+				1C5654F71396FA0B00A169F5 /* types.h */,
+				1C5654DE1396CFFC00A169F5 /* World.h */,
+				1C5654DF1396CFFC00A169F5 /* World.m */,
+				1C5654E41396D0AA00A169F5 /* DefaultGameViewController.h */,
+				1C5654E51396D0AA00A169F5 /* DefaultGameViewController.m */,
+				1C5654E71396D11600A169F5 /* CellView.h */,
+				1C5654E81396D11600A169F5 /* CellView.m */,
+				1C5654EE1396D21F00A169F5 /* WorldView.h */,
+				1C5654EF1396D21F00A169F5 /* WorldView.m */,
+				1C5654F11396D26600A169F5 /* WorldViewController.h */,
+				1C5654F21396D26600A169F5 /* WorldViewController.m */,
+			);
+			path = Colony;
+			sourceTree = "<group>";
+		};
+		1CBAE8D11395A88D004B151E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CBAE8D21395A88D004B151E /* Colony-Info.plist */,
+				1CBAE8D31395A88D004B151E /* InfoPlist.strings */,
+				1CBAE8D61395A88D004B151E /* Colony-Prefix.pch */,
+				1CBAE8D71395A88D004B151E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1CBAE8C51395A88D004B151E /* Colony */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CBAE8E71395A88D004B151E /* Build configuration list for PBXNativeTarget "Colony" */;
+			buildPhases = (
+				1CBAE8C21395A88D004B151E /* Sources */,
+				1CBAE8C31395A88D004B151E /* Frameworks */,
+				1CBAE8C41395A88D004B151E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Colony;
+			productName = Colony;
+			productReference = 1CBAE8C61395A88D004B151E /* Colony.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1CBAE8BD1395A88D004B151E /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1CBAE8C01395A88D004B151E /* Build configuration list for PBXProject "Colony" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1CBAE8BB1395A88D004B151E;
+			productRefGroup = 1CBAE8C71395A88D004B151E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1CBAE8C51395A88D004B151E /* Colony */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1CBAE8C41395A88D004B151E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBAE8D51395A88D004B151E /* InfoPlist.strings in Resources */,
+				1CBAE8DE1395A88D004B151E /* MainWindow.xib in Resources */,
+				1CBAE8E41395A88D004B151E /* RootViewController.xib in Resources */,
+				1CBAE8ED1395A987004B151E /* LoadView.xib in Resources */,
+				1CBAE8EF1395A997004B151E /* SaveView.xib in Resources */,
+				1CBAE8F31395AA07004B151E /* MainMenuView.xib in Resources */,
+				1CDB5A701395C5F90052A3D0 /* MenuController.xib in Resources */,
+				1CDB5A8D1395CF240052A3D0 /* GameViewController.xib in Resources */,
+				1CDB5A921395E54A0052A3D0 /* Green_sphere.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1CBAE8C21395A88D004B151E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CBAE8D81395A88D004B151E /* main.m in Sources */,
+				1CBAE8DB1395A88D004B151E /* ColonyAppDelegate.m in Sources */,
+				1CBAE8E11395A88D004B151E /* RootViewController.m in Sources */,
+				1CDB5A6F1395C5F90052A3D0 /* MenuController.m in Sources */,
+				1CDB5A8C1395CF240052A3D0 /* GameViewController.m in Sources */,
+				1CDB5A901395E0B50052A3D0 /* GameState.m in Sources */,
+				1C5654E01396CFFC00A169F5 /* Camera.m in Sources */,
+				1C5654E11396CFFC00A169F5 /* Entity.m in Sources */,
+				1C5654E21396CFFC00A169F5 /* Shape.m in Sources */,
+				1C5654E31396CFFC00A169F5 /* World.m in Sources */,
+				1C5654E61396D0AA00A169F5 /* DefaultGameViewController.m in Sources */,
+				1C5654E91396D11600A169F5 /* CellView.m in Sources */,
+				1C5654F01396D21F00A169F5 /* WorldView.m in Sources */,
+				1C5654F31396D26600A169F5 /* WorldViewController.m in Sources */,
+				1C5654F61396F71B00A169F5 /* Player.m in Sources */,
+				1C5654FA13970F3700A169F5 /* Enemy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1CBAE8D31395A88D004B151E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CBAE8D41395A88D004B151E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1CBAE8DC1395A88D004B151E /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CBAE8DD1395A88D004B151E /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		1CBAE8E21395A88D004B151E /* RootViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1CBAE8E31395A88D004B151E /* en */,
+			);
+			name = RootViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1CBAE8E51395A88D004B151E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1CBAE8E61395A88D004B151E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		1CBAE8E81395A88D004B151E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Colony/Colony-Prefix.pch";
+				INFOPLIST_FILE = "Colony/Colony-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1CBAE8E91395A88D004B151E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Colony/Colony-Prefix.pch";
+				INFOPLIST_FILE = "Colony/Colony-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1CBAE8C01395A88D004B151E /* Build configuration list for PBXProject "Colony" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBAE8E51395A88D004B151E /* Debug */,
+				1CBAE8E61395A88D004B151E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CBAE8E71395A88D004B151E /* Build configuration list for PBXNativeTarget "Colony" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CBAE8E81395A88D004B151E /* Debug */,
+				1CBAE8E91395A88D004B151E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1CBAE8BD1395A88D004B151E /* Project object */;
+}

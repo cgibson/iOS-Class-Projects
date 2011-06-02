@@ -10,33 +10,33 @@
 
 @interface Entity()
     @property (nonatomic) int objId;
-    @property (nonatomic) int type;
     @property (nonatomic) int version;
 @end
 
 @implementation Entity
 
 @synthesize objId = objId_;
-@synthesize type = type_;
 @synthesize location = location_;
 @synthesize size = size_;
 @synthesize version = version_;
-
+@synthesize cellType=_cellType;
+@synthesize level=_level;
 - (void)dealloc
 {
     NSLog(@"Entity %d dealloc'd", objId_);
     [super dealloc];
 }
 
-- (id) initWithType:(int)type location:(CGPoint)loc size:(CGPoint)size {
+- (id) initWithType:(CellType_t)type location:(CGPoint)loc size:(CGPoint)size level:(int)level {
     static int nextId = 0;
     self = [super init];
     
     self.objId = nextId++;
-    self.type = type;
+    self.cellType = type;
     self.location = loc;
     self.size = size;
     self.version = 0;
+    self.level = level;
     
     NSLog(@"Entity created");
     

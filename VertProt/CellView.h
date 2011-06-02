@@ -8,11 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "Shape.h"
+#import "Entity.h"
 
 @interface CellView : Shape {
     
 }
 
-- (id) initWithFrame:(CGRect)frame;
+@property (nonatomic, retain) UIColor *primaryColor;
+@property (nonatomic, retain) UIColor *secondaryColor;
+@property (nonatomic) int level;
+
+- (id)initWithFrame:(CGRect)frame CellType:(CellType_t) type Level:(int)level;
 
 @end

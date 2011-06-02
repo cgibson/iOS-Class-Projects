@@ -1,0 +1,113 @@
+// !$*UTF8*$!
+{
+	1C83A1FC1395C47A006533CC /* Colony */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Colony;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	1C83A2061395C499006533CC /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	1C83A2071395C499006533CC /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	1C83A2081395C4A8006533CC /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 1CBAE8D91395A88D004B151E /* ColonyAppDelegate.h */;
+	};
+	1C83A2091395C4A8006533CC /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1CBAE8D91395A88D004B151E /* ColonyAppDelegate.h */;
+		name = "ColonyAppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 395;
+		vrLoc = 0;
+	};
+	1CBAE8BD1395A88D004B151E /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 1C83A1FC1395C47A006533CC /* Colony */;
+		activeTarget = 1CBAE8C51395A88D004B151E /* Colony */;
+		codeSenseManager = 1C83A2071395C499006533CC /* Code sense */;
+		executables = (
+			1C83A1FC1395C47A006533CC /* Colony */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					2113,
+					20,
+					48.16259765625,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 328582266;
+			PBXWorkspaceStateSaveDate = 328582266;
+		};
+		perUserProjectItems = {
+			1C83A2081395C4A8006533CC /* PBXBookmark */ = 1C83A2081395C4A8006533CC /* PBXBookmark */;
+			1C83A2091395C4A8006533CC /* PBXTextBookmark */ = 1C83A2091395C4A8006533CC /* PBXTextBookmark */;
+		};
+		sourceControlManager = 1C83A2061395C499006533CC /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	1CBAE8C51395A88D004B151E /* Colony */ = {
+		activeExec = 0;
+		executables = (
+			1C83A1FC1395C47A006533CC /* Colony */,
+		);
+	};
+	1CBAE8D91395A88D004B151E /* ColonyAppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {2291, 1194}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 395}";
+		};
+	};
+}

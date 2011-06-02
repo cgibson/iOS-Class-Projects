@@ -6,7 +6,7 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "GameViewController.h"
+#import "DefaultGameViewController.h"
 #import "World.h"
 #import "Shape.h"
 #import "CellView.h"
@@ -31,18 +31,14 @@
 @end
 
 
-@interface GameViewController()
-@property (nonatomic, retain) World *world;
-@property (nonatomic, retain) CADisplayLink *dispLink;
-//@property (nonatomic, retain) CMMotionManager *motionManager;
-@property (nonatomic) BOOL active;
-@property (nonatomic) BOOL gyroEnabled;
+@interface DefaultGameViewController()
+    @property (nonatomic, retain) CADisplayLink *dispLink;
+    @property (nonatomic) BOOL active;
+    @property (nonatomic) BOOL gyroEnabled;
 @end
 
-@implementation GameViewController
+@implementation DefaultGameViewController
 
-//@synthesize motionManager = motionManager_;
-@synthesize world = world_;
 @synthesize dispLink = dispLink_;
 @synthesize gyroVec = gyroVec_;
 @synthesize active = active_;
@@ -111,29 +107,9 @@
     self.active = false;
 }
 
-- (void) panShape: (Shape*) shape amount: (ShapePanData*)data
-{
-    Entity *obj = [self.world objectWithID: shape.tag];
-    
-    CGPoint newPoint = obj.location;
-    newPoint.x += data.distance.x;
-    newPoint.y += data.distance.y;
-    
-    obj.location = newPoint;
-    
-    [obj refresh];
-}
-
 - (void) start
 {
     
-}
-
-- (void)setWorld:(World*) world
-{
-    world_ = world;
-    [world_ retain];
-    [self loadViewObjects];
 }
 
 - (void) stop
@@ -143,16 +119,12 @@
         [self.dispLink invalidate];
         self.dispLink = nil;
     }
-    
-    // Release our ownership of the WorldObjects
-    for (Entity *obj in world_.objects) {
-        [obj removeObserver:self forKeyPath:@"version"];
-    }
+    [self removeListeners];
 }
 
 - (void) dealloc
 {
-    NSLog(@"Game view dealloc'd");
+    NSLog(@"DefaultGameView dealloc'd");
     active_ = false;
     [self stop];
     
@@ -160,40 +132,7 @@
         [motionManager release];
     
     [dispLink_ release];
-    [world_ release];
     [super dealloc];
-}
-
-- (void)loadViewObjects
-{
-    for(Entity *obj in self.world.objects) {
-        
-        NSLog(@"Building view for ent %d", obj.objId);
-        Shape *subView = [[CellView alloc] initWithFrame: [obj getFrame]];
-        subView.opaque = NO;
-        subView.tag = obj.objId;
-        subView.target = self;
-        subView.panAction = @selector(panShape:amount:);
-        [self.view addSubview:subView];
-        [subView release];
-        
-        [obj addObserver:self forKeyPath:@"version" 
-                 options:NSKeyValueObservingOptionInitial 
-                 context:subView];
-    }
-}
-
-- (void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
-{
-    if(!self.world)
-    {
-        NSLog(@"World not loaded yet");
-        return;
-    }
-    
-    if ([keyPath isEqualToString:@"version"]) {
-        ((UIView*)context).frame = [self.world.camera applyToRect:[((Entity*)object) getFrame]];
-    }
 }
 
 - (void) frame: (CADisplayLink*) link

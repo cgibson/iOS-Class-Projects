@@ -9,13 +9,15 @@
 #import <Foundation/Foundation.h>
 #import "Entity.h"
 #import "Camera.h"
+#import "Player.h"
 
 @interface World : NSObject {
     @private
     CGRect bounds;
 }
-    
+
 @property (nonatomic, retain, readonly) NSMutableArray *objects;
+@property (nonatomic, retain) Player *player;
 @property (nonatomic, retain, readonly) Camera *camera;
 
 - (Entity*) objectWithID: (int) objId;

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 #import <CoreMotion/CoreMotion.h>
+#import "WorldViewController.h"
 #import "World.h"
 
 @interface Vec3 : NSObject {
@@ -25,13 +26,11 @@
 
 
 
-@interface GameViewController : UIViewController {
+@interface DefaultGameViewController : WorldViewController {
     CMMotionManager *motionManager;
 }
 
-@property (nonatomic, retain, readonly) World *world;
 @property (nonatomic, retain, readonly) CADisplayLink *dispLink;
-//@property (nonatomic, retain, readonly) CMMotionManager *motionManager;
 @property (nonatomic, retain, readonly) Vec3 *gyroVec; 
 @property (nonatomic, readonly) BOOL active;
 
@@ -40,7 +39,6 @@
 - (void) frame: (CADisplayLink*)link;
 - (void) start;
 - (void) stop;
-- (void) loadViewObjects;
 - (void) enableGyro;
 
 @end

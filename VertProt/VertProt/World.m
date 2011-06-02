@@ -17,6 +17,7 @@
 @implementation World
 
 @synthesize objects = objects_;
+@synthesize player=_player;
 @synthesize camera = camera_;
 
 - (void) dealloc
@@ -28,6 +29,7 @@
     }*/
     
     NSLog(@"World dealloc'd");
+    [_player release];
     [objects_ release];
     [camera_ release];
     [super dealloc];
@@ -35,7 +37,11 @@
 
 - (Entity*) objectWithID: (int) objId
 {
-    return [self.objects objectAtIndex:objId];
+    for (Entity* ent in self.objects) {
+        if(ent.objId == objId)
+            return ent;
+    }
+    return nil;//[self.objects objectAtIndex:objId];
 }
 
 - (id) initWithRect:(CGRect)rect
