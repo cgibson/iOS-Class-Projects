@@ -7,14 +7,15 @@
 //
 
 #import "Enemy.h"
-#import "World.h"
-
+#import "types.h"
+#import "Player.h"
 @implementation Enemy
 
 
-- (void) registerHit:(Entity *)entity
+- (void) registerHit:(Entity *)entity WithMode:(GameMode_t)mode
 {
-    switch (self.world.gameMode) {
+    
+    switch (mode) {
         case SURVIVAL:
             if([entity isKindOfClass:[Player class]])
             {
@@ -25,6 +26,7 @@
             [self fight:entity];
             break;
         case PEACEFUL:
+            break;
         default:
             break;
     }

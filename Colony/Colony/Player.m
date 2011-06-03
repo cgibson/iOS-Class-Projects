@@ -11,4 +11,22 @@
 
 @implementation Player
 
+
+- (id) initWithType:(CellType_t)type location:(CGPoint)loc size:(float)size world:(World *)world
+{
+    self = [super initWithType:type location:loc size:size world:world];
+    
+    self.location = CGPointMake(160, 240);
+    
+    return self;
+}
+ 
+ 
+ 
+
+- (void) think:(NSTimeInterval)elapsed
+{
+    [super think:elapsed];
+}
+
 @end

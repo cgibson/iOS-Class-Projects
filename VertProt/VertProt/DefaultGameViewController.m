@@ -13,7 +13,6 @@
 
 
 @interface DefaultGameViewController()
-    @property (nonatomic) BOOL active;
     @property (nonatomic) BOOL gyroEnabled;
     @property (nonatomic) BOOL gyroCalibrated;
     @property (nonatomic) CGPoint gyroOffset;
@@ -32,7 +31,6 @@
     [super viewDidLoad];
     [self initializeGyro];
     
-    [self start];
     
     self.gyroEnabled = false;
     self.gyroCalibrated = false;
@@ -107,8 +105,10 @@
     NSLog(@"DefaultGameView dealloc'd");
     active_ = false;
     
-    if(self.gyroEnabled)
+    if(self.gyroEnabled) {
         [motionManager release];
+        [gyroVec_ release];
+    }
     
     [super dealloc];
 }

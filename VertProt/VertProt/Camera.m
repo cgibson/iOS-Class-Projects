@@ -25,10 +25,17 @@
 
 - (CGRect) applyToRect:(CGRect)rect
 {
-    rect.origin.x += self.lookAt.x + self.screenOffset.x;
-    rect.origin.y += self.lookAt.y + self.screenOffset.y;
+    rect.origin = [self applyToPoint:rect.origin];
     
     return rect;
+}
+
+- (CGPoint) applyToPoint: (CGPoint) point
+{
+    point.x += self.lookAt.x + self.screenOffset.x;
+    point.y += self.lookAt.y + self.screenOffset.y;
+    
+    return point;
 }
 
 - (void) moveLookAt:(CGPoint)delta

@@ -27,10 +27,10 @@
         
         self.GVController = [[WorldViewController alloc] initWithNibName:@"GameViewController" bundle:nil];
         [self.GVController addFakeWorld];
-        
         [self.view addSubview:self.GVController.view];
         [self.view sendSubviewToBack:self.GVController.view];
         
+        self.GVController.world.spawnUpdateTime = 0.25;
         self.GVController.world.objectsWrap = true;
         [self.GVController start];
         

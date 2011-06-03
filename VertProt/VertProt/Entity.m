@@ -19,11 +19,13 @@
 @synthesize objId = objId_;
 @synthesize location = location_;
 @synthesize size = size_;
+@synthesize targetSize = targetSize_;
 @synthesize version = version_;
 @synthesize cellType=_cellType;
 @synthesize level=_level;
 @synthesize alive=_alive;
 @synthesize world=_world;
+@synthesize firstDraw=_firstDraw;
 - (void)dealloc
 {
     NSLog(@"Entity %d dealloc'd", objId_);
@@ -34,10 +36,12 @@
     static int nextId = 100;
     self = [super init];
     
+    self.firstDraw = true;
     self.objId = nextId++;
     self.cellType = type;
     self.location = loc;
-    self.size = size;
+    self.size = 10;
+    self.targetSize = size;
     self.version = 0;
     self.level = 0;
     self.alive = true;
@@ -60,9 +64,21 @@
     return CGRectMake(self.location.x - self.size/ 2., self.location.y - self.size / 2., self.size, self.size);
 }
 
+- (CGRect) getTargetFrame
+{
+    return CGRectMake(self.location.x - self.targetSize/ 2., self.location.y - self.targetSize / 2., self.targetSize, self.targetSize);
+}
+
 
 - (void) think:(NSTimeInterval)elapsed
 {
+    if(self.size < self.targetSize){
+        self.size += GROW_SPEED * elapsed;
+        //self.repaint = true;
+        if(self.size > self.targetSize) {
+            self.size = self.targetSize;
+        }
+    }
     //NSLog(@"Entity %d is thinking...", self.objId);
 }
 
@@ -100,7 +116,7 @@
     return false;
 }
 
-- (void) registerHit:(Entity*)entity
+- (void) registerHit:(Entity*)entity WithMode:(GameMode_t)mode
 {
     if(self.size > entity.size)
     {

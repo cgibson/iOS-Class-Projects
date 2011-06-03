@@ -19,6 +19,7 @@
 
 - (id) initWithLook: (CGPoint) look;
 - (CGRect) applyToRect: (CGRect) rect;
+- (CGPoint) applyToPoint: (CGPoint) point;
 - (void) moveLookAt: (CGPoint)delta;
 - (void) useScreenSize:(CGRect)screen;
 

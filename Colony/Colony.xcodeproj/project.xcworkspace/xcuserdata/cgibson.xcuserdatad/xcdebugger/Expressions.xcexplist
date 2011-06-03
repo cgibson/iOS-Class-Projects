@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesStackState
+   version = "1.0">
+   <StackStates>
+      <StackState
+         stackFrameDescription = "-[Enemy registerHit:]:Enemy.m">
+         <expressions>
+            <expression
+               value = "self.objId">
+            </expression>
+            <expression
+               value = "self.world">
+            </expression>
+         </expressions>
+      </StackState>
+   </StackStates>
+</VariablesStackState>

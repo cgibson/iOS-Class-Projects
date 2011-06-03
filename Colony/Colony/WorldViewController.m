@@ -15,7 +15,7 @@
 #import "MovingEnemy.h"
 @interface WorldViewController()
     @property (nonatomic, retain) CADisplayLink *dispLink;
-    @property (nonatomic, retain) World *world;
+@property (nonatomic, retain) World *world;
 @end
 
 @interface World()
@@ -26,17 +26,19 @@
 
 @synthesize world=_world;
 @synthesize dispLink = dispLink_;
+@synthesize active = active_;
 
 - (void) addFakeWorld
 {
     CGRect worldRect = CGRectMake(-200, -300, 400, 600);
-    World *newWorld = [[[World alloc] initWithRect:worldRect] autorelease];
+    self.world = [[[World alloc] initWithRect:worldRect] autorelease];
+    [self.world.camera useScreenSize:self.view.bounds];
     
     MovingEnemy *obj = nil;
     
+    
     for (int i = 0; i < 35; i++) {
         int size = rand() % 20;
-        int level = (50 - size) / 10;
         float movX = ((float)rand() / RAND_MAX) * 20.0 - 10.0;
         float movY = ((float)rand() / RAND_MAX) * 20.0 - 10.0;
         obj = [[MovingEnemy alloc] initWithType:CELL_ENEMY 
@@ -44,30 +46,28 @@
                                       size:size
                                       direction:CGPointMake(movX, movY) 
                                           world:self.world];
-        obj.level = level;
-        [newWorld addObject:obj];
+        obj.level = 1;
+        [self addEnemy:obj];
         [obj release];
     }
     
-    for (int i = 0; i < 45; i++) {
-        int size = rand() % 40 + 20;
-        int level = (50 - size) / 10;
-        float movX = ((float)rand() / RAND_MAX) * 40.0 - 20.0;
-        float movY = ((float)rand() / RAND_MAX) * 40.0 - 20.0;
-        obj = [[MovingEnemy alloc] initWithType:CELL_ENEMY 
-                                       location:CGPointMake(rand() % 400 - 200, rand() % 600 - 300)
-                                           size:size
-                                      direction:CGPointMake(movX, movY) 
-                                          world:self.world];
-        obj.level = level;
-        [newWorld addObject:obj];
-        [obj release];
-    }
+    self.world.gameMode = PEACEFUL;
     
+}
+
+- (void)lose
+{
+    self.active = false;
     
-    [newWorld.camera useScreenSize:self.view.bounds];
+    CGRect textFrame = CGRectMake(10, 100, 300, 150);
+    UITextView *txt = [[UITextView alloc] initWithFrame:textFrame];
     
-    self.world = newWorld;
+    txt.text = @"You Lose!";
+    txt.textAlignment = UITextAlignmentCenter;
+    
+    [self.view addSubview:txt];
+    
+    [txt release];
 }
 
 - (void)dealloc
@@ -106,7 +106,7 @@
 
 - (void)viewDidLoad
 {
-    
+    self.active = true;
     [super viewDidLoad];
     [self initWorldView];
     // Do any additional setup after loading the view from its nib.
@@ -131,12 +131,13 @@
 
 - (void)loadViewObjects
 {
+    /*
     Shape *subView = nil;
     
     if(self.world.objects)
     {
         for(Entity *obj in self.world.objects) {
-            subView = [[CellView alloc] initWithFrame: [obj getFrame] CellType:obj.cellType Level:obj.level];
+            subView = [[CellView alloc] initWithFrame: [obj getTargetFrame] CellType:obj.cellType Level:obj.level];
             subView.opaque = NO;
             subView.tag = obj.objId;
             subView.target = self;
@@ -152,7 +153,7 @@
     
     if(self.world.player)
     {
-        subView = [[CellView alloc] initWithFrame: [self.world.player getFrame] CellType:self.world.player.cellType Level:0];
+        subView = [[CellView alloc] initWithFrame: [self.world.player getTargetFrame] CellType:self.world.player.cellType Level:0];
         subView.opaque = NO;
         subView.tag = self.world.player.objId;
         subView.target = self;
@@ -164,6 +165,7 @@
                                options:NSKeyValueObservingOptionInitial 
                                context:subView];
     }
+     */
     
 }
 
@@ -234,7 +236,8 @@
                 
             }else {
                 //NSLog(@"Camera: %f %f", self.world.camera.lookAt.x, self.world.camera.lookAt.y);
-                ((UIView*)context).frame = [self.world.camera applyToRect:[((Entity*)object) getFrame]];
+                //UIView *v = (UIView*)context;
+                //v.frame = [self.world.camera applyToRect:[((Entity*)object) getFrame]];
             }
         }
     }
@@ -243,7 +246,7 @@
 - (void) start
 {
     NSLog(@"STARTING TIMER");
-    
+    self.active = true;
     if(self.dispLink) {
         [self.dispLink invalidate];
     }
@@ -276,14 +279,11 @@
     [self start];
 }
 
-- (void) frame:(CADisplayLink*)link
+- (void) updateObjectList:(NSMutableArray*)array background:(bool)background
 {
-    [self.world frame:link.duration];
-    
     int j = 0;
-    
-    for(int i = 0; i < [self.world.objects count]; i++) {
-        Entity *entity = [self.world.objects objectAtIndex:i];
+    for(int i = 0; i < [array count]; i++) {
+        Entity *entity = [array objectAtIndex:i];
         UIView *subview = [self.view.subviews objectAtIndex:j];
         while(subview.tag < entity.objId) {
             j++;
@@ -293,8 +293,50 @@
             NSLog(@"No Match for Object!");
             continue;
         }
-        subview.frame = [self.world.camera applyToRect:[entity getFrame]];
+        
+        if(entity.firstDraw) {
+            entity.firstDraw = false;
+        }else{
+            subview.frame = [self.world.camera applyToRect:[entity getFrame]];
+        }
+        
+        subview.alpha = (entity.level == 0) ? (entity.size / (float)entity.targetSize) : 0.3;
+
+        
+        if(!entity.alive || abs(entity.level - self.world.player.level) > 1) {
+            [self removeListener:entity];
+            [subview removeFromSuperview];
+            [self.world removeEnemy:(Enemy*)entity];
+            j--;
+            i--;
+        }else if(entity.level == self.world.player.level+1 && background) {
+            [self.world backgroundEnemy:(Enemy*)entity];
+            j--;
+            i--;
+        }else if(entity.level > self.world.player.level+1) {
+            entity.alive = false;
+        }
+        
+        
         j++;
+    }
+    
+}
+
+- (void) frame:(CADisplayLink*)link
+{
+    [self.world frame:link.duration];
+    
+    if(self.world.spawnNeeded) {
+        [self spawnEnemy];
+        self.world.spawnNeeded = false;
+    }
+    
+    [self updateObjectList:self.world.objects background:true];
+    [self updateObjectList:self.world.backgroundObjects background:false];
+
+    if(self.world.loseCondition) {
+        [self lose];
     }
 }
 
@@ -305,7 +347,7 @@
     {
         [self.world setPlayer:player];
         
-        Shape *subView = [[CellView alloc] initWithFrame: [self.world.player getFrame] CellType:player.cellType Level:0];
+        Shape *subView = [[CellView alloc] initWithFrame: [self.world.player getTargetFrame] CellType:player.cellType Level:0];
         subView.opaque = NO;
         subView.tag = player.objId;
         subView.target = self;
@@ -334,37 +376,86 @@
     if(enemy) {
         [self.world addEnemy:enemy];
         
-        CGRect frame = [enemy getFrame];
+        CGRect frame = [enemy getTargetFrame];
         Shape *subView = [[CellView alloc] initWithFrame:frame CellType:enemy.cellType Level:0];
         subView.opaque = NO;
+        subView.alpha = 0.0;
         subView.tag = enemy.objId;
         subView.target = self;
         subView.panAction = @selector(panShape:amount:);
         [self.view addSubview:subView];
         [subView release];
+        [subView setNeedsDisplay];
         
         [enemy addObserver:self forKeyPath:@"version" 
-                               options:NSKeyValueObservingOptionInitial 
-                               context:subView];
+                   options:NSKeyValueObservingOptionInitial 
+                   context:subView];
     }
 }
 
-- (void) spawnEnemy
+- (void) addEnemyInBackground:(Enemy*)enemy
 {
-    CGPoint loc = CGPointMake(rand() % 1000 - 500, rand() % 1000 - 500);
-    float size = rand() % 30 + 20;
-    Enemy *enemy = [[Enemy alloc] initWithType:CELL_ENEMY location:loc size:size world:self.world];
-    [self addEnemy:enemy];
+    if(enemy) {
+        [self.world addEnemy:enemy];
+        
+        CGRect frame = [enemy getTargetFrame];
+        Shape *subView = [[CellView alloc] initWithFrame:frame CellType:enemy.cellType Level:0];
+        subView.opaque = NO;
+        subView.alpha = 0.0;
+        subView.tag = enemy.objId;
+        subView.target = self;
+        subView.panAction = @selector(panShape:amount:);
+        [self.view addSubview:subView];
+        [subView release];
+        [subView setNeedsDisplay];
+        
+        [self.view sendSubviewToBack:subView];
+        
+        [enemy addObserver:self forKeyPath:@"version" 
+                   options:NSKeyValueObservingOptionInitial 
+                   context:subView];
+    }
+}
+
+- (Enemy*) spawnEnemyMin
+{
+    Enemy *obj;
+    int min = self.world.minEnemySize;
+    int max = self.world.maxEnemySize;
+    int size = rand() % (max-min) + min;
+    float movX = ((float)rand() / RAND_MAX) * 20.0;
+    float movY = ((float)rand() / RAND_MAX) * 20.0;
+    
+    movX *= (rand() % 2 == 1) ? 1 : -1;
+    movY *= (rand() % 2 == 1) ? 1 : -1;
+    
+    obj = [[MovingEnemy alloc] initWithType:CELL_ENEMY 
+                                   location:CGPointMake(rand() % 400 - 200, rand() % 600 - 300)
+                                       size:size
+                                  direction:CGPointMake(movX, movY) 
+                                      world:self.world];
+    obj.level = 0;
+    [self addEnemy:obj];
+    [obj release];
+    return obj;
 }
 
 
 - (void) spawnEnemyWithLevel:(int)level
 {
-    CGPoint loc = CGPointMake(rand() % 1000 - 500, rand() % 1000 - 500);
-    float size = rand() % 30 + 20;
-    Enemy *enemy = [[Enemy alloc] initWithType:CELL_ENEMY location:loc size:size world:self.world];
-    enemy.level = level;
-    [self addEnemy:enemy];
+    Enemy *obj;
+    int size = rand() % 30;
+    float movX = ((float)rand() / RAND_MAX) * 40.0 - 20.0;
+    float movY = ((float)rand() / RAND_MAX) * 40.0 - 20.0;
+    obj = [[MovingEnemy alloc] initWithType:CELL_ENEMY 
+                                   location:CGPointMake(rand() % 400 - 200, rand() % 600 - 300)
+                                       size:size
+                                  direction:CGPointMake(movX, movY) 
+                                      world:self.world];
+    obj.level = 0;
+    [self addEnemy:obj];
+    obj.level = 1;
+    [obj release];
 }
 
 - (void) removeEnemy:(Enemy*)enemy

@@ -16,6 +16,7 @@
 }
 
 @property (nonatomic, retain, readonly) CADisplayLink *dispLink;
+@property (nonatomic) BOOL active;
 @property (nonatomic, retain, readonly) World *world;
 
 - (void) loadViewObjects;
@@ -28,7 +29,7 @@
 
 - (void) setPlayer:(Player*)player;
 - (void) createPlayerDefault;
-- (void) spawnEnemy;
+- (Enemy*) spawnEnemy;
 - (void) addEnemy:(Enemy*)enemy;
 - (void) removeEnemy:(Enemy*)enemy;
 - (void) spawnEnemyWithLevel:(int)level;

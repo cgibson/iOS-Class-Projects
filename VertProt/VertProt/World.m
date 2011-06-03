@@ -7,10 +7,12 @@
 //
 
 #import "World.h"
+#import "CGPointMath.h"
 
 
 @interface World()
 @property (nonatomic, retain) NSMutableArray *objects;
+@property (nonatomic, retain) NSMutableArray *backgroundObjects;
 @property (nonatomic, retain) Player *player;
 @property (nonatomic, retain) Camera *camera;
 @end
@@ -18,10 +20,18 @@
 @implementation World
 
 @synthesize objects = objects_;
+@synthesize backgroundObjects = backgroundObjects_;
 @synthesize player=_player;
 @synthesize camera = camera_;
 @synthesize objectsWrap=_objectsWrap;
 @synthesize gameMode=_gameMode;
+@synthesize spawnUpdateTime=_spawnUpdateTime;
+@synthesize timeSinceLastSpawn=_timeSinceLastSpawn;
+@synthesize maxEnemies=_maxEnemies;
+@synthesize spawnNeeded=_spawnNeeded;
+@synthesize loseCondition=_loseCondition;
+@synthesize minEnemySize=_minEnemySize;
+@synthesize maxEnemySize=_maxEnemySize;
 
 - (void) dealloc
 {
@@ -33,6 +43,7 @@
     
     NSLog(@"World dealloc'd");
     [_player release];
+    [backgroundObjects_ release];
     [objects_ release];
     [camera_ release];
     [super dealloc];
@@ -66,7 +77,7 @@
             self.gameMode = PEACEFUL;
         }
     }
-    
+    NSLog(@"What are we? %d", self.gameMode);
     return self;
 }
 
@@ -75,14 +86,24 @@
     self = [super init];
     if (self) {
         self.objects = [NSMutableArray arrayWithCapacity:10];
+        self.backgroundObjects = [NSMutableArray arrayWithCapacity:10];
         self->bounds = rect;
+    
+        self.loseCondition = false;
+        self.gameMode = PEACEFUL;
+    
+        self.objectsWrap = true;
+        
+        self.minEnemySize = 10;
+        self.maxEnemySize = 60;
+        
+        self.spawnUpdateTime = 1.0;
+        self.timeSinceLastSpawn = 0.0;
+    
+        self.maxEnemies = 50;
+    
+        [self buildCamera:CGPointMake(0, 0)];
     }
-    
-    self.gameMode = PEACEFUL;
-    
-    self.objectsWrap = true;
-    
-    [self buildCamera:CGPointMake(0, 0)];
     
     return self;
 }
@@ -115,71 +136,141 @@
     }
 }
 
+- (bool) handleIntersectEnt1:(Entity*)ent Ent2:(Entity*)ent2
+{
+    CGPoint entLoc = [self.camera applyToPoint:ent.location];
+    CGPoint ent2Loc = [self.camera applyToPoint:ent2.location];
+    
+    if(ent.level == ent2.level) {
+        
+        CGPoint distVec = CGPointSubtract(entLoc, ent2Loc);
+        
+        float dist = CGPointMagnitude(distVec);
+        float invDist = 1.0f / dist;
+        float totEntSize = (ent.size + ent2.size) / 2.0;
+        
+        if(dist < totEntSize) {
+            CGPoint direction = CGPointMult(distVec, invDist);
+            
+            CGPoint midPoint = CGPointMult(distVec, 0.5);
+            
+            CGPoint entMove = CGPointSubtract(CGPointMult(direction, 0.5 * totEntSize), midPoint);
+            
+            ent.location = CGPointAdd(ent.location, entMove);
+            ent2.location = CGPointSubtract(ent2.location, entMove);
+            
+            return true;
+            
+        }
+        
+    }
+    return false;
+}
+
+- (bool) handlePlayerIntersectEnt:(Entity*)ent
+{
+    CGPoint entLoc = [self.camera applyToPoint:ent.location];
+    CGPoint playerLoc = self.camera.screenOffset;// = [self.camera applyToPoint:ent2.location];
+    
+    if(ent.level == self.player.level) {
+        
+        CGPoint distVec = CGPointSubtract(entLoc, playerLoc);
+        
+        float dist = CGPointMagnitude(distVec);
+        float invDist = 1.0f / dist;
+        float totEntSize = (ent.size + self.player.size) / 2.0;
+        
+        if(dist < totEntSize) {
+            CGPoint direction = CGPointMult(distVec, invDist);
+            
+            CGPoint midPoint = CGPointMult(distVec, 0.5);
+            
+            CGPoint entMove = CGPointSubtract(CGPointMult(direction, totEntSize), midPoint);
+            
+            ent.location = CGPointAdd(ent.location, entMove);
+            //self.player.location = CGPointSubtract(self.player.location, entMove);
+            
+            return true;
+            
+        }
+        
+    }
+    return false;
+}
+
 - (void) frame:(CFTimeInterval)elapsed
 {
+    self.timeSinceLastSpawn += elapsed;
+    if(self.timeSinceLastSpawn > self.spawnUpdateTime && [self.objects count] < self.maxEnemies) {
+        self.spawnNeeded = true;
+        self.timeSinceLastSpawn = 0.0;
+    }
+    
+    bool hit;
     int count = [self.objects count];
+    
+    for (Entity* ent in self.backgroundObjects) {
+        [ent think:elapsed];
+        
+        
+        // Get camera bounding box
+        CGRect camBounds = CGRectMake(bounds.origin.x - self.camera.lookAt.x, 
+                                      bounds.origin.y -
+                                      self.camera.lookAt.y, 
+                                      bounds.size.width, bounds.size.height);
+        
+        // Handle world wrapping
+        if(self.objectsWrap) {
+            CGPoint loc = ent.location;
+            if (loc.x < camBounds.origin.x) {
+                loc.x = camBounds.origin.x + camBounds.size.width;
+                ent.location = loc;
+            }else if (loc.x > camBounds.origin.x + camBounds.size.width) {
+                loc.x = camBounds.origin.x;
+                ent.location = loc;
+            }
+            if (loc.y < camBounds.origin.y) {
+                loc.y = camBounds.origin.y + camBounds.size.height;
+                ent.location = loc;
+            }else if (loc.y > camBounds.origin.y + camBounds.size.height) {
+                loc.y = camBounds.origin.y;
+                ent.location = loc;
+            }
+        }
+    }
+    
     for (int i = 0; i < count; i++) {
         Entity* ent = [self.objects objectAtIndex:i];
 
         [ent think:elapsed];
         
-        CGPoint entLoc = ent.location;
-        
         if(!ent) {
             continue;
         }
         
+        // Handle intersections with other entities
         for (int j = i+1; j < count; j++) {
             Entity* ent2 = [self.objects objectAtIndex:j];
             
             if(!ent2) {
                 continue;
             }
+            hit = [self handleIntersectEnt1:ent Ent2:ent2];
             
-            CGPoint ent2Loc = ent2.location;
-            if(ent.level == ent2.level) {
-
-                CGPoint distVec = CGPointMake(entLoc.x - ent2Loc.x, entLoc.y - ent2Loc.y);
-            
-                float dist = sqrt(pow(distVec.x, 2) + pow(distVec.y, 2));
-                float totEntSize = (ent.size + ent2.size) / 2.0;
-            
-                if(dist < totEntSize) {
-                    distVec.x /= dist;
-                    distVec.y /= dist;
-                
-                    distVec.x *= totEntSize;
-                    distVec.y *= totEntSize;
-                    
-                    CGPoint midpoint = CGPointMake((entLoc.x + ent2Loc.x) * 0.5, (entLoc.y + ent2Loc.y) * 0.5);
-                    
-                    // Move first object
-                    entLoc.x = midpoint.x + (distVec.x / 2.);
-                    entLoc.y = midpoint.y + (distVec.y / 2.);
-                    
-                    // Move other object
-                    ent2Loc.x = midpoint.x - (distVec.x / 2.);
-                    ent2Loc.y = midpoint.y - (distVec.y / 2.);
-                    
-                    ent2.location = ent2Loc;
-                    
-                    [ent registerHit:ent2];
-                    [ent2 registerHit:ent];
-                    
-                }
-                
+            if(hit) {
+                [ent registerHit:ent2 WithMode:self.gameMode];
+                [ent2 registerHit:ent WithMode:self.gameMode];
             }
              
         }
         
-
-        ent.location = entLoc;
-        
+        // Get camera bounding box
         CGRect camBounds = CGRectMake(bounds.origin.x - self.camera.lookAt.x, 
                                       bounds.origin.y -
                                       self.camera.lookAt.y, 
                                       bounds.size.width, bounds.size.height);
         
+        // Handle world wrapping
         if(self.objectsWrap) {
             CGPoint loc = ent.location;
             if (loc.x < camBounds.origin.x) {
@@ -201,18 +292,44 @@
         //[ent refresh];
          
     }
-    //[self.player think:elapsed];
+    
+    if(self.player) {
+        [self.player think:elapsed];
+        
+        for(Entity* ent in self.objects) {
+        
+            // Handle intersections with the player
+            hit = [self handlePlayerIntersectEnt:ent];
+        
+            if(hit) {
+                if(ent.size < self.player.size) {
+                    ent.alive = false;
+                }else{
+                    self.loseCondition = true;
+                }
+            }
+        }
+    }
+    //
 }
-
 
 - (void) addEnemy:(Enemy*)enemy
 {
+    enemy.world = self;
     [self.objects addObject:enemy];
 }
 
 - (void) removeEnemy:(Enemy*)enemy
 {
     [self.objects removeObject:enemy];
+}
+
+
+- (void) backgroundEnemy:(Enemy*)enemy
+{
+    [self.backgroundObjects addObject:enemy];
+    [self.objects removeObject:enemy];
+
 }
 
 @end

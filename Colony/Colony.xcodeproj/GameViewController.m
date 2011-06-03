@@ -32,24 +32,19 @@
     //World *newWorld = [[[World alloc] initWithRect:worldRect] autorelease];
     
     //[newWorld.camera useScreenSize:self.view.bounds];
-    
     //self.world = newWorld;
     NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:
                                 [NSValue valueWithCGRect:worldBounds], @"bounds", 
-                                [NSValue valueWithCGRect:self.view.bounds], @"screen", nil];
+                                [NSValue valueWithCGRect:self.view.bounds], @"screen",
+                                [NSNumber numberWithBool:2], @"mode", nil];
     [self.world = [World alloc] initWithOptions:dict];
     
-    [self createPlayerDefault];
-    
-    for(int i = 0; i < 30; i++) {
-        [self spawnEnemy];
-    }
     
     for(int i = 0; i < 50; i++) {
-        [self spawnEnemyWithLevel:-1];
+        [self spawnEnemyWithLevel:1];
     }
     
-    self.world.gameMode = SURVIVAL;
+    [self createPlayerDefault];
     
 }
 
@@ -59,6 +54,7 @@
     if (self) {
         // Custom initialization
         [self buildWorld];
+        self.world.spawnUpdateTime = 1.5;
     }
     
     
@@ -91,6 +87,9 @@
     [self.view addSubview:button];
     // add to a view
     
+    self.world.minEnemySize = 15;
+    self.world.minEnemySize = 100;
+    
     
 }
 
@@ -101,7 +100,7 @@
     [super viewDidLoad];
     [self initMenuButton];
     
-    [self start];
+    [self performSelector:@selector(start) withObject:self afterDelay:2.0];//[self start];
     self.world.objectsWrap = true;
     /*if(self.state && self.state.running) {
         CGRect myImageRect = CGRectMake(0.0f, 0.0f, 320.0f, 109.0f);
@@ -146,6 +145,7 @@
 
 - (void) start
 {
+    self.world.timeSinceLastSpawn = 0.0;
     NSLog(@"Started");
     [super start];
 }

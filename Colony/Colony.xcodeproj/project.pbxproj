@@ -42,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C122F151398ABE000331676 /* CGPointMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointMath.h; sourceTree = "<group>"; };
 		1C5654D81396CFFC00A169F5 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = ../../VertProt/VertProt/Camera.h; sourceTree = "<group>"; };
 		1C5654D91396CFFC00A169F5 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Camera.m; path = ../../VertProt/VertProt/Camera.m; sourceTree = "<group>"; };
 		1C5654DA1396CFFC00A169F5 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = ../../VertProt/VertProt/Entity.h; sourceTree = "<group>"; };
@@ -165,6 +166,7 @@
 				1CBAE8D11395A88D004B151E /* Supporting Files */,
 				1CDB5A8E1395E0B30052A3D0 /* GameState.h */,
 				1CDB5A8F1395E0B40052A3D0 /* GameState.m */,
+				1C122F151398ABE000331676 /* CGPointMath.h */,
 				1C5654D81396CFFC00A169F5 /* Camera.h */,
 				1C5654D91396CFFC00A169F5 /* Camera.m */,
 				1C5654F41396F71400A169F5 /* Player.h */,
