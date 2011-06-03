@@ -37,4 +37,5 @@
 - (void) spawnEnemyWithLevel:(int)level;
 - (void) showTitle:(NSString*)text;
 - (void) hideTitle;
+- (void) strike:(int)objId;
 @end

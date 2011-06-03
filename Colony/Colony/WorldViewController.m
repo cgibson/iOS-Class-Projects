@@ -210,7 +210,7 @@
         velPoint.x = data.velocity.x * (1.0 / 6.0);
         velPoint.y = data.velocity.y * (1.0 / 6.0);
         //enemy.direction = velPoint;
-        [enemy setDirection:velPoint];
+        [enemy changeDirection:velPoint];
     }
     
     [obj refresh];
@@ -220,6 +220,25 @@
 {
 
     [entity removeObserver:self forKeyPath:@"version"];
+}
+
+- (void) strike:(int)objId
+{
+    Entity *ent = nil;
+    for (Entity* e in self.world.objects) {
+        if(e.objId == objId) {
+            ent = e;
+            break;
+        }
+    }
+    
+    if(ent) {
+        if([ent isKindOfClass:[MovingEnemy class]]) {
+            if(ent.size > self.world.player.size) {
+                ent.targetSize /= 2.0;
+            }
+        }
+    }
 }
 
 - (void) removeListeners

@@ -47,10 +47,12 @@
 {
     UITouch *touch = [[event allTouches] anyObject];
     NSLog(@"Touches: %d", touch.tapCount);
-    if (touch.tapCount == 2 && [self.target isKindOfClass:[DefaultGameViewController class]]) {
+    if (touch.tapCount == 3 && [self.target isKindOfClass:[DefaultGameViewController class]]) {
             NSLog(@"Recalibrate");
             [(DefaultGameViewController*)self.target callibrateGyro];
-    }else if(touch.tapCount == 3) {
+    }else if(touch.tapCount == 2 && [self.target isKindOfClass:[WorldViewController class]]) {
+        [(DefaultGameViewController*)self.target strike:self.tag];
+    }else if(touch.tapCount == 4) {
         
         ((WorldViewController*)self.target).world.gameMode = THUNDERDOME;
     }

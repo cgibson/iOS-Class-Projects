@@ -143,21 +143,24 @@
     
     if(ent.level == ent2.level) {
         
-        CGPoint distVec = CGPointSubtract(entLoc, ent2Loc);
+        CGPoint distVec = [CGPointMath CGPointSubtractP1:entLoc P2:ent2Loc];
         
-        float dist = CGPointMagnitude(distVec);
+        float dist = [CGPointMath CGPointMagnitude:distVec];
         float invDist = 1.0f / dist;
         float totEntSize = (ent.size + ent2.size) / 2.0;
         
         if(dist < totEntSize) {
-            CGPoint direction = CGPointMult(distVec, invDist);
+            CGPoint direction = [CGPointMath CGPointMult:distVec Amount:invDist];
             
-            CGPoint midPoint = CGPointMult(distVec, 0.5);
+            CGPoint midPoint = [CGPointMath CGPointMult:distVec Amount:0.5];
             
-            CGPoint entMove = CGPointSubtract(CGPointMult(direction, 0.5 * totEntSize), midPoint);
+            CGPoint entMove = [CGPointMath CGPointSubtractP1:[CGPointMath CGPointMult:direction 
+                                                                               Amount:0.5 * totEntSize]
+                                                          P2:midPoint];
             
-            ent.location = CGPointAdd(ent.location, entMove);
-            ent2.location = CGPointSubtract(ent2.location, entMove);
+            ent.location = [CGPointMath CGPointAddP1:ent.location P2:entMove];
+            ent2.location = [CGPointMath CGPointSubtractP1:ent2.location 
+                                                        P2:entMove];
             
             return true;
             
@@ -174,20 +177,22 @@
     
     if(ent.level == self.player.level) {
         
-        CGPoint distVec = CGPointSubtract(entLoc, playerLoc);
+        CGPoint distVec = [CGPointMath CGPointSubtractP1:entLoc P2:playerLoc];
         
-        float dist = CGPointMagnitude(distVec);
+        float dist = [CGPointMath CGPointMagnitude:distVec];
         float invDist = 1.0f / dist;
         float totEntSize = (ent.size + self.player.size) / 2.0;
         
         if(dist < totEntSize) {
-            CGPoint direction = CGPointMult(distVec, invDist);
+            CGPoint direction = [CGPointMath CGPointMult:distVec Amount:invDist];
             
-            CGPoint midPoint = CGPointMult(distVec, 0.5);
+            CGPoint midPoint = [CGPointMath CGPointMult:distVec Amount:0.5];
             
-            CGPoint entMove = CGPointSubtract(CGPointMult(direction, totEntSize), midPoint);
+            CGPoint entMove = [CGPointMath CGPointSubtractP1:[CGPointMath CGPointMult:direction 
+                                                                               Amount:totEntSize] 
+                                                          P2:midPoint];
             
-            ent.location = CGPointAdd(ent.location, entMove);
+            ent.location = [CGPointMath CGPointAddP1:ent.location P2:entMove];
             //self.player.location = CGPointSubtract(self.player.location, entMove);
             
             return true;

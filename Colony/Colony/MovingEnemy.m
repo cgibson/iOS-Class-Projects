@@ -10,6 +10,7 @@
 #import "CGPointMath.h"
 
 #define ANIMATION_SPEED 1.0
+#define MAX_SPEED 100.0
 
 @implementation MovingEnemy
 
@@ -26,6 +27,7 @@
     
     if(self) {
         self.direction = CGPointMake(0, 0);
+        self.animationAmt = 1.0;
         self.targetDirection = dir;
     }
     
@@ -39,20 +41,29 @@
     
     if(self.animationAmt > 0.0) {
         self.animationAmt -= ANIMATION_SPEED * elapsed;
-        finalDirection = CGPointBlend(self.direction, self.targetDirection, self.animationAmt);
-    }else if(self.animationAmt < 0.0)
+        finalDirection = [CGPointMath CGPointBlendP1:self.direction 
+                                                  P2:self.targetDirection 
+                                              Amount:self.animationAmt];
+    }else if(self.animationAmt <= 0.0)
     {
+        self.animationAmt = 0.0;
         finalDirection = self.targetDirection;
     }
-    
-    [super think:elapsed];
+
     [self moveDirection: finalDirection
                 Elapsed:elapsed * 5];
+    
+    
+    [super think:elapsed];
 }
 
 - (void) changeDirection:(CGPoint)newDirection
 {
     self.animationAmt = 1.0;
+    float speed = [CGPointMath CGPointMagnitude:newDirection];
+    if(speed > MAX_SPEED) {
+        newDirection = [CGPointMath CGPointMult:newDirection Amount:(1.0 / speed) * MAX_SPEED];
+    }
     self.direction = newDirection;
 }
 

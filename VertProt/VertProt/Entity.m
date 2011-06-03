@@ -72,12 +72,12 @@
 
 - (void) think:(NSTimeInterval)elapsed
 {
-    if(self.size < self.targetSize){
-        self.size += GROW_SPEED * elapsed;
-        //self.repaint = true;
-        if(self.size > self.targetSize) {
-            self.size = self.targetSize;
-        }
+    if(fabs(self.size - self.targetSize) > (GROW_SPEED * elapsed)){
+        float dir = (self.size < self.targetSize) ? 1 : -1;
+        self.size += GROW_SPEED * elapsed * dir;
+
+    }else{
+        self.size = self.targetSize;
     }
     //NSLog(@"Entity %d is thinking...", self.objId);
 }
