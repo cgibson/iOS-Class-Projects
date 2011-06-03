@@ -43,5 +43,6 @@
 - (void) addEnemy:(Enemy*)enemy;
 - (void) removeEnemy:(Enemy*)enemy;
 - (void) backgroundEnemy:(Enemy*)enemy;
+- (void) addToPlayer:(float)mass;
 
 @end

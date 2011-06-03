@@ -13,4 +13,6 @@
     
 }
 
+@property (nonatomic) float score;
+
 @end

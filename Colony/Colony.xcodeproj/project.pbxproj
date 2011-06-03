@@ -19,6 +19,7 @@
 		1C5654F31396D26600A169F5 /* WorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654F21396D26600A169F5 /* WorldViewController.m */; };
 		1C5654F61396F71B00A169F5 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654F51396F71700A169F5 /* Player.m */; };
 		1C5654FA13970F3700A169F5 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5654F913970F3000A169F5 /* Enemy.m */; };
+		1C5E3677139916530055247B /* CGPointMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C5E36761399164F0055247B /* CGPointMath.m */; };
 		1C93145013973FF600121710 /* MovingEnemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C93144F13973FF600121710 /* MovingEnemy.m */; };
 		1C9314571397534600121710 /* Vec3.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C9314561397534400121710 /* Vec3.m */; };
 		1CBAE8CB1395A88D004B151E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBAE8CA1395A88D004B151E /* UIKit.framework */; };
@@ -42,7 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C122F151398ABE000331676 /* CGPointMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointMath.h; sourceTree = "<group>"; };
+		1C122F151398ABE000331676 /* CGPointMath2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointMath2.h; sourceTree = "<group>"; };
 		1C5654D81396CFFC00A169F5 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Camera.h; path = ../../VertProt/VertProt/Camera.h; sourceTree = "<group>"; };
 		1C5654D91396CFFC00A169F5 /* Camera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Camera.m; path = ../../VertProt/VertProt/Camera.m; sourceTree = "<group>"; };
 		1C5654DA1396CFFC00A169F5 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = ../../VertProt/VertProt/Entity.h; sourceTree = "<group>"; };
@@ -66,6 +67,8 @@
 		1C5654F71396FA0B00A169F5 /* types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = types.h; sourceTree = "<group>"; };
 		1C5654F813970F2B00A169F5 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
 		1C5654F913970F3000A169F5 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		1C5E36751399164A0055247B /* CGPointMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointMath.h; sourceTree = "<group>"; };
+		1C5E36761399164F0055247B /* CGPointMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CGPointMath.m; sourceTree = "<group>"; };
 		1C93144E13973FF600121710 /* MovingEnemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovingEnemy.h; sourceTree = "<group>"; };
 		1C93144F13973FF600121710 /* MovingEnemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovingEnemy.m; sourceTree = "<group>"; };
 		1C9314551397534300121710 /* Vec3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec3.h; sourceTree = "<group>"; };
@@ -166,7 +169,9 @@
 				1CBAE8D11395A88D004B151E /* Supporting Files */,
 				1CDB5A8E1395E0B30052A3D0 /* GameState.h */,
 				1CDB5A8F1395E0B40052A3D0 /* GameState.m */,
-				1C122F151398ABE000331676 /* CGPointMath.h */,
+				1C122F151398ABE000331676 /* CGPointMath2.h */,
+				1C5E36751399164A0055247B /* CGPointMath.h */,
+				1C5E36761399164F0055247B /* CGPointMath.m */,
 				1C5654D81396CFFC00A169F5 /* Camera.h */,
 				1C5654D91396CFFC00A169F5 /* Camera.m */,
 				1C5654F41396F71400A169F5 /* Player.h */,
@@ -292,6 +297,7 @@
 				1C5654FA13970F3700A169F5 /* Enemy.m in Sources */,
 				1C93145013973FF600121710 /* MovingEnemy.m in Sources */,
 				1C9314571397534600121710 /* Vec3.m in Sources */,
+				1C5E3677139916530055247B /* CGPointMath.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -54,7 +54,7 @@
     if (self) {
         // Custom initialization
         [self buildWorld];
-        self.world.spawnUpdateTime = 1.5;
+        self.world.spawnUpdateTime = 1.25;
     }
     
     
@@ -87,10 +87,13 @@
     [self.view addSubview:button];
     // add to a view
     
-    self.world.minEnemySize = 15;
-    self.world.minEnemySize = 100;
     
-    
+}
+
+- (void) startGame
+{
+    [self hideTitle];
+    [self start];
 }
 
 #pragma mark - View lifecycle
@@ -100,7 +103,11 @@
     [super viewDidLoad];
     [self initMenuButton];
     
-    [self performSelector:@selector(start) withObject:self afterDelay:2.0];//[self start];
+    
+    [self showTitle:@"Get Ready!"];
+    self.textScore.hidden = false;
+    self.textScore.text = @"0";
+    [self performSelector:@selector(startGame) withObject:self afterDelay:2.0];//[self start];
     self.world.objectsWrap = true;
     /*if(self.state && self.state.running) {
         CGRect myImageRect = CGRectMake(0.0f, 0.0f, 320.0f, 109.0f);

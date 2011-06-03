@@ -11,11 +11,13 @@
 
 @implementation Player
 
+@synthesize score=_score;
 
 - (id) initWithType:(CellType_t)type location:(CGPoint)loc size:(float)size world:(World *)world
 {
     self = [super initWithType:type location:loc size:size world:world];
     
+    self.score = 0;
     self.location = CGPointMake(160, 240);
     
     return self;

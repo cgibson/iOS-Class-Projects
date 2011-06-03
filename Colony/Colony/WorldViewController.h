@@ -17,6 +17,8 @@
 
 @property (nonatomic, retain, readonly) CADisplayLink *dispLink;
 @property (nonatomic) BOOL active;
+@property (nonatomic, retain, readonly) UITextView *textTitle;
+@property (nonatomic, retain, readonly) UITextView *textScore;
 @property (nonatomic, retain, readonly) World *world;
 
 - (void) loadViewObjects;
@@ -33,4 +35,6 @@
 - (void) addEnemy:(Enemy*)enemy;
 - (void) removeEnemy:(Enemy*)enemy;
 - (void) spawnEnemyWithLevel:(int)level;
+- (void) showTitle:(NSString*)text;
+- (void) hideTitle;
 @end

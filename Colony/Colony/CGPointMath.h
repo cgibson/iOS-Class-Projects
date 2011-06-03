@@ -2,37 +2,28 @@
 //  CGPointMath.h
 //  Colony
 //
-//  Created by Gibson, Christopher on 6/2/11.
+//  Created by Gibson, Christopher on 6/3/11.
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
+
 #import <Foundation/Foundation.h>
 
-CGPoint CGPointAdd(CGPoint p1, CGPoint p2)
-{
-    return CGPointMake(p1.x + p2.x, p1.y + p2.y);
-}
 
-CGPoint CGPointSubtract(CGPoint p1, CGPoint p2)
-{
-    return CGPointMake(p1.x - p2.x, p1.y - p2.y);
+@interface CGPointMath : NSObject {
+    
 }
++ (CGPoint)  CGPointAddP1:(CGPoint)p1 P2:(CGPoint)p2;
 
-float CGPointDistance(CGPoint p1, CGPoint p2)
-{
-    return sqrt( pow(p1.x - p2.x, 2) + pow(p1.y - p2.y, 2));
-}
++ (CGPoint)  CGPointSubtractP1:(CGPoint)p1 P2:(CGPoint)p2;
 
-CGPoint CGPointMult(CGPoint p, float amt)
-{
-    return CGPointMake(p.x * amt, p.y * amt);
-}
++ (float)    CGPointDistanceP1:(CGPoint)p1 P2:(CGPoint)p2;
 
-float CGPointMagnitude(CGPoint p)
-{
-    return sqrt(pow(p.x, 2) + pow(p.y, 2));
-}
++ (CGPoint)  CGPointMult:(CGPoint)p Amount:(float)amt;
 
-CGPoint CGPointMidpoint(CGPoint p1, CGPoint p2)
-{
-    return CGPointMake((p1.x + p2.x) * 0.5, (p1.y + p2.y) * 0.5);
-}
++ (float)    CGPointMagnitude:(CGPoint)p;
+
++ (CGPoint)  CGPointMidpointP1:(CGPoint)p1 P2:(CGPoint) p2;
+
++ (CGPoint)  CGPointBlendP1:(CGPoint)p1 P2:(CGPoint)p2 Amount:(float)amount;
+
+@end

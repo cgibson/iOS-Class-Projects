@@ -304,8 +304,10 @@
             if(hit) {
                 if(ent.size < self.player.size) {
                     ent.alive = false;
+                    [self addToPlayer:ent.size];
                 }else{
                     self.loseCondition = true;
+                    NSLog(@"LOSING NAUGH!");
                 }
             }
         }
@@ -330,6 +332,32 @@
     [self.backgroundObjects addObject:enemy];
     [self.objects removeObject:enemy];
 
+}
+
+- (void) updateEnemySizes
+{
+    if(self.player.score < 150) {
+        NSLog(@"LEVEL 1");
+        self.minEnemySize = 10;
+        self.maxEnemySize = 80;
+    } else if(self.player.score < 300) {
+        NSLog(@"LEVEL 2");
+        self.minEnemySize = 20;
+        self.maxEnemySize = 100;
+        self.spawnNeeded = 0.8;
+    } else if(self.player.score < 500) {
+        NSLog(@"LEVEL 3");
+        self.minEnemySize = 30;
+        self.maxEnemySize = 120;
+        self.spawnNeeded = 0.5;
+    }
+}
+
+- (void) addToPlayer:(float)mass
+{
+    self.player.score += mass;
+    NSLog(@"Score: %f", self.player.score);
+    [self updateEnemySizes];
 }
 
 @end

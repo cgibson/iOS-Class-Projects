@@ -14,8 +14,10 @@
 #import "CellView.h"
 #import "MovingEnemy.h"
 @interface WorldViewController()
-    @property (nonatomic, retain) CADisplayLink *dispLink;
+@property (nonatomic, retain) CADisplayLink *dispLink;
 @property (nonatomic, retain) World *world;
+@property (nonatomic, retain) UITextView *textTitle;
+@property (nonatomic, retain) UITextView *textScore;
 @end
 
 @interface World()
@@ -27,6 +29,8 @@
 @synthesize world=_world;
 @synthesize dispLink = dispLink_;
 @synthesize active = active_;
+@synthesize textTitle = textTitle_;
+@synthesize textScore = textScore_;
 
 - (void) addFakeWorld
 {
@@ -57,17 +61,10 @@
 
 - (void)lose
 {
-    self.active = false;
-    
-    CGRect textFrame = CGRectMake(10, 100, 300, 150);
-    UITextView *txt = [[UITextView alloc] initWithFrame:textFrame];
-    
-    txt.text = @"You Lose!";
-    txt.textAlignment = UITextAlignmentCenter;
-    
-    [self.view addSubview:txt];
-    
-    [txt release];
+    //if(self.textTitle.hidden) {
+    [self showTitle:@"Game Over!"];
+    [self stop];
+    //}
 }
 
 - (void)dealloc
@@ -76,6 +73,7 @@
     [self stop];
     NSLog(@"WorldViewController dealloc'd");
     [dispLink_ release];
+    [textTitle_ release];
     [_world release];
     [super dealloc];
 }
@@ -90,10 +88,35 @@
 
 #pragma mark - View lifecycle
 
+- (void) buildTitle
+{
+    CGRect textFrame = CGRectMake(10, 100, 300, 150);
+    self.textTitle = [[UITextView alloc] initWithFrame:textFrame];
+    self.textTitle.text = @"??????";
+    self.textTitle.font = [UIFont fontWithName:@"Arial" size:42];
+    self.textTitle.backgroundColor = [UIColor clearColor];
+    self.textTitle.textColor = [UIColor whiteColor];
+    self.textTitle.textAlignment = UITextAlignmentCenter;
+    self.textTitle.hidden = true;
+    self.textScore.tag = 1;
+    [self.view addSubview:self.textTitle];
+    [self.textTitle release];
+    
+    textFrame = CGRectMake(5, 5, 150, 50);
+    self.textScore = [[UITextView alloc] initWithFrame:textFrame];
+    self.textScore.text = @"9001";
+    self.textScore.font = [UIFont fontWithName:@"Arial" size:24];
+    self.textScore.backgroundColor = [UIColor clearColor];
+    self.textScore.textColor = [UIColor whiteColor];
+    self.textScore.textAlignment = UITextAlignmentLeft;
+    self.textScore.tag = 2;
+    self.textScore.hidden = true;
+    [self.view addSubview:self.textScore];
+    [self.textScore release];
+}
 
 - (void) initWorldView
 {
-    
     CGRect myWorldRect = CGRectMake(0.0f, 0.0f, 320.0f, 480.0f);
     WorldView *wView = [[WorldView alloc] initWithFrame:myWorldRect];
     [wView setBackgroundColor:[UIColor blackColor]];
@@ -106,9 +129,12 @@
 
 - (void)viewDidLoad
 {
-    self.active = true;
     [super viewDidLoad];
+    
+    self.active = true;
     [self initWorldView];
+    
+    [self buildTitle];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -183,9 +209,8 @@
         CGPoint velPoint;
         velPoint.x = data.velocity.x * (1.0 / 6.0);
         velPoint.y = data.velocity.y * (1.0 / 6.0);
-        enemy.direction = velPoint;
-        //enemy.alive = false;
-        NSLog(@"Enemy %d Dead!", enemy.objId);
+        //enemy.direction = velPoint;
+        [enemy setDirection:velPoint];
     }
     
     [obj refresh];
@@ -205,6 +230,7 @@
     }
     
     [self.world.player removeObserver:self forKeyPath:@"version"];
+    [self.world.player removeObserver:self forKeyPath:@"score"];
 }
 
 
@@ -222,6 +248,9 @@
     {
         NSLog(@"World not loaded yet");
         return;
+    }
+    if ([keyPath isEqualToString:@"score"]) {
+        self.textScore.text = [NSString stringWithFormat:@"%d", (int)self.world.player.score];
     }
     
     if ([keyPath isEqualToString:@"version"]) {
@@ -357,8 +386,12 @@
         [subView release];
         
         [player addObserver:self forKeyPath:@"version" 
-                               options:NSKeyValueObservingOptionInitial 
-                               context:subView];
+                    options:NSKeyValueObservingOptionInitial 
+                    context:subView];
+        
+        [player addObserver:self forKeyPath:@"score" 
+                    options:NSKeyValueObservingOptionInitial 
+                    context:subView];
     }
 }
 
@@ -390,6 +423,10 @@
         [enemy addObserver:self forKeyPath:@"version" 
                    options:NSKeyValueObservingOptionInitial 
                    context:subView];
+        
+        //if(enemy.level > self.world.player.level) {
+        //    [self.view sendSubviewToBack:subView];
+        //}
     }
 }
 
@@ -417,11 +454,13 @@
     }
 }
 
-- (Enemy*) spawnEnemyMin
+- (Enemy*) spawnEnemy
 {
     Enemy *obj;
     int min = self.world.minEnemySize;
     int max = self.world.maxEnemySize;
+    
+    NSLog(@"Min: %d Max: %d", min, max);
     int size = rand() % (max-min) + min;
     float movX = ((float)rand() / RAND_MAX) * 20.0;
     float movY = ((float)rand() / RAND_MAX) * 20.0;
@@ -452,9 +491,8 @@
                                        size:size
                                   direction:CGPointMake(movX, movY) 
                                       world:self.world];
-    obj.level = 0;
-    [self addEnemy:obj];
     obj.level = 1;
+    [self addEnemy:obj];
     [obj release];
 }
 
@@ -469,6 +507,18 @@
             }
         }
     }
+}
+
+- (void) showTitle:(NSString*)text
+{
+    self.textTitle.text = text;
+    self.textTitle.hidden = false;
+    [self.view bringSubviewToFront:self.textTitle];
+}
+
+- (void) hideTitle
+{
+    self.textTitle.hidden = true;
 }
 
 
