@@ -8,6 +8,7 @@
 
 #import "CellView.h"
 #include "Entity.h"
+#import "DefaultGameViewController.h"
 
 @implementation CellView
 
@@ -41,6 +42,15 @@
     return self;
 }
 
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch = [[event allTouches] anyObject];
+    NSLog(@"Touches: %d", touch.tapCount);
+    if (touch.tapCount == 2) {
+            NSLog(@"Recalibrate");
+            [(DefaultGameViewController*)self.target callibrateGyro];
+    }
+}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.

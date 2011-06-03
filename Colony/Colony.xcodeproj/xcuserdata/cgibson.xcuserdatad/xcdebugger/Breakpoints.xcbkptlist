@@ -37,11 +37,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/home/cgibson/iOS/VertProt/VertProt/Entity.h"
-         timestampString = "328684398.914722"
+         timestampString = "328756626.088308"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "14"
-         endingLineNumber = "14"
+         startingLineNumber = "19"
+         endingLineNumber = "19"
          landmarkName = "@interface Entity"
          landmarkType = "2">
       </FileBreakpoint>
@@ -51,25 +51,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Colony/WorldViewController.m"
-         timestampString = "328700048.733409"
+         timestampString = "328757890.816393"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "133"
-         endingLineNumber = "133"
-         landmarkName = "-loadViewObjects"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Colony/WorldViewController.m"
-         timestampString = "328700048.733409"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "136"
-         endingLineNumber = "136"
+         startingLineNumber = "137"
+         endingLineNumber = "137"
          landmarkName = "-loadViewObjects"
          landmarkType = "5">
       </FileBreakpoint>
@@ -93,11 +79,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Colony/WorldViewController.m"
-         timestampString = "328700048.733409"
+         timestampString = "328756062.157946"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "228"
-         endingLineNumber = "228"
+         startingLineNumber = "250"
+         endingLineNumber = "250"
          landmarkName = "-start"
          landmarkType = "5">
       </FileBreakpoint>
@@ -107,11 +93,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Colony/WorldViewController.m"
-         timestampString = "328700048.733409"
+         timestampString = "328756062.157946"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "229"
-         endingLineNumber = "229"
+         startingLineNumber = "251"
+         endingLineNumber = "251"
          landmarkName = "-start"
          landmarkType = "5">
       </FileBreakpoint>
@@ -121,12 +107,68 @@
          continueAfterRunningActions = "No"
          isPathRelative = "0"
          filePath = "/home/cgibson/iOS/VertProt/VertProt/Entity.m"
-         timestampString = "328689420.431046"
+         timestampString = "328756062.157946"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "66"
-         endingLineNumber = "66"
+         startingLineNumber = "71"
+         endingLineNumber = "71"
          landmarkName = "-moveDelta:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "0"
+         filePath = "/home/cgibson/iOS/VertProt/VertProt/World.m"
+         timestampString = "328753588.123953"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "52"
+         endingLineNumber = "52"
+         landmarkName = "-initWithOptions:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Colony/WorldViewController.m"
+         timestampString = "328761738.249348"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "378"
+         endingLineNumber = "378"
+         landmarkName = "-removeEnemy:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Colony/Enemy.m"
+         timestampString = "328756637.601774"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "21"
+         endingLineNumber = "21"
+         landmarkName = "-registerHit:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         isPathRelative = "1"
+         filePath = "Colony/Enemy.m"
+         timestampString = "328756639.170101"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "22"
+         endingLineNumber = "22"
+         landmarkName = "-registerHit:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

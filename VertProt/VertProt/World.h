@@ -10,6 +10,9 @@
 #import "Entity.h"
 #import "Camera.h"
 #import "Player.h"
+#import "Enemy.h"
+
+typedef enum GameMode_t{PEACEFUL, SURVIVAL, THUNDERDOME} GameMode_t;
 
 @interface World : NSObject {
     @private
@@ -20,13 +23,17 @@
 @property (nonatomic, retain, readonly) Player *player;
 @property (nonatomic, retain, readonly) Camera *camera;
 @property (nonatomic) bool objectsWrap;
+@property (nonatomic) GameMode_t gameMode;
 
 - (Entity*) objectWithID: (int) objId;
 - (id) initWithRect: (CGRect) rect;
+- (id) initWithOptions:(NSDictionary*)dict;
 - (void) setCamera: (Camera*) cam;
 - (void) addObject: (Entity*) obj;
 - (void) refreshAll;
 - (void) frame: (CFTimeInterval)elapsed;
 - (void) buildCamera:(CGPoint)point;
+- (void) addEnemy:(Enemy*)enemy;
+- (void) removeEnemy:(Enemy*)enemy;
 
 @end

@@ -13,12 +13,12 @@
 
 @synthesize direction=_direction;
 
-- (id) initWithType:(CellType_t)type location:(CGPoint)loc size:(CGPoint)size direction:(CGPoint)dir
+- (id) initWithType:(CellType_t)type location:(CGPoint)loc size:(float)size direction:(CGPoint)dir world:(World*)world
 {
     self = [self initWithType:type
                      location:loc 
                          size:size 
-                        level:0];
+                        world:world];
     
     if(self) {
         self.direction = dir;

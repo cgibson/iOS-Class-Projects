@@ -7,8 +7,27 @@
 //
 
 #import "Enemy.h"
-
+#import "World.h"
 
 @implementation Enemy
+
+
+- (void) registerHit:(Entity *)entity
+{
+    switch (self.world.gameMode) {
+        case SURVIVAL:
+            if([entity isKindOfClass:[Player class]])
+            {
+                [self fight:entity];
+            }
+            break;
+        case THUNDERDOME:
+            [self fight:entity];
+            break;
+        case PEACEFUL:
+        default:
+            break;
+    }
+}
 
 @end

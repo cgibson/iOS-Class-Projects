@@ -28,17 +28,28 @@
 
 - (void) buildWorld
 {
-    //CGRect worldRect = CGRectMake(-500, -500, 1000, 1000);
+    CGRect worldBounds = CGRectMake(-500, -500, 1000, 1000);
     //World *newWorld = [[[World alloc] initWithRect:worldRect] autorelease];
     
     //[newWorld.camera useScreenSize:self.view.bounds];
     
     //self.world = newWorld;
+    NSDictionary *dict = [[NSDictionary alloc] initWithObjectsAndKeys:
+                                [NSValue valueWithCGRect:worldBounds], @"bounds", 
+                                [NSValue valueWithCGRect:self.view.bounds], @"screen", nil];
+    [self.world = [World alloc] initWithOptions:dict];
     
-    [self addFakeWorld];
+    [self createPlayerDefault];
     
-    Player *player = [[Player alloc] initWithType:CELL_PLAYER location:CGPointMake(0, 0) size:CGPointMake(60, 60) level:0];
-    [self setPlayer:player];
+    for(int i = 0; i < 30; i++) {
+        [self spawnEnemy];
+    }
+    
+    for(int i = 0; i < 50; i++) {
+        [self spawnEnemyWithLevel:-1];
+    }
+    
+    self.world.gameMode = SURVIVAL;
     
 }
 
@@ -74,7 +85,7 @@
     CGRect buttonRect = CGRectMake(320.0f - (18.0f + 5.0f), 5.0f, 18.0f, 18.0f);
     UIButton *button = [UIButton buttonWithType:UIButtonTypeInfoLight];
     button.frame = buttonRect;
-    button.tag = 101;
+    button.tag = 0;
     
     [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];

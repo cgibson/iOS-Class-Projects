@@ -1,0 +1,952 @@
+TColony
+v7
+r0
+t328752372.931301
+cCheck dependencies
+cProcessInfoPlistFile /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Info.plist Colony/Colony-Info.plist
+cProcessPCH /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch.gch Colony/Colony-Prefix.pch normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/main.o /home/cgibson/iOS/Colony/Colony/main.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/ColonyAppDelegate.o /home/cgibson/iOS/Colony/Colony/ColonyAppDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/RootViewController.o /home/cgibson/iOS/Colony/Colony/RootViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/MenuController.o /home/cgibson/iOS/Colony/Colony/MenuController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/GameViewController.o /home/cgibson/iOS/Colony/Colony.xcodeproj/GameViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/GameState.o /home/cgibson/iOS/Colony/Colony/GameState.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Camera.o /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Camera.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Entity.o /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Entity.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Shape.o /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Shape.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/World.o /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/World.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/DefaultGameViewController.o /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/DefaultGameViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/CellView.o /home/cgibson/iOS/Colony/Colony/../../VertProt/CellView.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/WorldView.o /home/cgibson/iOS/Colony/Colony/WorldView.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/WorldViewController.o /home/cgibson/iOS/Colony/Colony/WorldViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Player.o /home/cgibson/iOS/Colony/Colony/Player.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Enemy.o /home/cgibson/iOS/Colony/Colony/Enemy.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/MovingEnemy.o /home/cgibson/iOS/Colony/Colony/MovingEnemy.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Vec3.o /home/cgibson/iOS/Colony/Colony/Vec3.m normal i386 objective-c com.apple.compilers.llvmgcc42
+cLd /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Colony normal i386
+cGenerateDSYMFile /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app.dSYM /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Colony
+cCopyStringsFile /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/en.lproj/InfoPlist.strings Colony/en.lproj/InfoPlist.strings
+cCompileXIB /home/cgibson/iOS/Colony/Colony/en.lproj/MainWindow.xib
+cCompileXIB /home/cgibson/iOS/Colony/Colony/en.lproj/RootViewController.xib
+cCompileXIB /home/cgibson/iOS/Colony/Colony/LoadView.xib
+cCompileXIB /home/cgibson/iOS/Colony/Colony/SaveView.xib
+cCompileXIB /home/cgibson/iOS/Colony/Colony.xcodeproj/MainMenuView.xib
+cCompileXIB /home/cgibson/iOS/Colony/Colony/MenuController.xib
+cCompileXIB /home/cgibson/iOS/Colony/Colony.xcodeproj/GameViewController.xib
+cCpResource build/Debug-iphonesimulator/Colony.app/Green_sphere.png Colony/../../../Downloads/Green_sphere.png
+cTouch /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk
+c000000004CC128950000000000000110
+t1287727253
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004CC12246000000000029B310
+t1287725638
+s2732816
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreMotion.framework/CoreMotion
+c000000004CC127EF000000000003F3E0
+t1287727087
+s259040
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/CoreMotion.framework/Headers/CoreMotion.h
+c000000004CC127E900000000000001CB
+t1287727081
+s459
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004CC1226D000000000029D5D0
+t1287725677
+s2741712
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004CC1225F0000000000001466
+t1287725663
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/QuartzCore.framework/Headers/QuartzCore.h
+c000000004CC1233C00000000000000C4
+t1287725884
+s196
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000004CC12431000000000015CDB0
+t1287726129
+s1428912
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004CC1281F0000000000000AA1
+t1287727135
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004CC12883000000000074D7B0
+t1287727235
+s7657392
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/Availability.h
+c000000004CB3FA080000000000001ADD
+t1286863368
+s6877
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk/usr/include/stdlib.h
+c000000004CB3E4860000000000002DF5
+t1286857862
+s11765
+
+N/home/cgibson/iOS/Colony/Colony.xcodeproj/GameViewController.h
+c000000004DE7381100000000000001B5
+t1306998801
+s437
+i<UIKit/UIKit.h>
+i"GameState.h"
+i"DefaultGameViewController.h"
+
+N/home/cgibson/iOS/Colony/Colony.xcodeproj/GameViewController.m
+c000000004DE816210000000000000F62
+t1307055649
+s3938
+i"GameViewController.h"
+i"WorldView.h"
+i"Running.h"
+
+N/home/cgibson/iOS/Colony/Colony.xcodeproj/GameViewController.xib
+c000000004DE6D6CA0000000000001E58
+t1306973898
+s7768
+
+N/home/cgibson/iOS/Colony/Colony.xcodeproj/MainMenuView.xib
+c000000004DE6CCE100000000000036C3
+t1306971361
+s14019
+
+N/home/cgibson/iOS/Colony/Colony/../../../Downloads/Green_sphere.png
+c000000004DE5AD740000000000006189
+t1306897780
+s24969
+
+N/home/cgibson/iOS/Colony/Colony/../../VertProt/CellView.h
+c000000004DE6D95200000000000001E1
+t1306974546
+s481
+i<Foundation/Foundation.h>
+i"Shape.h"
+i"Entity.h"
+
+N/home/cgibson/iOS/Colony/Colony/../../VertProt/CellView.m
+c000000004DE7486200000000000007EA
+t1307002978
+s2026
+i"CellView.h"
+i"Entity.h"
+
+N/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Camera.m
+c000000004DCDBD9A0000000000000372
+t1305329050
+s882
+i"Camera.h"
+
+N/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/DefaultGameViewController.h
+c000000004DE7564A0000000000000278
+t1307006538
+s632
+i<UIKit/UIKit.h>
+i<QuartzCore/QuartzCore.h>
+i<CoreMotion/CoreMotion.h>
+i"WorldViewController.h"
+i"World.h"
+i"Vec3.h"
+
+N/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/DefaultGameViewController.m
+c000000004DE759A50000000000000AB3
+t1307007397
+s2739
+i"DefaultGameViewController.h"
+i"World.h"
+i"Shape.h"
+i"CellView.h"
+
+N/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Entity.m
+c000000004DE819FE00000000000007E5
+t1307056638
+s2021
+i"Entity.h"
+
+N/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Shape.m
+c000000004DE6C2840000000000000967
+t1306968708
+s2407
+i"Shape.h"
+
+N/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/World.h
+c000000004DE81C570000000000000381
+t1307057239
+s897
+i<Foundation/Foundation.h>
+i"Entity.h"
+i"Camera.h"
+i"Player.h"
+i"Enemy.h"
+
+N/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/World.m
+c000000004DE8255A000000000000127F
+t1307059546
+s4735
+i"World.h"
+
+N/home/cgibson/iOS/Colony/Colony/Colony-Prefix.pch
+c000000004DE570CC000000000000013E
+t1306882252
+s318
+i<Availability.h>
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+
+N/home/cgibson/iOS/Colony/Colony/ColonyAppDelegate.h
+c000000004DE5AB5A00000000000001FC
+t1306897242
+s508
+i<UIKit/UIKit.h>
+i"GameState.h"
+
+N/home/cgibson/iOS/Colony/Colony/ColonyAppDelegate.m
+c000000004DE755BF0000000000000FEC
+t1307006399
+s4076
+i"ColonyAppDelegate.h"
+i"RootViewController.h"
+i"MenuController.h"
+
+N/home/cgibson/iOS/Colony/Colony/Enemy.h
+c000000004DE6D78100000000000000E9
+t1306974081
+s233
+i<Foundation/Foundation.h>
+i"Entity.h"
+
+N/home/cgibson/iOS/Colony/Colony/Enemy.m
+c000000004DE81A7E0000000000000146
+t1307056766
+s326
+i"Enemy.h"
+
+N/home/cgibson/iOS/Colony/Colony/GameState.h
+c000000004DE5AEA6000000000000015B
+t1306898086
+s347
+i<Foundation/Foundation.h>
+
+N/home/cgibson/iOS/Colony/Colony/GameState.m
+c000000004DE6AFAA000000000000044C
+t1306963882
+s1100
+i"GameState.h"
+
+N/home/cgibson/iOS/Colony/Colony/LoadView.xib
+c000000004DE571C60000000000001643
+t1306882502
+s5699
+
+N/home/cgibson/iOS/Colony/Colony/MenuController.h
+c000000004DE74B12000000000000021C
+t1307003666
+s540
+i<UIKit/UIKit.h>
+i"GameState.h"
+i"WorldViewController.h"
+i"GameViewController.h"
+i"Running.h"
+
+N/home/cgibson/iOS/Colony/Colony/MenuController.m
+c000000004DE755CB0000000000000BF7
+t1307006411
+s3063
+i"MenuController.h"
+i"WorldViewController.h"
+i"WorldView.h"
+
+N/home/cgibson/iOS/Colony/Colony/MenuController.xib
+c000000004DE58E380000000000001865
+t1306889784
+s6245
+
+N/home/cgibson/iOS/Colony/Colony/MovingEnemy.h
+c000000004DE81994000000000000017D
+t1307056532
+s381
+i<Foundation/Foundation.h>
+i"Enemy.h"
+
+N/home/cgibson/iOS/Colony/Colony/MovingEnemy.m
+c000000004DE81A7800000000000002CB
+t1307056760
+s715
+i"MovingEnemy.h"
+
+N/home/cgibson/iOS/Colony/Colony/Player.h
+c000000004DE6BF6900000000000000EB
+t1306967913
+s235
+i<Foundation/Foundation.h>
+i"Entity.h"
+
+N/home/cgibson/iOS/Colony/Colony/Player.m
+c000000004DE6BF5300000000000000BD
+t1306967891
+s189
+i"Player.h"
+
+N/home/cgibson/iOS/Colony/Colony/RootViewController.h
+c000000004DE570CD00000000000000F3
+t1306882253
+s243
+i<UIKit/UIKit.h>
+
+N/home/cgibson/iOS/Colony/Colony/RootViewController.m
+c000000004DE570CD0000000000000F0F
+t1306882253
+s3855
+i"RootViewController.h"
+
+N/home/cgibson/iOS/Colony/Colony/Running.h
+c000000004DE73C3F0000000000000114
+t1306999871
+s276
+i<Foundation/Foundation.h>
+
+N/home/cgibson/iOS/Colony/Colony/SaveView.xib
+c000000004DE571D60000000000001643
+t1306882518
+s5699
+
+N/home/cgibson/iOS/Colony/Colony/Vec3.h
+c000000004DE71B950000000000000109
+t1306991509
+s265
+i<Foundation/Foundation.h>
+
+N/home/cgibson/iOS/Colony/Colony/Vec3.m
+c000000004DE71B8C00000000000001A9
+t1306991500
+s425
+i"Vec3.h"
+
+N/home/cgibson/iOS/Colony/Colony/WorldView.h
+c000000004DE69A5E00000000000000D5
+t1306958430
+s213
+i<UIKit/UIKit.h>
+
+N/home/cgibson/iOS/Colony/Colony/WorldView.m
+c000000004DE6B6290000000000000233
+t1306965545
+s563
+i"WorldView.h"
+
+N/home/cgibson/iOS/Colony/Colony/WorldViewController.h
+c000000004DE81E8400000000000002D1
+t1307057796
+s721
+i<Foundation/Foundation.h>
+i"World.h"
+i"Running.h"
+i"Enemy.h"
+
+N/home/cgibson/iOS/Colony/Colony/WorldViewController.m
+c000000004DE8257200000000000022E1
+t1307059570
+s8929
+i<stdlib.h>
+i<QuartzCore/QuartzCore.h>
+i"WorldViewController.h"
+i"WorldView.h"
+i"Shape.h"
+i"CellView.h"
+i"MovingEnemy.h"
+
+N/home/cgibson/iOS/Colony/Colony/en.lproj/InfoPlist.strings
+c000000004DE570CC000000000000002D
+t1306882252
+s45
+
+N/home/cgibson/iOS/Colony/Colony/en.lproj/MainWindow.xib
+c000000004DE570CD0000000000005FE0
+t1306882253
+s24544
+
+N/home/cgibson/iOS/Colony/Colony/en.lproj/RootViewController.xib
+c000000004DE574230000000000001C44
+t1306883107
+s7236
+
+N/home/cgibson/iOS/Colony/Colony/main.m
+c000000004DE570CC0000000000000169
+t1306882252
+s361
+i<UIKit/UIKit.h>
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Camera.o
+t1307059514
+s10688
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/CellView.o
+t1307059514
+s41580
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Colony.LinkFileList
+c000000004DE8253A00000000000007E9
+t1307059514
+s2025
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/ColonyAppDelegate.o
+t1307059514
+s56636
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/DefaultGameViewController.o
+t1307059514
+s47000
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Enemy.o
+t1307059514
+s3772
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Entity.o
+t1307059514
+s20324
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/GameState.o
+t1307059514
+s8836
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/GameViewController.o
+t1307059514
+s49160
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/MenuController.o
+t1307059514
+s47776
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/MovingEnemy.o
+t1307059514
+s6904
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Player.o
+t1307059514
+s1164
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/RootViewController.o
+t1307059514
+s40452
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Shape.o
+t1307059514
+s46404
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Vec3.o
+t1307059514
+s7124
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/World.o
+t1307059556
+s24472
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/WorldView.o
+t1307059514
+s33280
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/WorldViewController.o
+t1307059572
+s70652
+
+N/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/main.o
+t1307059514
+s3060
+
+N/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app
+t1307059572
+s512
+
+N/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app.dSYM
+t1307059572
+s512
+
+N/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Colony
+t1307059572
+s115316
+
+N/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/GameViewController.nib
+t1307059515
+s1231
+
+N/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Green_sphere.png
+t1307059515
+s24969
+
+N/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Info.plist
+t1307059514
+s789
+
+N/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/LoadView.nib
+t1307059515
+s1029
+
+N/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/MainMenuView.nib
+t1307059515
+s4205
+
+N/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/MenuController.nib
+t1307059515
+s1231
+
+N/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/PkgInfo
+t1307059514
+s8
+
+N/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/SaveView.nib
+t1307059515
+s1029
+
+N/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/en.lproj/InfoPlist.strings
+t1307059515
+s42
+
+N/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/en.lproj/MainWindow.nib
+t1307059515
+s2455
+
+N/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/en.lproj/RootViewController.nib
+t1307059515
+s1518
+
+N/home/cgibson/iOS/VertProt/CellView.h
+c000000004DE6D95200000000000001E1
+t1306974546
+s481
+i<Foundation/Foundation.h>
+i"Shape.h"
+i"Entity.h"
+
+N/home/cgibson/iOS/VertProt/VertProt/Camera.h
+c000000004DCDAD1300000000000001DD
+t1305324819
+s477
+i<Foundation/Foundation.h>
+i"Entity.h"
+
+N/home/cgibson/iOS/VertProt/VertProt/DefaultGameViewController.h
+c000000004DE7564A0000000000000278
+t1307006538
+s632
+i<UIKit/UIKit.h>
+i<QuartzCore/QuartzCore.h>
+i<CoreMotion/CoreMotion.h>
+i"WorldViewController.h"
+i"World.h"
+i"Vec3.h"
+
+N/home/cgibson/iOS/VertProt/VertProt/Entity.h
+c000000004DE819C200000000000003CA
+t1307056578
+s970
+i<UIKit/UIKit.h>
+
+N/home/cgibson/iOS/VertProt/VertProt/Shape.h
+c000000004DCC68A50000000000000254
+t1305241765
+s596
+i<UIKit/UIKit.h>
+
+N/home/cgibson/iOS/VertProt/VertProt/World.h
+c000000004DE81C570000000000000381
+t1307057239
+s897
+i<Foundation/Foundation.h>
+i"Entity.h"
+i"Camera.h"
+i"Player.h"
+i"Enemy.h"
+
+N/var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch.gch
+t1307059514
+s11992272
+
+NColony/Colony-Info.plist
+c000000004DE570CC00000000000004B3
+t1306882252
+s1203
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies328752372#328752372#0(0"0(0#1#0"8603808192#0"0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Camera.o /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Camera.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.681840
+e328752314.756305
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Camera.o
+x/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Camera.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@72"Compile /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Camera.m328752314#328752314#0(0"0(0#0#64"/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Camera.m8603217728#1868"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Camera.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Camera.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/CellView.o /home/cgibson/iOS/Colony/Colony/../../VertProt/CellView.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.775040
+e328752314.908231
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/CellView.o
+x/home/cgibson/iOS/Colony/Colony/../../VertProt/CellView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@65"Compile /home/cgibson/iOS/Colony/Colony/../../VertProt/CellView.m328752314#328752314#0(0"0(0#0#57"/home/cgibson/iOS/Colony/Colony/../../VertProt/CellView.m8604179168#1863"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/../../VertProt/CellView.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/CellView.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/ColonyAppDelegate.o /home/cgibson/iOS/Colony/Colony/ColonyAppDelegate.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.675971
+e328752314.820791
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/ColonyAppDelegate.o
+x/home/cgibson/iOS/Colony/Colony/ColonyAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@59"Compile /home/cgibson/iOS/Colony/Colony/ColonyAppDelegate.m328752314#328752314#0(0"0(0#0#51"/home/cgibson/iOS/Colony/Colony/ColonyAppDelegate.m8605787680#1866"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/ColonyAppDelegate.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/ColonyAppDelegate.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/DefaultGameViewController.o /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/DefaultGameViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.756400
+e328752314.916459
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/DefaultGameViewController.o
+x/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/DefaultGameViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@91"Compile /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/DefaultGameViewController.m328752314#328752314#0(0"0(0#0#83"/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/DefaultGameViewController.m8590396128#1906"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/DefaultGameViewController.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/DefaultGameViewController.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Enemy.o /home/cgibson/iOS/Colony/Colony/Enemy.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.825322
+e328752314.896577
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Enemy.o
+x/home/cgibson/iOS/Colony/Colony/Enemy.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@47"Compile /home/cgibson/iOS/Colony/Colony/Enemy.m328752314#328752314#0(0"0(0#0#39"/home/cgibson/iOS/Colony/Colony/Enemy.m8606154112#1842"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/Enemy.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Enemy.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Entity.o /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Entity.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.683241
+e328752314.774924
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Entity.o
+x/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Entity.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@72"Compile /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Entity.m328752314#328752314#0(0"0(0#0#64"/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Entity.m8602588640#1868"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Entity.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Entity.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/GameState.o /home/cgibson/iOS/Colony/Colony/GameState.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.680504
+e328752314.751358
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/GameState.o
+x/home/cgibson/iOS/Colony/Colony/GameState.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@51"Compile /home/cgibson/iOS/Colony/Colony/GameState.m328752314#328752314#0(0"0(0#0#43"/home/cgibson/iOS/Colony/Colony/GameState.m8603740768#1850"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/GameState.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/GameState.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/GameViewController.o /home/cgibson/iOS/Colony/Colony.xcodeproj/GameViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.679206
+e328752314.825205
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/GameViewController.o
+x/home/cgibson/iOS/Colony/Colony.xcodeproj/GameViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@70"Compile /home/cgibson/iOS/Colony/Colony.xcodeproj/GameViewController.m328752314#328752314#0(0"0(0#0#62"/home/cgibson/iOS/Colony/Colony.xcodeproj/GameViewController.m8603981856#1878"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony.xcodeproj/GameViewController.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/GameViewController.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/MenuController.o /home/cgibson/iOS/Colony/Colony/MenuController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.677984
+e328752314.810812
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/MenuController.o
+x/home/cgibson/iOS/Colony/Colony/MenuController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@56"Compile /home/cgibson/iOS/Colony/Colony/MenuController.m328752314#328752314#0(0"0(0#0#48"/home/cgibson/iOS/Colony/Colony/MenuController.m8604309952#1860"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/MenuController.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/MenuController.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/MovingEnemy.o /home/cgibson/iOS/Colony/Colony/MovingEnemy.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.844282
+e328752314.917667
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/MovingEnemy.o
+x/home/cgibson/iOS/Colony/Colony/MovingEnemy.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@53"Compile /home/cgibson/iOS/Colony/Colony/MovingEnemy.m328752314#328752314#0(0"0(0#0#45"/home/cgibson/iOS/Colony/Colony/MovingEnemy.m8606413152#1854"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/MovingEnemy.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/MovingEnemy.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Player.o /home/cgibson/iOS/Colony/Colony/Player.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.821129
+e328752314.891954
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Player.o
+x/home/cgibson/iOS/Colony/Colony/Player.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@48"Compile /home/cgibson/iOS/Colony/Colony/Player.m328752314#328752314#0(0"0(0#0#40"/home/cgibson/iOS/Colony/Colony/Player.m8606500704#1844"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/Player.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Player.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/RootViewController.o /home/cgibson/iOS/Colony/Colony/RootViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.676862
+e328752314.779917
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/RootViewController.o
+x/home/cgibson/iOS/Colony/Colony/RootViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@60"Compile /home/cgibson/iOS/Colony/Colony/RootViewController.m328752314#328752314#0(0"0(0#0#52"/home/cgibson/iOS/Colony/Colony/RootViewController.m8604528224#1868"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/RootViewController.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/RootViewController.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Shape.o /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Shape.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.730276
+e328752314.844158
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Shape.o
+x/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Shape.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@71"Compile /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Shape.m328752314#328752314#0(0"0(0#0#63"/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Shape.m8600947648#1866"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/Shape.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Shape.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Vec3.o /home/cgibson/iOS/Colony/Colony/Vec3.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.864007
+e328752314.933380
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Vec3.o
+x/home/cgibson/iOS/Colony/Colony/Vec3.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@46"Compile /home/cgibson/iOS/Colony/Colony/Vec3.m328752314#328752314#0(0"0(0#0#38"/home/cgibson/iOS/Colony/Colony/Vec3.m8603993792#1840"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/Vec3.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Vec3.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/World.o /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/World.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752356.257566
+e328752356.372736
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/World.o
+x/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/World.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@71"Compile /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/World.m328752356#328752356#0(0"0(0#0#63"/home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/World.m8605815424#1866"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/../../VertProt/VertProt/World.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/World.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/WorldView.o /home/cgibson/iOS/Colony/Colony/WorldView.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.780050
+e328752314.879494
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/WorldView.o
+x/home/cgibson/iOS/Colony/Colony/WorldView.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@51"Compile /home/cgibson/iOS/Colony/Colony/WorldView.m328752314#328752314#0(0"0(0#0#43"/home/cgibson/iOS/Colony/Colony/WorldView.m8604068864#1850"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/WorldView.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/WorldView.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/WorldViewController.o /home/cgibson/iOS/Colony/Colony/WorldViewController.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752372.537791
+e328752372.686345
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/WorldViewController.o
+x/home/cgibson/iOS/Colony/Colony/WorldViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@61"Compile /home/cgibson/iOS/Colony/Colony/WorldViewController.m328752372#328752372#0(0"0(0#0#53"/home/cgibson/iOS/Colony/Colony/WorldViewController.m8604590464#1870"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/WorldViewController.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/WorldViewController.o0#
+
+CCompileC build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/main.o /home/cgibson/iOS/Colony/Colony/main.m normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.674718
+e328752314.730159
+r1
+xCompileC
+xbuild/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/main.o
+x/home/cgibson/iOS/Colony/Colony/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@46"Compile /home/cgibson/iOS/Colony/Colony/main.m328752314#328752314#0(0"0(0#0#38"/home/cgibson/iOS/Colony/Colony/main.m8606016736#1840"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -include /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch -c /home/cgibson/iOS/Colony/Colony/main.m -o /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /home/cgibson/iOS/Colony/Colony.xcodeproj/GameViewController.xib
+s328752315.185219
+e328752315.551955
+r1
+xCompileXIB
+x/home/cgibson/iOS/Colony/Colony.xcodeproj/GameViewController.xib
+o2011-06-02 17:05:15.471 Interface Builder Cocoa Touch Tool[19184:1903] CFPreferences: user home directory at file://localhost/home/cgibson/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF07#2@50"CompileXIB Colony.xcodeproj/GameViewController.xib328752315#328752315#0(241"2011-06-02 17:05:15.471 Interface Builder Cocoa Touch Tool[19184:1903] CFPreferences: user home directory at file://localhost/home/cgibson/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#64"/home/cgibson/iOS/Colony/Colony.xcodeproj/GameViewController.xib8603819840#560"    cd /home/cgibson/iOS/Colony    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/GameViewController.nib /home/cgibson/iOS/Colony/Colony.xcodeproj/GameViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /home/cgibson/iOS/Colony/Colony.xcodeproj/MainMenuView.xib
+s328752315.184103
+e328752315.628706
+r1
+xCompileXIB
+x/home/cgibson/iOS/Colony/Colony.xcodeproj/MainMenuView.xib
+o2011-06-02 17:05:15.489 Interface Builder Cocoa Touch Tool[19189:1b03] CFPreferences: user home directory at file://localhost/home/cgibson/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+o/* com.apple.ibtool.document.warnings */
+o/home/cgibson/iOS/Colony/Colony.xcodeproj/MainMenuView.xib:-1: warning: The 'view' outlet of 'File's Owner' is connected to 'View' but 'view' is no longer defined on MenuController.
+o/home/cgibson/iOS/Colony/Colony.xcodeproj/MainMenuView.xib:4: warning: The 'Touch Up Inside' event of 'Rounded Rect Button (New Game)' is connected to the 'buttonPressed:' selector of 'File's Owner', but 'buttonPressed:' is no longer defined on 'MenuController'.
+lSLF07#2@44"CompileXIB Colony.xcodeproj/MainMenuView.xib328752315#328752315#0(727"2011-06-02 17:05:15.489 Interface Builder Cocoa Touch Tool[19189:1b03] CFPreferences: user home directory at file://localhost/home/cgibson/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile./* com.apple.ibtool.document.warnings *//home/cgibson/iOS/Colony/Colony.xcodeproj/MainMenuView.xib:-1: warning: The 'view' outlet of 'File's Owner' is connected to 'View' but 'view' is no longer defined on MenuController./home/cgibson/iOS/Colony/Colony.xcodeproj/MainMenuView.xib:4: warning: The 'Touch Up Inside' event of 'Rounded Rect Button (New Game)' is connected to the 'buttonPressed:' selector of 'File's Owner', but 'buttonPressed:' is no longer defined on 'MenuController'.2(22@109"The 'view' outlet of 'File's Owner' is connected to 'View' but 'view' is no longer defined on MenuController.328752315#18446744073709551615#0#0(6@58"/home/cgibson/iOS/Colony/Colony.xcodeproj/MainMenuView.xib328664161#18446744073709551615#0#18446744073709551615#0#0"0(22@191"The 'Touch Up Inside' event of 'Rounded Rect Button (New Game)' is connected to the 'buttonPressed:' selector of 'File's Owner', but 'buttonPressed:' is no longer defined on 'MenuController'.328752315#18446744073709551615#0#0(6@58"/home/cgibson/iOS/Colony/Colony.xcodeproj/MainMenuView.xib328664161#4#0#4#0#0"0(0#0#58"/home/cgibson/iOS/Colony/Colony.xcodeproj/MainMenuView.xib8603951296#548"    cd /home/cgibson/iOS/Colony    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/MainMenuView.nib /home/cgibson/iOS/Colony/Colony.xcodeproj/MainMenuView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /home/cgibson/iOS/Colony/Colony/LoadView.xib
+s328752315.183148
+e328752315.567418
+r1
+xCompileXIB
+x/home/cgibson/iOS/Colony/Colony/LoadView.xib
+o2011-06-02 17:05:15.473 Interface Builder Cocoa Touch Tool[19187:1903] CFPreferences: user home directory at file://localhost/home/cgibson/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF07#2@30"CompileXIB Colony/LoadView.xib328752315#328752315#0(241"2011-06-02 17:05:15.473 Interface Builder Cocoa Touch Tool[19187:1903] CFPreferences: user home directory at file://localhost/home/cgibson/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#44"/home/cgibson/iOS/Colony/Colony/LoadView.xib8605744736#530"    cd /home/cgibson/iOS/Colony    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/LoadView.nib /home/cgibson/iOS/Colony/Colony/LoadView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /home/cgibson/iOS/Colony/Colony/MenuController.xib
+s328752315.184567
+e328752315.568449
+r1
+xCompileXIB
+x/home/cgibson/iOS/Colony/Colony/MenuController.xib
+o2011-06-02 17:05:15.474 Interface Builder Cocoa Touch Tool[19188:1903] CFPreferences: user home directory at file://localhost/home/cgibson/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF07#2@36"CompileXIB Colony/MenuController.xib328752315#328752315#0(241"2011-06-02 17:05:15.474 Interface Builder Cocoa Touch Tool[19188:1903] CFPreferences: user home directory at file://localhost/home/cgibson/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#50"/home/cgibson/iOS/Colony/Colony/MenuController.xib8603910208#542"    cd /home/cgibson/iOS/Colony    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/MenuController.nib /home/cgibson/iOS/Colony/Colony/MenuController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /home/cgibson/iOS/Colony/Colony/SaveView.xib
+s328752315.183591
+e328752315.559908
+r1
+xCompileXIB
+x/home/cgibson/iOS/Colony/Colony/SaveView.xib
+o2011-06-02 17:05:15.476 Interface Builder Cocoa Touch Tool[19186:1903] CFPreferences: user home directory at file://localhost/home/cgibson/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF07#2@30"CompileXIB Colony/SaveView.xib328752315#328752315#0(241"2011-06-02 17:05:15.476 Interface Builder Cocoa Touch Tool[19186:1903] CFPreferences: user home directory at file://localhost/home/cgibson/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#44"/home/cgibson/iOS/Colony/Colony/SaveView.xib8604170976#530"    cd /home/cgibson/iOS/Colony    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/SaveView.nib /home/cgibson/iOS/Colony/Colony/SaveView.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /home/cgibson/iOS/Colony/Colony/en.lproj/MainWindow.xib
+s328752315.182298
+e328752315.605305
+r1
+xCompileXIB
+x/home/cgibson/iOS/Colony/Colony/en.lproj/MainWindow.xib
+o2011-06-02 17:05:15.497 Interface Builder Cocoa Touch Tool[19190:1903] CFPreferences: user home directory at file://localhost/home/cgibson/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+lSLF07#2@41"CompileXIB Colony/en.lproj/MainWindow.xib328752315#328752315#0(241"2011-06-02 17:05:15.497 Interface Builder Cocoa Touch Tool[19190:1903] CFPreferences: user home directory at file://localhost/home/cgibson/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.0(0#0#55"/home/cgibson/iOS/Colony/Colony/en.lproj/MainWindow.xib8606163712#552"    cd /home/cgibson/iOS/Colony    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/en.lproj/MainWindow.nib /home/cgibson/iOS/Colony/Colony/en.lproj/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCompileXIB /home/cgibson/iOS/Colony/Colony/en.lproj/RootViewController.xib
+s328752315.182725
+e328752315.563525
+r1
+xCompileXIB
+x/home/cgibson/iOS/Colony/Colony/en.lproj/RootViewController.xib
+o2011-06-02 17:05:15.476 Interface Builder Cocoa Touch Tool[19185:1903] CFPreferences: user home directory at file://localhost/home/cgibson/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile.
+o/* com.apple.ibtool.document.warnings */
+o/home/cgibson/iOS/Colony/Colony/en.lproj/RootViewController.xib:-1: warning: The 'view' outlet of 'File's Owner' is connected to 'Table View' but 'view' is no longer defined on RootViewController.
+lSLF07#2@49"CompileXIB Colony/en.lproj/RootViewController.xib328752315#328752315#0(479"2011-06-02 17:05:15.476 Interface Builder Cocoa Touch Tool[19185:1903] CFPreferences: user home directory at file://localhost/home/cgibson/Library/Application%20Support/iPhone%20Simulator/User/ is unavailable. User domains will be volatile./* com.apple.ibtool.document.warnings *//home/cgibson/iOS/Colony/Colony/en.lproj/RootViewController.xib:-1: warning: The 'view' outlet of 'File's Owner' is connected to 'Table View' but 'view' is no longer defined on RootViewController.1(22@119"The 'view' outlet of 'File's Owner' is connected to 'Table View' but 'view' is no longer defined on RootViewController.328752315#18446744073709551615#0#0(6@63"/home/cgibson/iOS/Colony/Colony/en.lproj/RootViewController.xib328575907#18446744073709551615#0#18446744073709551615#0#0"0(0#0#63"/home/cgibson/iOS/Colony/Colony/en.lproj/RootViewController.xib8605844864#568"    cd /home/cgibson/iOS/Colony    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/en.lproj/RootViewController.nib /home/cgibson/iOS/Colony/Colony/en.lproj/RootViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk0#
+
+CCopyStringsFile /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/en.lproj/InfoPlist.strings Colony/en.lproj/InfoPlist.strings
+s328752315.177869
+e328752315.224376
+r1
+xCopyStringsFile
+x/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/en.lproj/InfoPlist.strings
+xColony/en.lproj/InfoPlist.strings
+lSLF07#2@38"Copy Colony/en.lproj/InfoPlist.strings328752315#328752315#0(0"0(0#0#58"/home/cgibson/iOS/Colony/Colony/en.lproj/InfoPlist.strings8607091136#461"    cd /home/cgibson/iOS/Colony    setenv ICONV /usr/bin/iconv    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/Xcode/Plug-ins/CoreBuildTasks.xcplugin/Contents/Resources/copystrings --validate --inputencoding utf-8 --outputencoding binary Colony/en.lproj/InfoPlist.strings --outdir /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/en.lproj0#
+
+CCpResource build/Debug-iphonesimulator/Colony.app/Green_sphere.png Colony/../../../Downloads/Green_sphere.png
+s328752315.224501
+e328752315.249732
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Colony.app/Green_sphere.png
+xColony/../../../Downloads/Green_sphere.png
+lSLF07#2@47"Copy Colony/../../../Downloads/Green_sphere.png328752315#328752315#0(0"0(0#0#67"/home/cgibson/iOS/Colony/Colony/../../../Downloads/Green_sphere.png8604225984#457"    cd /home/cgibson/iOS/Colony    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /home/cgibson/iOS/Colony/Colony/../../../Downloads/Green_sphere.png /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app0#
+
+CGenerateDSYMFile /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app.dSYM /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Colony
+s328752372.789020
+e328752372.926046
+r1
+xGenerateDSYMFile
+x/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app.dSYM
+x/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Colony
+lSLF07#2@106"GenerateDSYMFile build/Debug-iphonesimulator/Colony.app.dSYM build/Debug-iphonesimulator/Colony.app/Colony328752372#328752372#0(0"0(0#0#70"/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Colony8603993792#338"    cd /home/cgibson/iOS/Colony    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Colony -o /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app.dSYM0#
+
+CLd /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Colony normal i386
+s328752372.686412
+e328752372.788947
+r1
+xLd
+x/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Colony
+xnormal
+xi386
+lSLF07#2@75"Link /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Colony328752372#328752372#0(0"0(0#0#0"8605791968#883"    cd /home/cgibson/iOS/Colony    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -L/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -filelist /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Objects-normal/i386/Colony.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework QuartzCore -framework CoreMotion -framework UIKit -framework Foundation -framework CoreGraphics -prebind -o /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Colony0#
+
+CProcessInfoPlistFile /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Info.plist Colony/Colony-Info.plist
+s328752314.291399
+e328752314.322352
+r1
+xProcessInfoPlistFile
+x/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Info.plist
+xColony/Colony-Info.plist
+lSLF07#2@32"Process Colony/Colony-Info.plist328752314#328752314#0(0"0(0#0#49"/home/cgibson/iOS/Colony/Colony/Colony-Info.plist8600075392#441"    cd /home/cgibson/iOS/Colony    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Colony/Colony-Info.plist -genpkginfo /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app/Info.plist0#
+
+CProcessPCH /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch.gch Colony/Colony-Prefix.pch normal i386 objective-c com.apple.compilers.llvmgcc42
+s328752314.322423
+e328752314.674642
+r1
+xProcessPCH
+x/var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch.gch
+xColony/Colony-Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.llvmgcc42
+lSLF07#2@35"Precompile Colony/Colony-Prefix.pch328752314#328752314#0(0"0(0#0#49"/home/cgibson/iOS/Colony/Colony/Colony-Prefix.pch8604614112#1747"    cd /home/cgibson/iOS/Colony    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/llvm-gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=gnu99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -DDEBUG -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -fexceptions -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40200 -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-generated-files.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-own-target-headers.hmap -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-all-target-headers.hmap -iquote /home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/Colony-project-headers.hmap -F/home/cgibson/iOS/Colony/build/Debug-iphonesimulator -I/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/include -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources/i386 -I/home/cgibson/iOS/Colony/build/Colony.build/Debug-iphonesimulator/Colony.build/DerivedSources -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.2.sdk -c /home/cgibson/iOS/Colony/Colony/Colony-Prefix.pch -o /var/folders/iE/iE0PKs0NFZycoYNIGfZ1D++SxPk/-Caches-/com.apple.Xcode.2028988/SharedPrecompiledHeaders/Colony-Prefix-erwrkxnlhgdgbxbzbcfmmnxhypbb/Colony-Prefix.pch.gch0#
+
+CTouch /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app
+s328752372.926541
+e328752372.931279
+r1
+xTouch
+x/home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app
+lSLF07#2@69"Touch /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app328752372#328752372#0(0"0(0#0#0"8600373344#249"    cd /home/cgibson/iOS/Colony    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /home/cgibson/iOS/Colony/build/Debug-iphonesimulator/Colony.app0#
+

@@ -27,5 +27,9 @@
 - (void) frame:(CADisplayLink*)link;
 
 - (void) setPlayer:(Player*)player;
+- (void) createPlayerDefault;
+- (void) spawnEnemy;
 - (void) addEnemy:(Enemy*)enemy;
+- (void) removeEnemy:(Enemy*)enemy;
+- (void) spawnEnemyWithLevel:(int)level;
 @end

@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+
+@class Enemy;
+
 typedef enum CellType_t{CELL_PLAYER, CELL_ENEMY} CellType_t;
 
 #define TYPE_CELL 1
+
+@class World;
 
 @interface Entity : NSObject {
 }
@@ -17,16 +22,21 @@ typedef enum CellType_t{CELL_PLAYER, CELL_ENEMY} CellType_t;
 @property (nonatomic, readonly) int objId;
 @property (nonatomic, readonly) int version;
 @property (nonatomic) CGPoint location;
-@property (nonatomic) CGPoint size;
+@property (nonatomic) float size;
 @property (nonatomic) CellType_t cellType;
 @property (nonatomic) int level;
+@property (nonatomic) bool alive;
+@property (nonatomic, retain) World *world;
 
-- (id) initWithType: (CellType_t) type location:(CGPoint)loc size:(CGPoint)size level:(int)level;
+- (id) initWithType: (CellType_t) type location:(CGPoint)loc size:(float)size world:(World*)world;
 - (void) refresh;
 - (CGRect) getFrame;
 - (void) moveDelta:(CGPoint)delta;
 - (void) moveDelta:(CGPoint)delta refresh:(bool)refresh;
 - (void) moveDirection:(CGPoint)dir Elapsed:(NSTimeInterval)elapsed;
 - (void) think:(NSTimeInterval)elapsed;
+- (bool) doesHit:(Entity*)entity;
+- (void) registerHit:(Entity*)entity;
+- (void) fight:(Entity*)entity;
 
 @end

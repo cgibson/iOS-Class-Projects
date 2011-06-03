@@ -7,6 +7,7 @@
 //
 
 #import "Entity.h"
+#import "World.h"
 
 @interface Entity()
     @property (nonatomic) int objId;
@@ -21,14 +22,16 @@
 @synthesize version = version_;
 @synthesize cellType=_cellType;
 @synthesize level=_level;
+@synthesize alive=_alive;
+@synthesize world=_world;
 - (void)dealloc
 {
     NSLog(@"Entity %d dealloc'd", objId_);
     [super dealloc];
 }
 
-- (id) initWithType:(CellType_t)type location:(CGPoint)loc size:(CGPoint)size level:(int)level {
-    static int nextId = 0;
+- (id) initWithType:(CellType_t)type location:(CGPoint)loc size:(float)size world:(World*)world {
+    static int nextId = 100;
     self = [super init];
     
     self.objId = nextId++;
@@ -36,7 +39,9 @@
     self.location = loc;
     self.size = size;
     self.version = 0;
-    self.level = level;
+    self.level = 0;
+    self.alive = true;
+    self.world = world;
     
     return self;
 }
@@ -52,7 +57,7 @@
 
 - (CGRect) getFrame
 {
-    return CGRectMake(self.location.x - self.size.x / 2., self.location.y - self.size.y / 2., self.size.x, self.size.y);
+    return CGRectMake(self.location.x - self.size/ 2., self.location.y - self.size / 2., self.size, self.size);
 }
 
 
@@ -67,7 +72,7 @@
     loc.x += delta.x;
     loc.y += delta.y;
     self.location = loc;
-    [self refresh];
+    //[self refresh];
 }
 
 - (void) moveDelta:(CGPoint)delta refresh:(bool)refresh
@@ -76,8 +81,8 @@
     loc.x += delta.x;
     loc.y += delta.y;
     self.location = loc;
-    if(refresh)
-        [self refresh];
+    //if(refresh)
+    //[self refresh];
 }
 
 - (void) moveDirection:(CGPoint)dir Elapsed:(NSTimeInterval)elapsed
@@ -86,7 +91,28 @@
     loc.x += dir.x * elapsed;
     loc.y += dir.y * elapsed;
     self.location = loc;
-    [self refresh];
+    //[self refresh];
+}
+
+
+- (bool) doesHit:(Entity*)entity
+{
+    return false;
+}
+
+- (void) registerHit:(Entity*)entity
+{
+    if(self.size > entity.size)
+    {
+        
+    }
+}
+
+- (void) fight:(Entity*)entity
+{
+    if(self.size < entity.size) {
+        self.alive = false;
+    }
 }
 
 @end

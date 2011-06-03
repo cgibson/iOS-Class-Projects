@@ -8,12 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Enemy.h"
+#import "World.h"
 
 @interface MovingEnemy : Enemy {
 }
 
 @property (nonatomic) CGPoint direction;
 
-- (id) initWithType:(CellType_t)type location:(CGPoint)loc size:(CGPoint)size direction:(CGPoint)dir;
+- (id) initWithType:(CellType_t)type location:(CGPoint)loc size:(float)size direction:(CGPoint)dir world:(World*)world;
 
 @end

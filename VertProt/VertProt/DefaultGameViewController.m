@@ -15,6 +15,8 @@
 @interface DefaultGameViewController()
     @property (nonatomic) BOOL active;
     @property (nonatomic) BOOL gyroEnabled;
+    @property (nonatomic) BOOL gyroCalibrated;
+    @property (nonatomic) CGPoint gyroOffset;
 @end
 
 @implementation DefaultGameViewController
@@ -22,6 +24,8 @@
 @synthesize gyroVec = gyroVec_;
 @synthesize active = active_;
 @synthesize gyroEnabled = gyroEnabled_;
+@synthesize gyroCalibrated=gyroCalibrated_;
+@synthesize gyroOffset=gyroOffset_;
 
 - (void) viewDidLoad
 {
@@ -31,6 +35,7 @@
     [self start];
     
     self.gyroEnabled = false;
+    self.gyroCalibrated = false;
     
 }
 
@@ -46,8 +51,17 @@
         {
             if(self.active && self.gyroEnabled)
             {
+                
                 CMAcceleration accel = accelerometerData.acceleration;
-                [self.world.camera moveLookAt:CGPointMake(accel.x * -10, accel.y * 10)];
+                
+                if(!self.gyroCalibrated) {
+                    self.gyroOffset = CGPointMake(accel.x * -10.0f, accel.y * 10.0f);
+                    self.gyroCalibrated = true;
+                    NSLog(@"GYRO: callibrated to %.2f, %.2f", self.gyroOffset.x, self.gyroOffset.y);
+                }else{
+                    [self.world.camera moveLookAt:CGPointMake(accel.x * -10.0f - self.gyroOffset.x, 
+                                                              accel.y * 10.0f - self.gyroOffset.y)];
+                }
                 //[self.world refreshAll];
             }
         }];
@@ -119,6 +133,11 @@
 - (void) unpause
 {
     [super unpause];
+}
+
+- (void) callibrateGyro
+{
+    self.gyroCalibrated = false;
 }
 
 @end

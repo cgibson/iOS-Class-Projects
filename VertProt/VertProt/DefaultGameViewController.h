@@ -19,10 +19,13 @@
 
 @property (nonatomic, retain, readonly) Vec3 *gyroVec; 
 @property (nonatomic, readonly) BOOL active;
+@property (nonatomic, readonly) BOOL gyroCalibrated;
+@property (nonatomic, readonly) CGPoint gyroOffset;
 
 @property (nonatomic, readonly) BOOL gyroEnabled;
 
 - (void) initializeGyro;
+- (void) callibrateGyro;
 
 - (void) start;
 - (void) stop;
